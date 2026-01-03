@@ -185,7 +185,6 @@ class IssueCollector:
             # Closing method
             "closing_pr": closing_pr,
             "closing_commit": closing_commit,
-            "timeline": timeline,
         }
     
     def _calculate_timestamps(self, issue, comments):
@@ -423,7 +422,7 @@ class IssueCollector:
         return None, None
     
     def _fetch_pr_details(self, owner, repo, pr_number):
-        """Fetch detailed PR information including reviews"""
+        """Fetch detailed PR information with all metrics"""
         url = f"https://api.github.com/repos/{owner}/{repo}/pulls/{pr_number}"
         
         try:
@@ -432,77 +431,152 @@ class IssueCollector:
             # Fetch PR reviews
             reviews = self._fetch_pr_reviews(owner, repo, pr_number)
             
+            # Count unique reviewers and review states
+            reviewers = set()
+            review_states = {
+                "approved": 0,
+                "changes_requested": 0,
+                "commented": 0,
+                "dismissed": 0
+            }
+            
+            for review in reviews:
+                reviewer_username = review.get("user", {}).get("login")
+                if reviewer_username:
+                    reviewers.add(reviewer_username)
+                
+                state = review.get("state", "").lower()
+                if state in review_states:
+                    review_states[state] += 1
+            
+            # Extract author and merger info
+            pr_author = pr.get("user") or {}
+            merged_by = pr.get("merged_by") or {}
+            
             return {
                 "number": pr.get("number"),
                 "title": pr.get("title"),
-                "body": pr.get("body"),
-                "state": pr.get("state"),
-                "merged": pr.get("merged"),
+                "html_url": pr.get("html_url"),
+                "merged": bool(pr.get("merged_at")),
                 "merged_at": pr.get("merged_at"),
                 "created_at": pr.get("created_at"),
+                "updated_at": pr.get("updated_at"),
                 "closed_at": pr.get("closed_at"),
-                "user": {
-                    "username": pr.get("user", {}).get("login"),
-                    "id": pr.get("user", {}).get("id")
+                "state": pr.get("state"),
+                "body": pr.get("body"),
+                
+                # Author info
+                "author": {
+                    "username": pr_author.get("login"),
+                    "id": pr_author.get("id"),
+                    "name": pr_author.get("name"),
+                    "email": pr_author.get("email")
                 },
-                "changed_files": pr.get("changed_files"),
+                
+                # Merger info
+                "merged_by": {
+                    "username": merged_by.get("login"),
+                    "id": merged_by.get("id"),
+                    "name": merged_by.get("name"),
+                    "email": merged_by.get("email")
+                } if merged_by else None,
+                
+                # Code changes
+                "commits": pr.get("commits"),
                 "additions": pr.get("additions"),
                 "deletions": pr.get("deletions"),
-                "commits": pr.get("commits"),
-                "reviews": reviews
+                "total_changes": (pr.get("additions") or 0) + (pr.get("deletions") or 0),
+                "changed_files": pr.get("changed_files"),
+                "files_changed": pr.get("changed_files"),
+                
+                # Review info
+                "review_comments": pr.get("review_comments"),
+                "comments": pr.get("comments"),
+                "unique_reviewers": len(reviewers),
+                "reviewer_usernames": sorted(list(reviewers)),
+                "total_reviews": len(reviews),
+                "approved_count": review_states["approved"],
+                "changes_requested_count": review_states["changes_requested"],
+                "commented_count": review_states["commented"],
+                
+                # Branch info
+                "head_ref": pr.get("head", {}).get("ref"),
+                "base_ref": pr.get("base", {}).get("ref"),
+                "head_sha": pr.get("head", {}).get("sha"),
+                "merge_commit_sha": pr.get("merge_commit_sha")
             }
         except Exception as e:
             print(f"      Error fetching PR details: {e}")
             return None
-    
+        
     def _fetch_pr_reviews(self, owner, repo, pr_number):
         """Fetch all reviews for a PR"""
         url = f"https://api.github.com/repos/{owner}/{repo}/pulls/{pr_number}/reviews"
         
         try:
-            reviews_data = self._fetch_paginated(url)
-            
-            return [
-                {
-                    "id": review.get("id"),
-                    "user": {
-                        "username": review.get("user", {}).get("login"),
-                        "id": review.get("user", {}).get("id")
-                    },
-                    "body": review.get("body"),
-                    "state": review.get("state"),
-                    "submitted_at": review.get("submitted_at")
-                }
-                for review in reviews_data
-            ]
+            return self._fetch_paginated(url)
         except Exception as e:
             print(f"      Could not fetch PR reviews: {e}")
             return []
     
     def _fetch_commit_details(self, owner, repo, commit_sha):
-        """Fetch commit information"""
+        """Fetch commit information with all metrics"""
         url = f"https://api.github.com/repos/{owner}/{repo}/commits/{commit_sha}"
         
         try:
             commit = self._fetch(url)
             
+            stats = commit.get("stats", {})
+            author = commit.get("commit", {}).get("author", {})
+            committer = commit.get("commit", {}).get("committer", {})
+            
             return {
                 "sha": commit.get("sha"),
                 "message": commit.get("commit", {}).get("message"),
+                "html_url": commit.get("html_url"),
+                
+                # Author info (git author)
                 "author": {
-                    "name": commit.get("commit", {}).get("author", {}).get("name"),
-                    "email": commit.get("commit", {}).get("author", {}).get("email"),
-                    "date": commit.get("commit", {}).get("author", {}).get("date")
+                    "name": author.get("name"),
+                    "email": author.get("email"),
+                    "date": author.get("date")
                 },
-                "stats": commit.get("stats"),
+                
+                # Committer info (git committer)
+                "committer": {
+                    "name": committer.get("name"),
+                    "email": committer.get("email"),
+                    "date": committer.get("date")
+                },
+                
+                # GitHub user who authored the commit
+                "github_author": {
+                    "username": commit.get("author", {}).get("login"),
+                    "id": commit.get("author", {}).get("id")
+                } if commit.get("author") else None,
+                
+                # GitHub user who committed
+                "github_committer": {
+                    "username": commit.get("committer", {}).get("login"),
+                    "id": commit.get("committer", {}).get("id")
+                } if commit.get("committer") else None,
+                
+                # Stats
+                "additions": stats.get("additions"),
+                "deletions": stats.get("deletions"),
+                "total_changes": stats.get("total"),
+                
+                # Files changed (limit to first 20)
+                "changed_files": len(commit.get("files", [])),
                 "files": [
                     {
                         "filename": f.get("filename"),
                         "status": f.get("status"),
                         "additions": f.get("additions"),
-                        "deletions": f.get("deletions")
+                        "deletions": f.get("deletions"),
+                        "changes": f.get("changes")
                     }
-                    for f in commit.get("files", [])[:20]  # Limit to first 20 files
+                    for f in commit.get("files", [])[:20]
                 ]
             }
         except Exception as e:
