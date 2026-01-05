@@ -22,7 +22,7 @@ class BugAgent:
         # Create tools
         self.tools = create_tools()
         
-        # Create agent prompt
+        # basic agent prompt
         template = """You are a helpful bug classification assistant. You help users explore GitHub repositories and classify bug reports.
 
             You have access to the following tools:
@@ -57,7 +57,7 @@ class BugAgent:
 
         prompt = PromptTemplate.from_template(template)
         
-        # Create memory
+        # retain converstaion history
         self.memory = ConversationBufferMemory(
             memory_key="chat_history",
             return_messages=False
