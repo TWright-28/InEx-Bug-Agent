@@ -70,7 +70,7 @@ class BugAgent:
             prompt=prompt
         )
         
-        # Create agent executor
+        # This will run the agent with tools and memory
         self.agent_executor = AgentExecutor(
             agent=agent,
             tools=self.tools,
