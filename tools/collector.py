@@ -49,6 +49,51 @@ class IssueCollector:
         print(f"   Found {len(collected)} issues")
         return collected
     
+    
+    def list_repos(self, owner, limit=20):
+        """List repositories for a given owner/organization"""
+        
+        print(f"Finding repositories for {owner}...")
+        
+        try:
+            # Check if it's an organization or user
+            try:
+                org = self.gh.get_organization(owner)
+                repos = org.get_repos(sort='updated', direction='desc')
+                entity_type = "organization"
+            except:
+                # Not an org, try as user
+                user = self.gh.get_user(owner)
+                repos = user.get_repos(sort='updated', direction='desc')
+                entity_type = "user"
+            
+            # Get repo list
+            repo_list = []
+            count = 0
+            for repo in repos:
+                if count >= limit:
+                    break
+                
+                repo_list.append({
+                    'name': repo.name,
+                    'full_name': repo.full_name,
+                    'description': repo.description or "No description",
+                    'stars': repo.stargazers_count,
+                    'open_issues': repo.open_issues_count,
+                    'language': repo.language,
+                    'updated': repo.updated_at.isoformat() if repo.updated_at else None
+                })
+                count += 1
+            
+            print(f"   Found {len(repo_list)} repositories for {entity_type} '{owner}'")
+            return repo_list
+            
+        except Exception as e:
+            print(f"   Error: {e}")
+            return []
+        
+    
+    
     def _extract_full_issue_data(self, issue, repo_name):
         """Extract comprehensive issue data"""
         
@@ -647,3 +692,5 @@ class IssueCollector:
             return datetime.fromisoformat(iso_string.replace("Z", "+00:00"))
         except:
             return None
+        
+    
