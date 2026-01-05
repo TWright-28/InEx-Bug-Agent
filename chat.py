@@ -4,6 +4,7 @@ def main():
     print("\n" + "="*60)
     print("In-Ex Bug Classification Agent")
     print("="*60)
+    print("Welcome! This agent can help collect andd classify GitHub issues as Intrinsic, Extrinsic, Not a Bug, or Unknown. ")
     print("\nType 'exit' to quit\n")
     
     # Create agent

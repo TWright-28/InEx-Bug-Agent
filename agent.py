@@ -12,11 +12,10 @@ load_dotenv()
 
 class BugAgent:
     def __init__(self):
-        # Create the LLM (using ChatOllama for better agent support)
         self.llm = ChatOllama(
             model="gpt-oss:20b",
             base_url="http://localhost:11434",
-            temperature=0.2,
+            temperature=0.5,
             num_predict=4096
         )
         
