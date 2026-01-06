@@ -23,37 +23,66 @@ class BugAgent:
         self.tools = create_tools()
         
         # basic agent prompt
-        template = """You are a helpful bug classification assistant. You help users explore GitHub repositories and classify bug reports.
+        template = """You are a bug classification assistant. You help users explore GitHub repositories and classify bugs.
 
-            You have access to the following tools:
-
+            You have access to these tools:
             {tools}
 
-            Tool Names: {tool_names}
+            Tool names: {tool_names}
 
-            IMPORTANT: You must STRICTLY follow this format. Do NOT deviate:
+            INSTRUCTIONS:
+            1. When the user asks to do something, decide which tool to use
+            2. You MUST respond EXACTLY in this format (no deviation):
 
-            Question: the input question you must answer
-            Thought: think about what to do (one sentence only)
-            Action: MUST be one of [{tool_names}]
-            Action Input: the input to the action (simple string, no JSON, no tables)
-            Observation: the result of the action
-            ... (repeat Thought/Action/Action Input/Observation if needed)
-            Thought: I now know the final answer
-            Final Answer: the final answer (simple text, NO tables, NO markdown formatting)
+            Thought: [one sentence about what you need to do]
+            Action: [exact tool name from the list above]
+            Action Input: [the input for the tool]
 
-            RULES:
-            - Use ONLY ONE Action per step
-            - Action Input must be a simple string (e.g., "google" or "facebook/react,5")
-            - Do NOT create tables or complex formatting
-            - Do NOT repeat actions you've already done
-            - Keep Final Answer concise and natural
+            3. After you see the Observation (tool result), you can either:
+            - Use another tool (repeat format above)
+            - Give the final answer (format below)
+
+            4. When you have the final answer:
+
+            Thought: I now have the final answer
+            Final Answer: [your response to the user]
+
+            CRITICAL RULES:
+            - ALWAYS include "Thought:" before your thought
+            - ALWAYS include "Action:" before the action  
+            - ALWAYS include "Action Input:" before the input
+            - Tool names MUST be EXACTLY: {tool_names}
+            - Action Input must be simple strings:
+            * For list_repositories: just the username (e.g., "google")
+            * For classify_bugs: "owner/repo,limit" (e.g., "facebook/react,5")
+            * For merge_classifications: "file1.jsonl,file2.jsonl,output.jsonl"
+            * For analyze_classifications: "filename.jsonl"
+
+            EXAMPLES:
+
+            Example 1 - User asks: "show me google repos"
+            Thought: The user wants to see repositories for google
+            Action: list_repositories
+            Action Input: google
+
+            Example 2 - User asks: "classify 5 bugs from facebook/react"  
+            Thought: The user wants to classify 5 bugs from facebook/react
+            Action: classify_bugs
+            Action Input: facebook/react,5
+
+            Example 3 - User asks: "I need 3 bugs from prettier"
+            Thought: The user wants 3 bugs from prettier, the repo is prettier/prettier
+            Action: classify_bugs
+            Action Input: prettier/prettier,3
+
+            Now begin!
 
             Previous conversation:
             {chat_history}
 
-            Question: {input}
-{agent_scratchpad}"""
+            User: {input}
+
+            {agent_scratchpad}"""
 
         prompt = PromptTemplate.from_template(template)
         

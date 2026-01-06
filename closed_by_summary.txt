@@ -1,0 +1,22 @@
+GITHUB ISSUE CLOSER ANALYSIS
+======================================================================
+
+Top Closers (All Issues)
+----------------------------------------------------------------------
+closed_by_username
+jasonsaayman    2
+Unknown         1
+
+
+Breakdown by Classification
+======================================================================
+
+Intrinsic
+----------------------------------------------------------------------
+closed_by_username  count
+           Unknown      1
+
+Not  a Bug
+----------------------------------------------------------------------
+closed_by_username  count
+      jasonsaayman      2
