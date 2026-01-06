@@ -19,10 +19,8 @@ class BugAgent:
             num_predict=4096
         )
         
-        # Create tools
         self.tools = create_tools()
         
-        # basic agent prompt
         template = """You are a bug classification assistant. You help users explore GitHub repositories and classify bugs.
 
             You have access to these tools:
@@ -89,20 +87,17 @@ class BugAgent:
 
         prompt = PromptTemplate.from_template(template)
         
-        # retain converstaion history
         self.memory = ConversationBufferMemory(
             memory_key="chat_history",
             return_messages=False
         )
         
-        # Create agent
         agent = create_react_agent(
             llm=self.llm,
             tools=self.tools,
             prompt=prompt
         )
         
-        # This will run the agent with tools and memory
         self.agent_executor = AgentExecutor(
             agent=agent,
             tools=self.tools,
@@ -113,45 +108,36 @@ class BugAgent:
         )
     
     def chat(self, message):
-        """Send a message to the agent"""
+
         import os
         from datetime import datetime
         import io
         import sys
         
-        # Create logs directory if needed
         os.makedirs('logs', exist_ok=True)
         
-        # Create log file for this session (one per conversation)
         if not hasattr(self, 'session_log'):
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             self.session_log = f"logs/agent_session_{timestamp}.log"
         
         try:
-            # Capture stdout (where verbose output goes)
             old_stdout = sys.stdout
             sys.stdout = captured_output = io.StringIO()
             
-            # Log the user message to file
             with open(self.session_log, 'a', encoding='utf-8') as f:
                 f.write(f"\n{'='*80}\n")
                 f.write(f"User: {message}\n")
                 f.write(f"Timestamp: {datetime.now().isoformat()}\n")
                 f.write(f"{'='*80}\n\n")
             
-            # Invoke the agent
             response = self.agent_executor.invoke({"input": message})
             
-            # Restore stdout
             sys.stdout = old_stdout
             
-            # Get captured output (all the Thought/Action/Observation steps)
             agent_thinking = captured_output.getvalue()
             
-            # Print to console
             print(agent_thinking)
             
-            # Log everything to file
             with open(self.session_log, 'a', encoding='utf-8') as f:
                 f.write("Agent Thinking Process:\n")
                 f.write(agent_thinking)
