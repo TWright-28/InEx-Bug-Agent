@@ -36,7 +36,7 @@ class BugAgent:
 
             Thought: [one sentence about what you need to do]
             Action: [exact tool name from the list above]
-            Action Input: [the input for the tool]
+            Action Input: "[JSON string input for the tool]"
 
             3. After you see the Observation (tool result), you can either:
             - Use another tool (repeat format above)
@@ -52,28 +52,31 @@ class BugAgent:
             - ALWAYS include "Action:" before the action  
             - ALWAYS include "Action Input:" before the input
             - Tool names MUST be EXACTLY: {tool_names}
-            - Action Input must be simple strings:
-            * For list_repositories: just the username (e.g., "google")
+            - IMPORTANT: Action Input MUST be valid JSON.
+            For these tools, always pass a JSON string (wrap the whole input in double quotes).
+
+            Examples:
+            * For list_repositories: "google"
             * For classify_bugs: "owner/repo,limit" (e.g., "facebook/react,5")
-            * For merge_classifications: "file1.jsonl,file2.jsonl,output.jsonl"
+            * For merge_classifications: "collected.jsonl,results.jsonl,output.jsonl"
             * For analyze_classifications: "filename.jsonl"
 
             EXAMPLES:
 
             Example 1 - User asks: "show me google repos"
-            Thought: The user wants to see repositories for google
-            Action: list_repositories
-            Action Input: google
+            Thought: [one sentence about what you need to do]
+            Action: [exact tool name from the list above]
+            Action Input: "[JSON string input for the tool]"
 
             Example 2 - User asks: "classify 5 bugs from facebook/react"  
             Thought: The user wants to classify 5 bugs from facebook/react
             Action: classify_bugs
-            Action Input: facebook/react,5
+            Action Input: "facebook/react,5"
 
             Example 3 - User asks: "I need 3 bugs from prettier"
             Thought: The user wants 3 bugs from prettier, the repo is prettier/prettier
             Action: classify_bugs
-            Action Input: prettier/prettier,3
+            Action Input: "prettier/prettier,3"
 
             Now begin!
 

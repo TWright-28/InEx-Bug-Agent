@@ -331,10 +331,54 @@ def _safe_list_repos(input_str):
 # Update the tool
 
 
+def _safe_merge_classifications(input_str: str) -> str:
+    """
+    Safely parse and call merge_classifications.
 
+    Accepted input formats:
+      1) "collected.jsonl,results.jsonl"
+      2) "collected.jsonl,results.jsonl,output.jsonl"
 
+    Notes:
+    - Strips whitespace
+    - Rejects too few/many args with a helpful error
+    - Validates file existence for collected/results
+    """
+    try:
+        if not input_str or not input_str.strip():
+            return (
+                "Error: Please provide at least collected and results file paths.\n"
+                "Expected: 'collected.jsonl,results.jsonl[,output.jsonl]'"
+            )
 
+        # Split on commas, strip whitespace, drop empty fields (handles trailing commas)
+        parts = [p.strip() for p in input_str.split(',') if p.strip()]
 
+        if len(parts) not in (2, 3):
+            return (
+                "Error: Invalid input format.\n"
+                "Use: 'collected.jsonl,results.jsonl' OR "
+                "'collected.jsonl,results.jsonl,output.jsonl'\n"
+                "Example: data/collected_20260104_120000.jsonl,data/results_20260104_120000.jsonl,issues_merged.jsonl"
+            )
+
+        collected_file, results_file = parts[0], parts[1]
+        output_file = parts[2] if len(parts) == 3 else "issues_with_classifications.jsonl"
+
+        # Basic validation: files exist
+        if not os.path.exists(collected_file):
+            return f"Error: collected_file not found: {collected_file}"
+        if not os.path.exists(results_file):
+            return f"Error: results_file not found: {results_file}"
+
+        # Call the real merge
+        return merge_classifications(collected_file, results_file, output_file)
+
+    except Exception as e:
+        return (
+            f"Error merging classifications: {str(e)}\n"
+            "Expected: 'collected.jsonl,results.jsonl[,output.jsonl]'"
+        )
 
 # Create tools
 tools = [
@@ -357,8 +401,15 @@ tools = [
     ),
     Tool(
         name="merge_classifications",
-        func=lambda input_str: merge_classifications(*input_str.split(',')),
-        description="Merge classification results with collected data. Input should be 'collected_file.jsonl,results_file.jsonl,output_file.jsonl' (e.g., 'data/collected_20260104.jsonl,data/results_20260104.jsonl,issues_merged.jsonl'). Output file is optional."
+        func=lambda input_str: _safe_merge_classifications(input_str),
+        description=(
+            "Merge classification results with collected data.\n"
+            "Input: 'collected.jsonl,results.jsonl[,output.jsonl]'\n"
+            "Examples:\n"
+            "- 'data/collected_20260104_120000.jsonl,data/results_20260104_120000.jsonl'\n"
+            "- 'data/collected_20260104_120000.jsonl,data/results_20260104_120000.jsonl,issues_merged.jsonl'\n"
+            "If output is omitted, defaults to 'issues_with_classifications.jsonl'."
+        )
     ),
     Tool(
         name="analyze_classifications", 
