@@ -768,9 +768,15 @@ def _draw_sankey_flow(ax, df):
 def _draw_repo_distribution(ax, df):
     """Draw repository distribution boxplot with jittered points."""
     if 'project' not in df.columns:
-        ax.text(0.5, 0.5, 'No project data available', 
-                ha='center', va='center', transform=ax.transAxes)
-        return
+            ax.text(0.5, 0.5, 'No project data available', 
+                    ha='center', va='center', transform=ax.transAxes)
+            return
+        
+        # Add minimum repo check
+    if len(df['project'].unique()) < 2:
+            ax.text(0.5, 0.5, f'Need data from 2+ repositories\n(have {len(df["project"].unique())})', 
+                    ha='center', va='center', transform=ax.transAxes)
+            return
     
     # Calculate proportions per repository
     project_data = []
@@ -831,12 +837,25 @@ def _draw_repo_distribution(ax, df):
     ax.set_axisbelow(True)
 
 def _draw_time_to_close(ax, df):
-    """Draw time to close boxplot."""
     df_closed = df[df['time_to_close_days'].notna()].copy()
+    
+    # Add check for minimum data
+    if len(df_closed) < 3:
+        ax.text(0.5, 0.5, f'Insufficient data for time to close analysis\n(need 3+ closed issues, have {len(df_closed)})', 
+                ha='center', va='center', transform=ax.transAxes)
+        ax.set_title('Time to Close Distribution')
+        return
     
     bug_order = ['Intrinsic', 'Extrinsic', 'Not  a Bug']
     data_to_plot = [df_closed[df_closed['bug_type'] == bt]['time_to_close_days'].values 
                     for bt in bug_order if bt in df_closed['bug_type'].values]
+    
+    # Check if we have any data
+    if not data_to_plot or all(len(d) == 0 for d in data_to_plot):
+        ax.text(0.5, 0.5, 'No closed issues with time data', 
+                ha='center', va='center', transform=ax.transAxes)
+        return
+    
     positions = range(len(data_to_plot))
     
     bp = ax.boxplot(data_to_plot, positions=positions, widths=0.5,

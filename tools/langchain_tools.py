@@ -125,6 +125,80 @@ Top issues:
     
     return summary
 
+
+def collect_bugs(repo: str, limit: int = 10) -> str:
+    """Collect bug data from a GitHub repository WITHOUT classification"""
+    
+    print(f"\n Collecting {limit} issues from {repo}...\n")
+    issues = collector.collect(repo, limit)
+    
+    if not issues:
+        return f"No issues found in {repo}"
+    
+    # Prepare storage
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    collected_file = f"data/collected_{timestamp}.jsonl"
+    
+    # Ensure data directory exists
+    os.makedirs('data', exist_ok=True)
+    
+    # Save collected issues
+    print(f" Saving collected issues to {collected_file}...")
+    with open(collected_file, 'w', encoding='utf-8') as f:
+        for issue in issues:
+            f.write(json.dumps(issue, ensure_ascii=False) + '\n')
+    
+    # Summarize (NO classification info)
+    summary = f"""
+Collected {len(issues)} issues from {repo}:
+
+Collected data saved to: {collected_file}
+
+Top issues:
+"""
+    
+    for i, issue in enumerate(issues[:5], 1):
+        state = issue.get('state', 'unknown')
+        summary += f"  • #{issue['number']}: {issue['title'][:60]}... ({state})\n"
+    
+    summary += f"\nData collected successfully. To classify these issues, run classification separately."
+    
+    return summary
+
+
+def _safe_collect_bugs(input_str):
+    """Safely parse and call collect_bugs"""
+    try:
+        parts = input_str.split(',')
+        
+        if len(parts) == 1:
+            repo = parts[0].strip()
+            limit = 10
+        elif len(parts) == 2:
+            repo = parts[0].strip()
+            limit_str = parts[1].strip()
+            
+            try:
+                limit = int(limit_str)
+            except ValueError:
+                return f"Error: limit must be a number, got '{limit_str}'"
+        else:
+            return f"Error: Invalid input format. Use 'owner/repo,limit' (e.g., 'facebook/react,5')"
+        
+        if '/' not in repo:
+            return f"Error: Repository must be in 'owner/repo' format (e.g., 'facebook/react', not just 'react')"
+        
+        repo_parts = repo.split('/')
+        if len(repo_parts) != 2:
+            return f"Error: Repository must be 'owner/repo' format, got '{repo}'"
+        
+        return collect_bugs(repo, limit)
+        
+    except Exception as e:
+        return f"Error parsing input: {str(e)}\nExpected format: 'owner/repo,limit' (e.g., 'facebook/react,5')"
+
+
+
 def merge_classifications(collected_file: str, results_file: str, output_file: str = "issues_with_classifications.jsonl") -> str:
     """
     Merge classification results back into collected data.
@@ -206,11 +280,10 @@ def merge_classifications(collected_file: str, results_file: str, output_file: s
                 # Write to output
                 f.write(json.dumps(issue, ensure_ascii=False) + '\n')
         
-        return f"""
- Successfully merged {merged_count}/{len(collected)} issues
- Output saved to: {output_file}
+        return f""" Successfully merged {merged_count}/{len(collected)} issues
+Output saved to: {output_file}
 
-You can now run analysis on this file.
+IMPORTANT: Use this file for analysis: {output_file}
 """
     
     except Exception as e:
@@ -308,7 +381,24 @@ def _safe_classify_bugs(input_str):
     except Exception as e:
         return f"Error parsing input: {str(e)}\nExpected format: 'owner/repo,limit' (e.g., 'facebook/react,5')"
 
-
+def _safe_analyze_classifications(input_str):
+    """Safely parse and call analyze_classifications"""
+    try:
+        # Clean the input
+        input_file = input_str.strip().strip('"').strip("'")
+        
+        if not input_file:
+            input_file = "issues_with_classifications.jsonl"
+        
+        if not os.path.exists(input_file):
+            return f"Error: File not found: {input_file}\n\nAvailable files:\n" + "\n".join(
+                [f"  - {f}" for f in os.listdir('.') if f.endswith('.jsonl')]
+            )
+        
+        return analyze_classifications(input_file)
+        
+    except Exception as e:
+        return f"Error: {str(e)}"
 
 
 
@@ -331,86 +421,99 @@ def _safe_list_repos(input_str):
 # Update the tool
 
 
-def _safe_merge_classifications(input_str: str) -> str:
-    """
-    Safely parse and call merge_classifications.
-
-    Accepted input formats:
-      1) "collected.jsonl,results.jsonl"
-      2) "collected.jsonl,results.jsonl,output.jsonl"
-
-    Notes:
-    - Strips whitespace
-    - Rejects too few/many args with a helpful error
-    - Validates file existence for collected/results
-    """
+def _safe_merge_classifications(input_str):
+    """Safely parse and call merge_classifications"""
     try:
-        if not input_str or not input_str.strip():
-            return (
-                "Error: Please provide at least collected and results file paths.\n"
-                "Expected: 'collected.jsonl,results.jsonl[,output.jsonl]'"
-            )
-
-        # Split on commas, strip whitespace, drop empty fields (handles trailing commas)
-        parts = [p.strip() for p in input_str.split(',') if p.strip()]
-
-        if len(parts) not in (2, 3):
-            return (
-                "Error: Invalid input format.\n"
-                "Use: 'collected.jsonl,results.jsonl' OR "
-                "'collected.jsonl,results.jsonl,output.jsonl'\n"
-                "Example: data/collected_20260104_120000.jsonl,data/results_20260104_120000.jsonl,issues_merged.jsonl"
-            )
-
-        collected_file, results_file = parts[0], parts[1]
-        output_file = parts[2] if len(parts) == 3 else "issues_with_classifications.jsonl"
-
-        # Basic validation: files exist
+        # Clean the input string
+        input_str = input_str.strip().strip('"').strip("'")
+        
+        parts = [p.strip() for p in input_str.split(',')]
+        
+        if len(parts) == 2:
+            # No output file specified, use default
+            collected_file = parts[0]
+            results_file = parts[1]
+            output_file = "issues_with_classifications.jsonl"
+        elif len(parts) == 3:
+            collected_file = parts[0]
+            results_file = parts[1]
+            output_file = parts[2]
+        else:
+            return f"Error: Expected 2-3 files separated by commas.\nFormat: 'collected.jsonl,results.jsonl' or 'collected.jsonl,results.jsonl,output.jsonl'"
+        
+        # Check files exist
         if not os.path.exists(collected_file):
-            return f"Error: collected_file not found: {collected_file}"
+            return f"Error: Collected file not found: {collected_file}"
         if not os.path.exists(results_file):
-            return f"Error: results_file not found: {results_file}"
-
-        # Call the real merge
+            return f"Error: Results file not found: {results_file}"
+        
         return merge_classifications(collected_file, results_file, output_file)
-
+        
     except Exception as e:
-        return (
-            f"Error merging classifications: {str(e)}\n"
-            "Expected: 'collected.jsonl,results.jsonl[,output.jsonl]'"
-        )
+        return f"Error parsing merge input: {str(e)}"
 
 
 
 
 # Create tools
+# Create tools
 tools = [
     Tool(
-    name="list_repositories",
-    func=lambda input_str: _safe_list_repos(input_str),
-    description="List GitHub repositories for a user or organization. Input should be just the username or organization name (e.g., 'google', 'facebook', 'microsoft')."
+        name="list_repositories",
+        func=lambda input_str: _safe_list_repos(input_str),
+        description="List GitHub repositories for a user or organization. Input should be just the username or organization name (e.g., 'google', 'facebook', 'microsoft')."
     ),
     Tool(
-    name="classify_bugs",
-    func=lambda input_str: _safe_classify_bugs(input_str),
-    description="""Classify bugs from a GitHub repository. 
-            Input format: "owner/repo,limit" where limit is a number
-            Examples: 
-            - "facebook/react,5" - classify 5 bugs from facebook/react
-            - "google/leveldb,10" - classify 10 bugs from google/leveldb
-            - "microsoft/vscode,3" - classify 3 bugs from microsoft/vscode
+        name="collect_bugs",  # ← NEW TOOL
+        func=lambda input_str: _safe_collect_bugs(input_str),
+        description="""Collect bug data from a GitHub repository WITHOUT classification.
+        
+Input format: "owner/repo,limit" where limit is a number
 
-            If only repo name given without owner, try common patterns."""
+Examples:
+  - "facebook/react,5" - collect 5 issues (no classification)
+  - "google/leveldb,10" - collect 10 issues (no classification)
+
+This ONLY fetches data from GitHub. No classification is performed.
+To classify bugs, use classify_bugs instead."""
+    ),
+    Tool(
+        name="classify_bugs",
+        func=lambda input_str: _safe_classify_bugs(input_str),
+        description="""Collect AND classify bugs from a GitHub repository.
+        
+Input format: "owner/repo,limit" where limit is a number
+
+Examples:
+  - "facebook/react,5" - collect and classify 5 bugs
+  - "google/leveldb,10" - collect and classify 10 bugs
+
+This fetches data from GitHub AND runs classification on each issue.
+To just collect data without classification, use collect_bugs instead."""
     ),
     Tool(
         name="merge_classifications",
-        func=lambda input_str: merge_classifications(*input_str.split(',')),
-        description="Merge classification results with collected data. Input should be 'collected_file.jsonl,results_file.jsonl,output_file.jsonl' (e.g., 'data/collected_20260104.jsonl,data/results_20260104.jsonl,issues_merged.jsonl'). Output file is optional."
+        func=lambda input_str: _safe_merge_classifications(input_str),
+        description="""Merge classification results with collected data.
+    
+Input format: "collected_file.jsonl,results_file.jsonl,output_file.jsonl"
+The output file is optional (defaults to issues_with_classifications.jsonl)
+
+Examples:
+  - "data/collected_20260107.jsonl,data/results_20260107.jsonl"
+  - "data/collected_20260107.jsonl,data/results_20260107.jsonl,merged.jsonl"
+"""
     ),
     Tool(
-        name="analyze_classifications", 
-        func=lambda input_file: analyze_classifications(input_file if input_file.strip() else "issues_with_classifications.jsonl"),
-        description="Run comprehensive statistical analysis on classified issues and generate publication-quality figures. Input should be the path to a merged JSONL file with classifications (e.g., 'issues_with_classifications.jsonl'). Generates statistics and visualizations in figures/ directory."
+        name="analyze_classifications",
+        func=lambda input_str: _safe_analyze_classifications(input_str),
+        description="""Run comprehensive analysis on classified issues.
+    
+Input: Path to a merged JSONL file with classifications (file must have 'final_classification' field)
+
+Example: "issues_with_classifications.jsonl"
+
+This generates statistics and visualizations in the figures/ directory."""
     )
 ]
 

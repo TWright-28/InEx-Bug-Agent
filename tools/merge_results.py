@@ -1,17 +1,6 @@
 import json
 
 def merge_classifications(collected_file, results_file, output_file):
-    """
-    Merge classification results back into collected data.
-    
-    Args:
-        collected_file: Path to collected_TIMESTAMP.jsonl
-        results_file: Path to results_TIMESTAMP.jsonl
-        output_file: Path to output merged file
-    
-    Returns:
-        Number of issues merged
-    """
     
     # Load collected data
     print(f"Loading collected data from {collected_file}...")

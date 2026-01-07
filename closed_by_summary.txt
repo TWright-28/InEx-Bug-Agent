@@ -4,7 +4,8 @@ GITHUB ISSUE CLOSER ANALYSIS
 Top Closers (All Issues)
 ----------------------------------------------------------------------
 closed_by_username
-Unknown    3
+Unknown         1
+jasonsaayman    1
 
 
 Breakdown by Classification
@@ -15,12 +16,7 @@ Intrinsic
 closed_by_username  count
            Unknown      1
 
-Not  a Bug
-----------------------------------------------------------------------
-closed_by_username  count
-           Unknown      1
-
 Unknown
 ----------------------------------------------------------------------
 closed_by_username  count
-           Unknown      1
+      jasonsaayman      1
