@@ -651,7 +651,7 @@ def export_closer_summary(df, output_path="closed_by_summary.txt"):
             f.write(subset[["closed_by_username", "count"]].to_string(index=False))
             f.write("\n")
 
-    print(f"\n✓ Exported closer summary to: {output_path}")
+    print(f"\n Exported closer summary to: {output_path}")
 
 # ============================================================================
 # SECTION 11: VISUALIZATION

@@ -380,6 +380,9 @@ def _safe_merge_classifications(input_str: str) -> str:
             "Expected: 'collected.jsonl,results.jsonl[,output.jsonl]'"
         )
 
+
+
+
 # Create tools
 tools = [
     Tool(
@@ -401,15 +404,8 @@ tools = [
     ),
     Tool(
         name="merge_classifications",
-        func=lambda input_str: _safe_merge_classifications(input_str),
-        description=(
-            "Merge classification results with collected data.\n"
-            "Input: 'collected.jsonl,results.jsonl[,output.jsonl]'\n"
-            "Examples:\n"
-            "- 'data/collected_20260104_120000.jsonl,data/results_20260104_120000.jsonl'\n"
-            "- 'data/collected_20260104_120000.jsonl,data/results_20260104_120000.jsonl,issues_merged.jsonl'\n"
-            "If output is omitted, defaults to 'issues_with_classifications.jsonl'."
-        )
+        func=lambda input_str: merge_classifications(*input_str.split(',')),
+        description="Merge classification results with collected data. Input should be 'collected_file.jsonl,results_file.jsonl,output_file.jsonl' (e.g., 'data/collected_20260104.jsonl,data/results_20260104.jsonl,issues_merged.jsonl'). Output file is optional."
     ),
     Tool(
         name="analyze_classifications", 

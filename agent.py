@@ -13,7 +13,7 @@ load_dotenv()
 class BugAgent:
     def __init__(self):
         self.llm = ChatOllama(
-            model="gpt-oss:20b",
+            model="qwen2.5:7b-instruct",
             base_url="http://localhost:11434",
             temperature=0.5,
             num_predict=4096
