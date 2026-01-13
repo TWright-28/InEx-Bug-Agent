@@ -452,6 +452,124 @@ def _safe_merge_classifications(input_str):
     except Exception as e:
         return f"Error parsing merge input: {str(e)}"
 
+def classify_from_file(collected_file: str) -> str:
+    """
+    Classify bugs from an already-collected file
+    
+    Args:
+        collected_file: Path to collected_*.jsonl file
+    """
+    from pathlib import Path
+    
+    print(f"\n Classifying bugs from {collected_file}...\n")
+    
+    # Verify file exists
+    if not Path(collected_file).exists():
+        return f"Error: File not found: {collected_file}"
+    
+    # Load collected issues
+    issues = []
+    with open(collected_file, 'r', encoding='utf-8') as f:
+        for line in f:
+            issues.append(json.loads(line))
+    
+    if not issues:
+        return f"No issues found in {collected_file}"
+    
+    print(f"Found {len(issues)} issues to classify")
+    
+    # Extract repo name from first issue
+    repo = f"{issues[0]['owner']}/{issues[0]['repo']}"
+    
+    # Prepare storage
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    results_file = f"data/results_{timestamp}.jsonl"
+    log_file = f"data/classification_{timestamp}.log"
+    
+    # Classify each issue
+    results = []
+    
+    # Open log file
+    with open(log_file, 'w', encoding='utf-8') as log:
+        log.write(f"Classification started at {datetime.now().isoformat()}\n")
+        log.write(f"Source file: {collected_file}\n")
+        log.write(f"Total issues to classify: {len(issues)}\n")
+        log.write("="*80 + "\n\n")
+        
+        for i, issue in enumerate(issues, 1):
+            print(f"Classifying issue {i}/{len(issues)}: #{issue['number']}")
+            
+            # Log to file
+            log.write(f"[{i}/{len(issues)}] Issue #{issue['number']}: {issue['title']}\n")
+            log.flush()
+            
+            classification = classifier.classify(issue)
+            
+            # Match the EXACT format from classify_bugs
+            result = {
+                'timestamp': datetime.now().isoformat(),
+                'repo': repo,  # ADDED
+                'number': issue['number'],
+                'title': issue['title'],
+                'url': issue['url'],  # Changed from html_url
+                'state': issue['state'],  # ADDED
+                'classification': classification['classification'],
+                'reasoning': classification['reasoning'],
+                'probabilities': classification.get('probabilities', {}),  # ADDED
+                'raw_response': classification.get('raw_response', '')  # ADDED
+            }
+            
+            results.append(result)
+            
+            # Save incrementally to JSONL
+            with open(results_file, 'a', encoding='utf-8') as f:
+                f.write(json.dumps(result, ensure_ascii=False) + '\n')
+            
+            # Log result
+            log.write(f"  Classification: {classification['classification']}\n")
+            log.write(f"  Reasoning (first 200 chars): {classification['reasoning'][:200]}...\n")
+            log.write("\n")
+            log.flush()
+    
+    # Count by type
+    intrinsic = len([r for r in results if r['classification'] == 'INTRINSIC'])
+    extrinsic = len([r for r in results if r['classification'] == 'EXTRINSIC'])
+    not_bug = len([r for r in results if r['classification'] == 'NOT_A_BUG'])
+    unknown = len([r for r in results if r['classification'] == 'UNKNOWN'])
+    
+    # Summary
+    summary = f"""
+Classification complete! Processed {len(issues)} issues.
+
+Results:
+  • Intrinsic: {intrinsic}
+  • Extrinsic: {extrinsic}
+  • Not a Bug: {not_bug}
+  • Unknown: {unknown}
+
+Results saved to: {results_file}
+Log saved to: {log_file}
+
+Top issues:
+"""
+    
+    for r in results[:5]:
+        summary += f"  • #{r['number']}: {r['title'][:60]}... ({r['classification']})\n"
+    
+    summary += f"\nTo merge with collected data, use: merge_classifications"
+    
+    return summary
+
+
+def _safe_classify_from_file(input_str):
+    """Wrapper with error handling"""
+    try:
+        file_path = input_str.strip()
+        return classify_from_file(file_path)
+    except Exception as e:
+        import traceback
+        return f"Error classifying from file: {str(e)}\n{traceback.format_exc()}"
+
 
 
 
@@ -514,7 +632,18 @@ Input: Path to a merged JSONL file with classifications (file must have 'final_c
 Example: "issues_with_classifications.jsonl"
 
 This generates statistics and visualizations in the figures/ directory."""
-    )
+    ), 
+    Tool(
+        name="classify_from_file",  # NEW TOOL!
+        func=lambda input_str: _safe_classify_from_file(input_str),
+        description="""Classify bugs from an already-collected file.
+        
+Input format: "path/to/collected_*.jsonl"
+
+Use this when user already collected data and now wants to classify it.
+Example: "data/collected_20260112_153045.jsonl"
+"""
+    ),
 ]
 
 def create_tools():

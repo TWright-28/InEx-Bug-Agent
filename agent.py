@@ -4,16 +4,17 @@ from langchain_core.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
 from tools.langchain_tools import create_tools
 from dotenv import load_dotenv
-import json
-from datetime import datetime
 import os
+from datetime import datetime
+import io
+import sys
 
 load_dotenv()
 
 class BugAgent:
     def __init__(self):
         self.llm = ChatOllama(
-            model="gpt-oss:20b",
+            model="qwen3:30b",
             base_url="http://localhost:11434",
             temperature=0.3,
             num_predict=4096
@@ -21,214 +22,144 @@ class BugAgent:
         
         self.tools = create_tools()
         
-        template = """You are a bug classification assistant. You help users explore GitHub repositories and classify bugs.
+        template = """You are a helpful bug classification assistant for GitHub issues.
 
-            You have access to these tools:
-            {tools}
+AVAILABLE TOOLS:
+{tools}
 
-            Tool names: {tool_names}
+Tool names: {tool_names}
 
-            CRITICAL WORKFLOW UNDERSTANDING:
-            ================================
-            Bug classification has THREE steps that must happen IN ORDER:
+═══════════════════════════════════════════════════════════════════
+TOOL DESCRIPTIONS
+═══════════════════════════════════════════════════════════════════
 
-            STEP 1: CLASSIFY OR COLLECT
-            - Collect: Just fetch GitHub data (use collect_bugs)
-            - Classify: Fetch data AND classify bugs (use classify_bugs)
-            - Output: TWO files (collected_TIMESTAMP.jsonl and results_TIMESTAMP.jsonl for classify)
+1. list_repositories: Browse GitHub repos for a user/org
+2. collect_bugs: Fetch issues from GitHub (NO classification)
+3. classify_bugs: Fetch issues AND classify them
+4. classify_from_file: Classify previously collected issues
+5. merge_classifications: Combine collected + classified data
+6. analyze_classifications: Generate statistics and figures
 
-            STEP 2: MERGE (REQUIRED before analysis)
-            - Input: The TWO files from Step 1
-            - Output: ONE merged file (issues_with_classifications.jsonl)
-            - Tool: merge_classifications
-            - WHY: Analysis needs the 'final_classification' field which only exists in merged files
-            - AFTER MERGE: You MUST proceed to Step 3 (analyze) if that's what the user wants
+═══════════════════════════════════════════════════════════════════
+WORKFLOW PATTERNS
+═══════════════════════════════════════════════════════════════════
 
-            STEP 3: ANALYZE
-            - Input: The MERGED file from Step 2 (always "issues_with_classifications.jsonl")
-            - Output: Statistics and figures
-            - Tool: analyze_classifications
-            - MUST use: "issues_with_classifications.jsonl" (this is the default merged filename)
+PATTERN 1: Collect Only
+User: "collect 5 bugs from react"
+→ Action: collect_bugs → Done
 
-            CRITICAL DISTINCTION:
-            ====================
-            collect_bugs: Fetch GitHub data ONLY (no classification)
-            classify_bugs: Fetch data AND classify bugs
+PATTERN 2: Classify (new collection)
+User: "classify 5 bugs from react"
+→ Action: classify_bugs → Done
 
-            WHEN TO USE EACH:
-            - User says "collect" → use collect_bugs
-            - User says "classify" → use classify_bugs
-            - User says "get" or "fetch" → use collect_bugs (unless they say "and classify")
+PATTERN 3: Classify (existing collection)
+User: [after collecting] "classify them"
+→ Action: classify_from_file → Done
 
-            RESPONSE FORMAT:
-            ===============
-            You MUST respond EXACTLY in this format:
+PATTERN 4: Full Analysis Workflow
+User: "classify 5 bugs and analyze"
+→ Step 1: classify_bugs
+→ Step 2: merge_classifications
+→ Step 3: analyze_classifications
+→ Done
 
-            Thought: [one sentence about what you need to do]
-            Action: [exact tool name from: {tool_names}]
-            Action Input: [the input for the tool]
+═══════════════════════════════════════════════════════════════════
+CRITICAL RULES
+═══════════════════════════════════════════════════════════════════
 
-            After seeing the Observation (tool result):
-            - Continue with another action if needed
-            - Or give the Final Answer
+RULE 1: ONE TOOL CALL PER THOUGHT
+After calling a tool, WAIT for the Observation before deciding next action.
 
-            When finished:
-            Thought: I now have the final answer
-            Final Answer: [your response to the user]
+RULE 2: NO REPEATED CALLS
+If a tool returns a success message, it worked.
+DO NOT call it again with the same input.
+Check the Observation for "saved to" or "complete" - if present, move on.
 
-            CRITICAL RULES FOR TOOL USE:
-            ============================
-            1. NEVER imagine tool results - you MUST wait for the actual Observation
-            2. After calling a tool, STOP and wait for the Observation
-            3. Do NOT write "Final Answer" until ALL tools have run and you've seen their Observations
-            4. Do NOT write hypothetical text like "[After seeing...]" - wait for the real result
-            5. Each Action must be followed by an actual Observation before you continue
-            6. After merge_classifications completes, if user wanted analysis, you MUST call analyze_classifications next
-            7. Do NOT call the same tool twice in a row unless there was an error
+RULE 3: MERGE → ANALYZE SEQUENCE
+After merge_classifications succeeds (shows "Output saved to"), 
+the ONLY valid next action is analyze_classifications.
+DO NOT call merge again!
 
-            BAD Example (WRONG):
-            Action: analyze_classifications
-            Action Input: issues_with_classifications.jsonl
-            [After seeing analysis results...]  ← WRONG! You haven't seen them yet!
-            Final Answer: Here are the results... ← WRONG! Tool hasn't run!
+RULE 4: RESPECT USER INTENT
+- If user says "collect" → collect_bugs only
+- If user says "classify" → classify_bugs only (don't auto-analyze)
+- If user says "analyze" → do full workflow (classify → merge → analyze)
 
-            GOOD Example (CORRECT):
-            Action: analyze_classifications
-            Action Input: issues_with_classifications.jsonl
+═══════════════════════════════════════════════════════════════════
+SUCCESS INDICATORS
+═══════════════════════════════════════════════════════════════════
 
-            [Wait for Observation...]
+After calling a tool, check the Observation for these success messages:
 
-            [After you see the actual Observation with real results:]
-            Thought: I now have the analysis results
-            Final Answer: [Present the ACTUAL results from the Observation]
+- collect_bugs: "Data collected successfully"
+- classify_bugs: "Results saved to: data/results_"
+- classify_from_file: "Results saved to: data/results_"
+- merge_classifications: "Output saved to: issues_with_classifications.jsonl"
+- analyze_classifications: "Analysis complete!"
 
-            USER FLEXIBILITY:
-            =================
-            Users have different levels of intent. LISTEN CAREFULLY to what they ask for:
+If you see the SUCCESS indicator, that tool is DONE.
+Move to next step OR give Final Answer.
+DO NOT call the same tool again!
 
-            INTENT 1: Just Collect Data (NO classification)
-            - "collect 5 bugs from react"
-            - "get 10 issues from vue"
-            - "fetch bugs from angular"
-            → Action: collect_bugs ONLY
+═══════════════════════════════════════════════════════════════════
+RESPONSE FORMAT
+═══════════════════════════════════════════════════════════════════
 
-            INTENT 2: Just Classification
-            - "classify 5 bugs from react"
-            - "classify issues from vue"
-            → Action: classify_bugs ONLY, then Final Answer with summary
+Always use this exact format:
 
-            INTENT 3: Classification + Analysis (Full workflow)
-            - "classify 5 bugs and analyze them"
-            - "collect, classify and analyze bugs from react"
-            → Actions: classify_bugs → merge_classifications → analyze_classifications
+Thought: [What I need to do]
+Action: [tool name]
+Action Input: [tool input]
 
-            INTENT 4: Just Analysis (use existing data)
-            - "analyze those bugs" (after previous classification)
-            - "run analysis on issues_with_classifications.jsonl"
-            - "analyze the results"
-            → Check if merge needed first, then analyze_classifications
+[WAIT FOR OBSERVATION]
 
-            INTENT 5: Just Merge (intermediate step)
-            - "merge the results"
-            - "merge data/collected_X.jsonl and data/results_X.jsonl"
-            → Action: merge_classifications ONLY
+Thought: [What the observation tells me]
+Action: [next tool if needed] OR Final Answer: [if done]
 
-            INTENT 6: Browse Repositories (separate workflow)
-            - "show me repos for google"
-            - "list facebook repositories"
-            → Action: list_repositories ONLY
+═══════════════════════════════════════════════════════════════════
+EXAMPLES
+═══════════════════════════════════════════════════════════════════
 
-            CRITICAL: If user ONLY asks to "collect", use collect_bugs (not classify_bugs)
-            CRITICAL: If user ONLY asks to "classify", do NOT automatically merge or analyze
-            Only do the full workflow if they explicitly request analysis or say "and analyze"
+Example 1: Collect only
+User: "collect 2 bugs from numpy"
+Thought: User wants to collect bugs without classification
+Action: collect_bugs
+Action Input: numpy/numpy,2
+Observation: Collected 2 issues... saved to data/collected_X.jsonl
+Thought: Collection complete, user didn't ask for classification
+Final Answer: Collected 2 bugs from numpy. Saved to data/collected_X.jsonl
 
-            EXAMPLES:
-            =========
+Example 2: Classify existing bugs
+User: "classify them"
+Thought: User wants to classify previously collected bugs
+Action: classify_from_file
+Action Input: data/collected_20260112_154725.jsonl
+Observation: Classification complete... saved to data/results_X.jsonl
+Thought: Classification done, user didn't ask for analysis
+Final Answer: Classified 2 bugs. Results in data/results_X.jsonl
 
-            Example 1 - User asks: "collect 2 bugs from react"
-            Thought: User wants to collect 2 bugs only, no classification requested
-            Action: collect_bugs
-            Action Input: facebook/react,2
+Example 3: Analyze workflow
+User: "analyze them"
+Thought: User wants analysis, need to merge first
+Action: merge_classifications
+Action Input: data/collected_X.jsonl,data/results_Y.jsonl
+Observation: Successfully merged... Output saved to: issues_with_classifications.jsonl
+Thought: Merge succeeded, now I must analyze (NOT merge again)
+Action: analyze_classifications
+Action Input: issues_with_classifications.jsonl
+Observation: Analysis complete! Generated figures/...
+Thought: Analysis done
+Final Answer: Analysis complete! Generated comprehensive_analysis.png, ...
 
-            [After seeing collection results...]
+═══════════════════════════════════════════════════════════════════
 
-            Thought: Collection complete, user did not ask for classification
-            Final Answer: I've collected 2 bugs from facebook/react. Data saved to data/collected_TIMESTAMP.jsonl. [Present the actual summary from the Observation]
+Previous conversation:
+{chat_history}
 
-            Example 2 - User asks: "classify 2 bugs from react"
-            Thought: User wants to classify 2 bugs only, no analysis requested
-            Action: classify_bugs
-            Action Input: facebook/react,2
+Current request:
+{input}
 
-            [After seeing classification results...]
-
-            Thought: Classification complete, user did not ask for analysis
-            Final Answer: I've classified 2 bugs from facebook/react. Results saved to data/results_TIMESTAMP.jsonl and data/collected_TIMESTAMP.jsonl. Here's the summary: [Present the actual summary from the Observation]
-
-            Example 3 - User asks: "classify 5 bugs from react and analyze them"
-            Thought: User wants classification AND analysis, I need all three steps
-            Action: classify_bugs
-            Action Input: facebook/react,5
-
-            [After seeing results with file paths...]
-
-            Thought: Now I must merge before analyzing
-            Action: merge_classifications
-            Action Input: data/collected_20260107_091954.jsonl,data/results_20260107_091954.jsonl
-
-            [After seeing: "Output saved to: issues_with_classifications.jsonl"]
-
-            Thought: Merge complete, now I MUST analyze using the merged file
-            Action: analyze_classifications
-            Action Input: issues_with_classifications.jsonl
-
-            [After seeing analysis results...]
-
-            Thought: All steps complete
-            Final Answer: [Present the actual analysis results from the Observation]
-
-            Example 4 - User asks: "analyze those bugs" (after previous classification)
-            Thought: User wants to analyze previously classified bugs, I need to merge first
-            Action: merge_classifications
-            Action Input: data/collected_20260107_144831.jsonl,data/results_20260107_144831.jsonl
-
-            [After seeing: "Output saved to: issues_with_classifications.jsonl"]
-
-            Thought: Merge complete, now I MUST analyze using the merged file
-            Action: analyze_classifications
-            Action Input: issues_with_classifications.jsonl
-
-            [After seeing analysis results...]
-
-            Thought: Analysis complete
-            Final Answer: [Present the actual analysis results]
-
-            Example 5 - User asks: "show me google repos"
-            Thought: User wants to see repositories for google
-            Action: list_repositories
-            Action Input: google
-
-            [After seeing results...]
-
-            Thought: I have the repository list
-            Final Answer: [Present the repos to user]
-
-            Example 6 - User asks: "merge the results"
-            Thought: User wants to merge their most recent classification files
-            Action: merge_classifications
-            Action Input: data/collected_20260107_091954.jsonl,data/results_20260107_091954.jsonl
-
-            [After seeing merge complete...]
-
-            Thought: Merge complete
-            Final Answer: Successfully merged the classification results. Output saved to issues_with_classifications.jsonl
-
-            Previous conversation:
-            {chat_history}
-
-            User: {input}
-
-            {agent_scratchpad}"""
+{agent_scratchpad}"""
 
         prompt = PromptTemplate.from_template(template)
         
@@ -244,22 +175,17 @@ class BugAgent:
         )
         
         self.agent_executor = AgentExecutor(
-        agent=agent,
-        tools=self.tools,
-        memory=self.memory,
-        verbose=True,
-        handle_parsing_errors=True,
-        max_iterations=7, 
-        return_intermediate_steps=True
+            agent=agent,
+            tools=self.tools,
+            memory=self.memory,
+            verbose=True,
+            handle_parsing_errors=True,
+            max_iterations=5,  # Reduced from 7 to prevent long loops
+            return_intermediate_steps=True
         )
     
     def chat(self, message):
-
-        import os
-        from datetime import datetime
-        import io
-        import sys
-        
+        """Handle user message and log session"""
         os.makedirs('logs', exist_ok=True)
         
         if not hasattr(self, 'session_log'):
@@ -267,25 +193,32 @@ class BugAgent:
             self.session_log = f"logs/agent_session_{timestamp}.log"
         
         try:
+            # Capture agent thinking
             old_stdout = sys.stdout
             sys.stdout = captured_output = io.StringIO()
             
+            # Log user input
             with open(self.session_log, 'a', encoding='utf-8') as f:
                 f.write(f"\n{'='*80}\n")
                 f.write(f"User: {message}\n")
                 f.write(f"Timestamp: {datetime.now().isoformat()}\n")
                 f.write(f"{'='*80}\n\n")
             
+            # Run agent
             response = self.agent_executor.invoke({"input": message})
             
+            # Restore stdout
             sys.stdout = old_stdout
             
+            # Get thinking process
             agent_thinking = captured_output.getvalue()
             
+            # Print to console
             print(agent_thinking)
             
+            # Log everything
             with open(self.session_log, 'a', encoding='utf-8') as f:
-                f.write("Agent Thinking Process:\n")
+                f.write("Agent Thinking:\n")
                 f.write(agent_thinking)
                 f.write(f"\n\nFinal Response:\n")
                 f.write(f"{response.get('output', 'No response')}\n")
@@ -296,10 +229,8 @@ class BugAgent:
             return response.get("output", "I'm not sure how to respond to that.")
             
         except Exception as e:
-            # Restore stdout if error
             sys.stdout = old_stdout
             
-            # Log errors too
             with open(self.session_log, 'a', encoding='utf-8') as f:
                 f.write(f"\nERROR: {str(e)}\n")
                 f.write(f"\n{'='*80}\n")
