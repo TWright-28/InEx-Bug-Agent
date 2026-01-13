@@ -570,7 +570,91 @@ def _safe_classify_from_file(input_str):
         import traceback
         return f"Error classifying from file: {str(e)}\n{traceback.format_exc()}"
 
+def track_package_evolution(package_name: str) -> str:
+    """
+    Track how a package's bug composition evolved across all versions.
+    
+    Args:
+        package_name: npm package name
+    
+    Returns:
+        Complete version-by-version evolution report
+    """
+    from tools.package_evolution_tracker import track_package_evolution as track_evolution
+    from tools.package_evolution_tracker import format_evolution_report
+    
+    try:
+        results = track_evolution(package_name)
+        
+        if 'error' in results:
+            return f"❌ {results['error']}"
+        
+        return format_evolution_report(
+            package_name,
+            results['analysis_results'],
+            results['version_timeline']
+        )
+    except Exception as e:
+        return f"❌ Error tracking evolution for {package_name}: {str(e)}"
 
+
+def check_package_health(package_name: str, months: int = 120) -> str:
+    """
+    Check current health status of an npm package.
+    
+    Args:
+        package_name: npm package name
+        months: analysis window in months (default 120 for full dataset)
+    
+    Returns:
+        Health dashboard with trends and alerts
+    """
+    from tools.package_health_dashboard import get_package_health
+    
+    try:
+        return get_package_health(package_name, months)
+    except Exception as e:
+        return f"❌ Error checking health for {package_name}: {str(e)}"
+
+
+def _safe_track_evolution(input_str):
+    """Safely parse and call track_package_evolution"""
+    try:
+        package_name = input_str.strip()
+        
+        if not package_name:
+            return "Error: Please provide a package name"
+        
+        return track_package_evolution(package_name)
+        
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+
+def _safe_check_health(input_str):
+    """Safely parse and call check_package_health"""
+    try:
+        parts = [p.strip() for p in input_str.split(',')]
+        
+        if len(parts) == 1:
+            package_name = parts[0]
+            months = 120  # Default to full dataset
+        elif len(parts) == 2:
+            package_name = parts[0]
+            try:
+                months = int(parts[1])
+            except ValueError:
+                return f"Error: months must be a number, got '{parts[1]}'"
+        else:
+            return "Error: Format should be 'package_name' or 'package_name,months'"
+        
+        if not package_name:
+            return "Error: Please provide a package name"
+        
+        return check_package_health(package_name, months)
+        
+    except Exception as e:
+        return f"Error: {str(e)}"
 
 
 # Create tools
@@ -644,7 +728,43 @@ Use this when user already collected data and now wants to classify it.
 Example: "data/collected_20260112_153045.jsonl"
 """
     ),
+    Tool(
+        name="track_package_evolution",
+        func=lambda input_str: _safe_track_evolution(input_str),
+        description="""Track how a package's bug composition evolved across all versions.
+
+Shows bug trends for every release version with dependency changes.
+Useful for understanding long-term patterns and how bugs changed as the package matured.
+
+Input format: "package_name"
+
+Examples:
+  - "axios"
+  - "laravel-mix"
+  - "webpack"
+
+This shows historical evolution across all versions."""
+    ),
+    Tool(
+        name="check_package_health",
+        func=lambda input_str: _safe_check_health(input_str),
+        description="""Check current health status of an npm package.
+
+Analyzes recent bug trends, dependency status, and provides health alerts.
+Shows bug composition changes over a time period.
+
+Input format: "package_name,months" (months is optional, defaults to 120)
+
+Examples:
+  - "axios" - full dataset analysis
+  - "laravel-mix,6" - last 6 months only
+  - "webpack,12" - last 12 months
+
+For datasets ending around 2020, use 120 months to see all data."""
+    ),
 ]
+
+
 
 def create_tools():
     """Return the list of tools for the agent"""
