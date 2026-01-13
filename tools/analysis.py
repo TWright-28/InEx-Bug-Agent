@@ -1,20 +1,3 @@
-#!/usr/bin/env python3
-"""
-GitHub Issue Analysis Script
-
-Analyzes collected GitHub issue data from issues.jsonl and generates
-comprehensive statistics about issue classifications, closure patterns,
-maintainer involvement, and code changes.
-
-Usage:
-    python analysis.py
-    
-Output:
-    - Console output with all statistics
-    - closed_by_summary.txt with detailed closer information
-    - figures/ directory with publication-quality visualizations
-"""
-
 import json
 import pandas as pd
 import numpy as np
@@ -23,10 +6,6 @@ import matplotlib.gridspec as gridspec
 import seaborn as sns
 from matplotlib.patches import Rectangle
 import os
-
-# ============================================================================
-# CONSTANTS
-# ============================================================================
 
 KNOWN_BOTS = {"stale[bot]", "vue-bot"}
 BUG_TYPES_ORDER = ['Intrinsic', 'Extrinsic', 'Not  a Bug', 'Unknown']
@@ -37,17 +16,12 @@ COLOR_PALETTE = {
     'Unknown': '#FFC000'
 }
 
-# ============================================================================
-# HELPER FUNCTIONS
-# ============================================================================
 
 def _closed_by_username(row):
-    """Extract username from closed_by field."""
     x = row.get("closed_by")
     return x.get("username") if isinstance(x, dict) and x.get("username") else "Unknown"
 
 def _bot_closed_mask(df):
-    """Return boolean mask for issues closed by known bots."""
     df_local = df
     if "closed_by_username" not in df.columns:
         df_local = df.copy()
@@ -56,15 +30,10 @@ def _bot_closed_mask(df):
     return is_closed & df_local["closed_by_username"].isin(KNOWN_BOTS)
 
 def _fmt_pct(col):
-    """Format column as percentage string."""
     return col.map(lambda v: f"{v:.2f}%" if pd.notnull(v) else "")
 
 def _sec_series(series, key):
-    """
-    Extract a specific numeric field from a series of dicts,
-    preserving original index for groupby operations.
-    Returns float series with NaN for missing/invalid values.
-    """
+
     vals, idx = [], []
     for i, x in series.items():
         if isinstance(x, dict) and isinstance(x.get(key), (int, float)):
@@ -78,25 +47,20 @@ def _prepare_dataframe(df):
     """Add computed columns to dataframe for easier analysis."""
     df = df.copy()
     
-    # Bug type (cleaned classification)
     df['bug_type'] = df['final_classification'].str.strip()
     
-    # Closed status
     df['is_closed'] = df['state'].str.lower() == 'closed'
     
-    # Time to close (days)
     df['time_to_close_days'] = df['timestamp_metrics'].apply(
         lambda x: x['time_to_close_seconds'] / 86400 if isinstance(x, dict) and 
         isinstance(x.get('time_to_close_seconds'), (int, float)) else None
     )
     
-    # Closed by username
+    
     df['closed_by_username'] = df.apply(_closed_by_username, axis=1)
     
-    # Bot closed mask
     df['bot_closed'] = _bot_closed_mask(df)
     
-    # Closing methods
     df["closed_by_pr"] = df["closing_pr"].apply(
         lambda x: isinstance(x, dict) and len(x) > 0 if pd.notna(x) else False
     )
@@ -104,16 +68,12 @@ def _prepare_dataframe(df):
         lambda x: isinstance(x, dict) and len(x) > 0 if pd.notna(x) else False
     )
     
-    # Project name
     if 'project' not in df.columns:
         if 'owner' in df.columns and 'repo' in df.columns:
             df['project'] = df['owner'] + '/' + df['repo']
     
     return df
 
-# ============================================================================
-# DATA LOADING
-# ============================================================================
 
 def load_data(path="issues.jsonl"):
     """Load JSONL data into a pandas DataFrame."""
@@ -123,12 +83,8 @@ def load_data(path="issues.jsonl"):
     df = pd.DataFrame(data)
     return _prepare_dataframe(df)
 
-# ============================================================================
-# SECTION 1: BOT ANALYSIS
-# ============================================================================
 
 def analyze_bot_closures(df):
-    """Analyze how many issues were closed by bots overall and per classification."""
     print("\n" + "="*70)
     print("SECTION 1: BOT-CLOSED ISSUES")
     print("="*70)
@@ -146,12 +102,7 @@ def analyze_bot_closures(df):
     print("\nBot-closed by class (count / total, %):")
     print(by_class)
 
-# ============================================================================
-# SECTION 2: BASIC STATISTICS
-# ============================================================================
-
 def analyze_class_distribution(df):
-    """Show distribution of issues across classifications."""
     print("\n" + "="*70)
     print("SECTION 2: CLASS DISTRIBUTION")
     print("="*70)
@@ -162,7 +113,6 @@ def analyze_class_distribution(df):
     print("\n" + tbl.to_string())
 
 def analyze_closed_ratio(df):
-    """Calculate closed ratio for all issues and excluding bot-closed."""
     print("\n" + "-"*70)
     print("Closed Ratio (All Issues vs Excluding Bots)")
     print("-"*70)
@@ -172,9 +122,6 @@ def analyze_closed_ratio(df):
                .mean().mul(100).round(2)
                .rename("Closed % (All)"))
 
-    # Closed % excluding bot-closures from numerator only
-    # This measures: "What % of issues were closed by humans?"
-    # Denominator includes all issues (bot-closed, human-closed, and open)
     is_closed_by_human = df['is_closed'] & ~df['bot_closed']
     t_nb = (df.assign(_closed_human=is_closed_by_human)
                .groupby("bug_type")["_closed_human"]
@@ -199,12 +146,8 @@ def analyze_comments(df):
     )
     print("\n" + result.to_string())
 
-# ============================================================================
-# SECTION 3: TIMING ANALYSIS
-# ============================================================================
 
 def analyze_time_to_close(df):
-    """Calculate time to close for all issues and excluding bot-closed."""
     print("\n" + "="*70)
     print("SECTION 3: TIMING ANALYSIS")
     print("="*70)
@@ -230,7 +173,6 @@ def analyze_time_to_close(df):
     print("\n" + out.to_string())
 
 def analyze_time_to_first_response(df):
-    """Calculate time to first response (hours) by classification."""
     print("\n" + "-"*70)
     print("Time to First Response (hours)")
     print("-"*70)
@@ -242,12 +184,7 @@ def analyze_time_to_first_response(df):
              .round(2))
     print("\n" + result.to_string())
 
-# ============================================================================
-# SECTION 4: MAINTAINER INVOLVEMENT
-# ============================================================================
-
 def analyze_maintainer_involvement(df):
-    """Calculate maintainer participation statistics."""
     print("\n" + "="*70)
     print("SECTION 4: MAINTAINER INVOLVEMENT")
     print("="*70)
@@ -279,7 +216,6 @@ def analyze_maintainer_involvement(df):
     print("\n" + result.to_string())
 
 def analyze_maintainer_ratio(df):
-    """Calculate maintainer vs community participation ratio."""
     print("\n" + "-"*70)
     print("Maintainer Participation Ratio (% of total participants)")
     print("-"*70)
@@ -306,13 +242,8 @@ def analyze_maintainer_ratio(df):
         .round(2)
     )
     print("\n" + result.to_string())
-
-# ============================================================================
-# SECTION 5: REOPEN ANALYSIS
-# ============================================================================
-
+    
 def analyze_reopens(df):
-    """Calculate reopen statistics excluding bot-closed issues."""
     print("\n" + "="*70)
     print("SECTION 5: REOPEN STATISTICS (Excluding Bot-Closed)")
     print("="*70)
@@ -347,12 +278,8 @@ def analyze_reopens(df):
     result["Percentage"] = _fmt_pct(result["Percentage"])
     print("\n" + result.to_string())
 
-# ============================================================================
-# SECTION 6: LABEL ANALYSIS
-# ============================================================================
 
 def _categorize_label(label_name):
-    """Categorize a label into a broader category."""
     name = label_name.lower()
     
     if "bug" in name:
@@ -389,10 +316,6 @@ def _categorize_label(label_name):
         return "Other"
 
 def analyze_labels(df):
-    """
-    Categorize all issue labels into broader categories and compute
-    distribution per classification.
-    """
     print("\n" + "="*70)
     print("SECTION 6: LABEL ANALYSIS")
     print("="*70)
@@ -428,10 +351,8 @@ def analyze_labels(df):
            .sort_index()
     )
 
-    # Percent distribution (including unlabeled)
     dist_all = counts.div(counts.sum(axis=1), axis=0).round(3) * 100
 
-    # Percent distribution (only labeled issues)
     labeled = counts.drop(columns=["No Label"], errors="ignore")
     dist_labeled = labeled.div(labeled.sum(axis=1), axis=0).round(3) * 100
 
@@ -442,12 +363,8 @@ def analyze_labels(df):
     print("\n% Distribution (only labeled issues):")
     print(dist_labeled)
 
-# ============================================================================
-# SECTION 7: CODE CHANGE ANALYSIS
-# ============================================================================
 
 def _extract_code_stats(row):
-    """Extract code change statistics from a row."""
     cls = row.get("bug_type", "Unknown")
     src = row.get("closing_pr") if isinstance(row.get("closing_pr"), dict) else row.get("closing_commit")
     
@@ -471,10 +388,7 @@ def _extract_code_stats(row):
     return None
 
 def analyze_code_changes(df):
-    """
-    Analyze code changes (additions, deletions, files changed) for issues
-    that were closed via PR or commit.
-    """
+
     print("\n" + "="*70)
     print("SECTION 7: CODE CHANGE ANALYSIS")
     print("="*70)
@@ -531,9 +445,6 @@ def analyze_change_effort(df):
     )
     print("\n" + result.to_string())
 
-# ============================================================================
-# SECTION 8: CLOSURE METHOD ANALYSIS
-# ============================================================================
 
 def analyze_closure_methods(df):
     """
@@ -558,7 +469,7 @@ def analyze_closure_methods(df):
     print(f"  Closed by Code:   {closed_by_code}/{total_issues} ({closed_by_code/total_issues*100:.2f}%)")
     print(f"  Among closed:     {closed_by_code}/{total_closed.sum()} ({closed_by_code/total_closed.sum()*100:.2f}%)")
 
-    # Breakdown by classification
+
     rows = []
     for cls, g in df.groupby("bug_type"):
         total = len(g)
@@ -583,9 +494,6 @@ def analyze_closure_methods(df):
     print("\nBreakdown by Classification:")
     print(summary.to_string())
 
-# ============================================================================
-# SECTION 9: REPOSITORY ANALYSIS
-# ============================================================================
 
 def analyze_issues_per_repo(df):
     """
@@ -612,9 +520,6 @@ def analyze_issues_per_repo(df):
 
     print("\n" + counts.to_string(index=False))
 
-# ============================================================================
-# SECTION 10: CLOSER ANALYSIS
-# ============================================================================
 
 def export_closer_summary(df, output_path="closed_by_summary.txt"):
     """
@@ -652,10 +557,6 @@ def export_closer_summary(df, output_path="closed_by_summary.txt"):
             f.write("\n")
 
     print(f"\n Exported closer summary to: {output_path}")
-
-# ============================================================================
-# SECTION 11: VISUALIZATION
-# ============================================================================
 
 def _setup_plot_style():
     """Configure matplotlib for publication-quality figures."""
@@ -718,8 +619,7 @@ def _draw_sankey_flow(ax, df):
            ha='left', va='center', fontsize=10, fontweight='bold')
     ax.text(right_x - 0.06, closed_height + open_height/2, f'{int(total_open)}',
            ha='center', va='center', fontsize=9, color='white', fontweight='bold')
-    
-    # Draw flows
+
     cumulative_closed = 0
     cumulative_open = closed_height
     
@@ -736,8 +636,7 @@ def _draw_sankey_flow(ax, df):
         
         left_y_start, left_y_end = left_positions[bug_type]
         left_height = left_y_end - left_y_start
-        
-        # Flow to closed
+
         if closed_count > 0:
             closed_flow_height = closed_count / total_height
             x = [left_x + 0.12, right_x - 0.12, right_x - 0.12, left_x + 0.12]
@@ -747,8 +646,7 @@ def _draw_sankey_flow(ax, df):
                  left_y_start + (closed_count/total_count) * left_height]
             ax.fill(x, y, color=COLOR_PALETTE[bug_type], alpha=0.25, edgecolor='none')
             cumulative_closed += closed_flow_height
-        
-        # Flow to open
+
         if open_count > 0:
             open_flow_height = open_count / total_height
             left_open_start = left_y_start + (closed_count/total_count) * left_height
@@ -771,19 +669,17 @@ def _draw_repo_distribution(ax, df):
             ax.text(0.5, 0.5, 'No project data available', 
                     ha='center', va='center', transform=ax.transAxes)
             return
-        
-        # Add minimum repo check
+
     if len(df['project'].unique()) < 2:
             ax.text(0.5, 0.5, f'Need data from 2+ repositories\n(have {len(df["project"].unique())})', 
                     ha='center', va='center', transform=ax.transAxes)
             return
-    
-    # Calculate proportions per repository
+
     project_data = []
     for project in df['project'].unique():
         project_df = df[df['project'] == project]
         total = len(project_df)
-        if total >= 2:  # Only include repos with 2+ issues
+        if total >= 2:  
             for bug_type in ['Intrinsic', 'Extrinsic', 'Not  a Bug']:
                 count = len(project_df[project_df['bug_type'] == bug_type])
                 project_data.append({

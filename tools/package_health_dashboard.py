@@ -1,10 +1,3 @@
-"""
-Package Health Dashboard
-Real-time health assessment for npm packages
-
-Provides current state, recent trends, and alerts for active development.
-"""
-
 import json
 from pathlib import Path
 from datetime import datetime, timedelta
@@ -12,51 +5,32 @@ from collections import defaultdict
 from datetime import timezone
 
 def get_package_health(package_name, months=3, classified_file="issues_with_classifications_21k.jsonl"):
-    """
-    Analyze current health of an npm package
-    
-    Args:
-        package_name: npm package name
-        months: analysis window in months (default 3)
-        classified_file: path to classified bugs dataset
-    
-    Returns:
-        Formatted health dashboard string
-    """
-    print(f"\n🏥 Analyzing health for {package_name} (last {months} months)...")
-    
-    # Calculate time windows
+
+    print(f"\n Analyzing health for {package_name} (last {months} months)...")
+
     now = datetime.now(timezone.utc)
     recent_start = now - timedelta(days=months * 30)
     comparison_start = recent_start - timedelta(days=months * 30)
-    
-    # Load bugs for package
+  
     bugs = load_package_bugs(classified_file, package_name)
     
     if not bugs:
-        return f"❌ No bugs found for package '{package_name}'"
+        return f" No bugs found for package '{package_name}'"
     
-    # Get current state from npm
     current_state = get_current_state(package_name)
     
-    # Split bugs into time windows
     recent_bugs = [b for b in bugs if b['created_dt'] >= recent_start]
     comparison_bugs = [b for b in bugs if comparison_start <= b['created_dt'] < recent_start]
     
-    # Calculate compositions
     recent_comp = calculate_composition(recent_bugs)
     comparison_comp = calculate_composition(comparison_bugs)
     
-    # Calculate trends
     trends = calculate_trends(recent_comp, comparison_comp)
     
-    # Generate alerts
     alerts = generate_alerts(trends, current_state)
     
-    # Calculate health score
     health_score = calculate_health_score(recent_comp, trends)
     
-    # Format report
     report = format_dashboard(
         package_name,
         months,
@@ -72,8 +46,6 @@ def get_package_health(package_name, months=3, classified_file="issues_with_clas
 
 
 def load_package_bugs(classified_file, package_name):
-    """Load all bugs for a package with timestamps"""
-    
     if not Path(classified_file).exists():
         return None
     
@@ -86,15 +58,13 @@ def load_package_bugs(classified_file, package_name):
             
             try:
                 bug = json.loads(line)
-                
-                # Extract package name
+
                 repo = bug.get('repo', '')
                 if '/' in repo:
                     pkg = repo.split('/')[-1]
                 else:
                     pkg = repo
-                
-                # Match package
+            
                 if pkg.lower() == package_name.lower() and bug.get('created_at'):
                     try:
                         bug['created_dt'] = datetime.fromisoformat(bug['created_at'].replace('Z', '+00:00')).replace(tzinfo=timezone.utc)
@@ -109,7 +79,6 @@ def load_package_bugs(classified_file, package_name):
 
 
 def get_current_state(package_name):
-    """Get current package state from npm"""
     import requests
     
     try:
@@ -118,18 +87,15 @@ def get_current_state(package_name):
             return None
         
         data = response.json()
-        
-        # Count production dependencies
+
         dependencies = data.get('dependencies', {})
         peer_dependencies = data.get('peerDependencies', {})
         optional_dependencies = data.get('optionalDependencies', {})
         
         production_deps = len(dependencies) + len(peer_dependencies) + len(optional_dependencies)
-        
-        # Get publish time of latest version
+
         version = data.get('version', 'unknown')
-        
-        # Fetch full package data to get publish time
+
         full_response = requests.get(f"https://registry.npmjs.org/{package_name}", timeout=10)
         if full_response.status_code == 200:
             full_data = full_response.json()
@@ -150,8 +116,7 @@ def get_current_state(package_name):
 
 
 def calculate_composition(bugs):
-    """Calculate bug composition percentages"""
-    
+
     if not bugs:
         return {
             'total': 0,
@@ -200,100 +165,75 @@ def calculate_trends(recent, comparison):
 
 
 def generate_alerts(trends, current_state):
-    """Generate alerts based on trends"""
+
     
     alerts = []
-    
-    # Extrinsic trending up
+
     if trends['extrinsic_change'] > 5:
-        alerts.append(f"⚠️  Extrinsic bugs increased by {trends['extrinsic_change']:+.1f} percentage points")
-    
-    # Intrinsic trending up
+        alerts.append(f"  Extrinsic bugs increased by {trends['extrinsic_change']:+.1f} percentage points")
     if trends['intrinsic_change'] > 5:
-        alerts.append(f"⚠️  Intrinsic bugs increased by {trends['intrinsic_change']:+.1f} percentage points")
-    
-    # Positive trends
+        alerts.append(f"  Intrinsic bugs increased by {trends['intrinsic_change']:+.1f} percentage points")
     if trends['extrinsic_change'] < -5:
-        alerts.append(f"✅ Extrinsic bugs decreased by {abs(trends['extrinsic_change']):.1f} percentage points")
-    
+        alerts.append(f" Extrinsic bugs decreased by {abs(trends['extrinsic_change']):.1f} percentage points")  
     if trends['intrinsic_change'] < -5:
-        alerts.append(f"✅ Intrinsic bugs decreased by {abs(trends['intrinsic_change']):.1f} percentage points")
+        alerts.append(f" Intrinsic bugs decreased by {abs(trends['intrinsic_change']):.1f} percentage points")
     
-    # No significant changes
     if not alerts:
-        alerts.append("ℹ️  No significant trend changes detected")
+        alerts.append("  No significant trend changes detected")
     
     return alerts
 
 
 def calculate_health_score(recent_comp, trends):
-    """
-    Calculate simple health score (1-10)
-    
-    Formula: 
-    - Start at 10
-    - Subtract extrinsic_pct / 2
-    - Subtract intrinsic_pct / 4
-    - Subtract points for negative trends
-    """
-    
     score = 10.0
-    
-    # Penalize for current bug rates
+
     score -= recent_comp['extrinsic_pct'] / 2
     score -= recent_comp['intrinsic_pct'] / 4
-    
-    # Penalize for worsening trends
+
     if trends['extrinsic_change'] > 0:
         score -= trends['extrinsic_change'] / 5
     
     if trends['intrinsic_change'] > 0:
         score -= trends['intrinsic_change'] / 10
-    
-    # Clamp to 1-10
+        
     score = max(1.0, min(10.0, score))
     
     return round(score, 1)
 
 
 def format_dashboard(package_name, months, current_state, recent, comparison, trends, alerts, health_score):
-    """Format the health dashboard report"""
     
     output = []
     output.append("\n" + "=" * 70)
-    output.append(f"🏥 {package_name.upper()} HEALTH DASHBOARD")
+    output.append(f" {package_name.upper()} HEALTH DASHBOARD")
     output.append("=" * 70)
     output.append(f"Analysis Period: Last {months} months")
     output.append(f"Generated: {datetime.now().strftime('%Y-%m-%d')}")
     
-    # Current state
     if current_state:
-        output.append(f"\n📊 CURRENT STATE:")
+        output.append(f"\n CURRENT STATE:")
         output.append(f"   Latest version: v{current_state['version']}")
         output.append(f"   Production deps: {current_state['production_deps']}")
         output.append(f"   Last release: {current_state['last_release']}")
     else:
-        output.append(f"\n📊 CURRENT STATE:")
-        output.append(f"   ⚠️  Unable to fetch current npm data")
+        output.append(f"\n CURRENT STATE:")
+        output.append(f"     Unable to fetch current npm data")
     
-    # Recent activity
-    output.append(f"\n🐛 RECENT ACTIVITY (Last {months} months):")
+    output.append(f"\n RECENT ACTIVITY (Last {months} months):")
     output.append(f"   Total bugs: {recent['total']}")
     output.append(f"   - Intrinsic: {recent['intrinsic']} ({recent['intrinsic_pct']:.1f}%)")
     output.append(f"   - Extrinsic: {recent['extrinsic']} ({recent['extrinsic_pct']:.1f}%)")
     output.append(f"   - Not a Bug: {recent['not_bug']} ({recent['not_bug_pct']:.1f}%)")
     output.append(f"   - Unknown: {recent['unknown']} ({recent['unknown_pct']:.1f}%)")
     
-    # Comparison period
-    output.append(f"\n📊 COMPARISON ({months} months before):")
+    output.append(f"\n COMPARISON ({months} months before):")
     output.append(f"   Total bugs: {comparison['total']}")
     output.append(f"   - Intrinsic: {comparison['intrinsic']} ({comparison['intrinsic_pct']:.1f}%)")
     output.append(f"   - Extrinsic: {comparison['extrinsic']} ({comparison['extrinsic_pct']:.1f}%)")
     output.append(f"   - Not a Bug: {comparison['not_bug']} ({comparison['not_bug_pct']:.1f}%)")
     output.append(f"   - Unknown: {comparison['unknown']} ({comparison['unknown_pct']:.1f}%)")
     
-    # Trends
-    output.append(f"\n📈 TRENDS:")
+    output.append(f"\n TRENDS:")
     
     ex_arrow = "⬆️" if trends['extrinsic_change'] > 0 else "⬇️" if trends['extrinsic_change'] < 0 else "➡️"
     in_arrow = "⬆️" if trends['intrinsic_change'] > 0 else "⬇️" if trends['intrinsic_change'] < 0 else "➡️"
@@ -301,12 +241,10 @@ def format_dashboard(package_name, months, current_state, recent, comparison, tr
     output.append(f"   Extrinsic: {comparison['extrinsic_pct']:.1f}% → {recent['extrinsic_pct']:.1f}% ({trends['extrinsic_change']:+.1f}% {ex_arrow} {trends['extrinsic_trend']})")
     output.append(f"   Intrinsic: {comparison['intrinsic_pct']:.1f}% → {recent['intrinsic_pct']:.1f}% ({trends['intrinsic_change']:+.1f}% {in_arrow} {trends['intrinsic_trend']})")
     
-    # Alerts
-    output.append(f"\n⚠️  ALERTS:")
+    output.append(f"\n  ALERTS:")
     for alert in alerts:
         output.append(f"   {alert}")
-    
-    # Health score
+
     score_emoji = "🟢" if health_score >= 7 else "🟡" if health_score >= 5 else "🔴"
     score_label = "EXCELLENT" if health_score >= 8 else "GOOD" if health_score >= 7 else "FAIR" if health_score >= 5 else "NEEDS ATTENTION"
     
@@ -316,8 +254,6 @@ def format_dashboard(package_name, months, current_state, recent, comparison, tr
     
     return "\n".join(output)
 
-
-# For standalone testing
 if __name__ == "__main__":
     import sys
     
