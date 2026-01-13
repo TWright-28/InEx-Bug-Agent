@@ -206,7 +206,7 @@ class BugAgent:
             memory=self.memory,
             verbose=True,
             handle_parsing_errors=True,
-            max_iterations=5,  # Reduced from 7 to prevent long loops
+            max_iterations=2,  # Reduced from 7 to prevent long loops
             return_intermediate_steps=True
         )
     
