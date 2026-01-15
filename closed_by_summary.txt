@@ -4303,10 +4303,11 @@ Breakdown by Classification
 Extrinsic
 ----------------------------------------------------------------------
     closed_by_username  count
-               Unknown     58
+               Unknown     63
+                ljharb     62
             JeffreyWay     51
                 feross     50
-                ljharb     50
+       alexander-akait     44
                  vjeux     42
             stale[bot]     40
           sindresorhus     39
@@ -4314,19 +4315,22 @@ Extrinsic
               ikatyang     27
                 thorn0     27
             dougwilson     24
+                  MoOx     21
              yyx990803     20
-       alexander-akait     18
+                  bcoe     16
                gaearon     16
                    azz     15
-                  bcoe     15
           lukastaegert     15
                timdorr     15
-                  MoOx     11
+                bebraw     14
+             yannickcr     14
+     michael-ciniawsky     13
               typicode     11
                     ai     10
          jonschlinkert     10
              theKashey     10
                jhiesey      9
+                 sokra      9
                 fisker      8
              benmosher      7
           coreyfarrell      7
@@ -4344,12 +4348,17 @@ Extrinsic
            chinesedfan      5
                  danez      5
              gregberge      5
+             joshwiens      5
+     ricardogobbosouza      5
             shellscape      5
+                  th0r      5
+              valscion      5
+                xzyfer      5
                  JaKXz      4
              TimothyGu      4
            ahmadnassri      4
-                bebraw      4
         existentialism      4
+             glenjamin      4
              jlongster      4
            loganfsmyth      4
              mafintosh      4
@@ -4366,6 +4375,7 @@ Extrinsic
            haoqunjiang      3
           jasonsaayman      3
          jonathantneal      3
+               jscheid      3
                  kevva      3
               lahmatiy      3
              laracasts      3
@@ -4375,14 +4385,15 @@ Extrinsic
                 sebmck      3
           sosukesuzuki      3
           stefanpenner      3
-                xzyfer      3
               3rd-Eden      2
               COScholl      2
                   Flet      2
              Sebmaster      2
+            TheLarkInn      2
               addaleax      2
              arekinath      2
                 dchest      2
+             deepsweet      2
                dgraham      2
                  doowb      2
                fanatid      2
@@ -4397,14 +4408,18 @@ Extrinsic
              mastilver      2
             mzabriskie      2
          ArcanoxDragon      1
+            Arturszott      1
           Benhawkins18      1
                Borewit      1
                Centaur      1
         ForbesLindesay      1
+            FrailWords      1
             JamesHenry      1
              JedWatson      1
      Joris-van-der-Wel      1
                 Jumace      1
+            KisaneNeko      1
+                Kurtas      1
          MarkTiedemann      1
                 Melcus      1
                  Okipa      1
@@ -4420,15 +4435,20 @@ Extrinsic
             aleclarson      1
                 amasad      1
             anadimisra      1
+            andreypopp      1
            andyjansson      1
+              anilanar      1
                   b12k      1
                 bakkot      1
                 bartek      1
+               beckend      1
+              benregan      1
                 bigkrp      1
            bjohansebas      1
             brandon93s      1
          byronanderson      1
                calesce      1
+        cap-Bernardito      1
              cb1kenobi      1
                   cedx      1
                clarkdo      1
@@ -4443,11 +4463,13 @@ Extrinsic
              devcircus      1
              dkozickis      1
                domenic      1
+                dounan      1
                 edsadr      1
        eduardodallmann      1
                ehmicky      1
             electrovir      1
               emsedano      1
+                 ericf      1
                ernscht      1
                  es128      1
                  fobdy      1
@@ -4457,6 +4479,7 @@ Extrinsic
                 ghinks      1
                 giggio      1
           helloyou2012      1
+            imdongchen      1
              jacobheun      1
            jamesplease      1
           jamestalmage      1
@@ -4467,11 +4490,15 @@ Extrinsic
              johanbook      1
               jonkoops      1
                jooj123      1
+          jorawarsingh      1
           jpriceonline      1
             kaicataldo      1
+               kazupon      1
              keithamus      1
             kentcdodds      1
+              kevlened      1
              kkerchmar      1
+               kobe990      1
              kotapeter      1
                    kzc      1
                louieaa      1
@@ -4490,8 +4517,10 @@ Extrinsic
              nasirkhan      1
           nicolasnoble      1
         nicolo-ribaudo      1
+               niieani      1
                  nkcmr      1
       no-response[bot]      1
+                oh-ren      1
                  olach      1
       oliviertassinari      1
            punmechanic      1
@@ -4499,6 +4528,7 @@ Extrinsic
           rickharrison      1
             rubennorte      1
           ruchernchong      1
+             rvarbanov      1
                 scravy      1
                 shinnn      1
                   sqal      1
@@ -4515,6 +4545,8 @@ Extrinsic
           thejoshwolfe      1
                  timdp      1
                tkellen      1
+                  tony      1
+           tzimmermann      1
                  vkrol      1
                vue-bot      1
                 watson      1
@@ -4530,23 +4562,25 @@ yashwanthkumarsuruneni      1
 Intrinsic
 ----------------------------------------------------------------------
  closed_by_username  count
-            Unknown    523
+            Unknown    581
+             ljharb    517
               vjeux    355
        lukastaegert    304
        sindresorhus    283
         Rich-Harris    245
-             ljharb    178
+          yannickcr    219
          JeffreyWay    176
+    alexander-akait    137
            ikatyang    137
              thorn0    135
                 azz    103
           jlongster    100
            duailibe     94
+          yyx990803     90
          stale[bot]     89
-    alexander-akait     88
       jonschlinkert     88
           szmarczak     87
-          yyx990803     80
+               bcoe     78
           benmosher     78
             timdorr     77
          kossnocorp     70
@@ -4561,15 +4595,16 @@ Intrinsic
        jasonsaayman     55
          guybedford     49
              feross     47
-               bcoe     42
+               MoOx     43
         chinesedfan     42
           gregberge     42
             indutny     39
          mzabriskie     39
-               MoOx     38
           leshakoss     38
                  ai     37
-             bebraw     31
+             bebraw     35
+              sokra     35
+  michael-ciniawsky     34
          kentcdodds     31
        nickuraltsev     30
            lahmatiy     29
@@ -4588,6 +4623,7 @@ Intrinsic
           floatdrop     20
         markerikson     20
                 mde     20
+               th0r     20
         Semigradsky     18
             jhiesey     18
           mafintosh     18
@@ -4601,12 +4637,16 @@ Intrinsic
               lipis     14
        Victorystick     13
           arekinath     13
+              gajus     13
              isaacs     13
+           kevlened     13
                 nlf     13
          rubennorte     12
        thejoshwolfe     12
+          glenjamin     11
               iarna     11
           laracasts     11
+           lencioni     11
         loganfsmyth     11
              phated     11
             calesce     10
@@ -4614,11 +4654,12 @@ Intrinsic
       davidtheclark     10
               doowb     10
            floridoo     10
-              gajus     10
            inxilpro     10
           mastilver     10
+             xzyfer     10
            Alanscut      9
 github-actions[bot]      9
+          joshwiens      9
              lpinca      9
              puzrin      9
             Borewit      8
@@ -4634,14 +4675,19 @@ github-actions[bot]      9
             dgraham      7
             domenic      7
       josephfrazier      7
+            jscheid      7
              scravy      7
+           valscion      7
              LinusU      6
           aackerman      6
              amasad      6
      darrachequesne      6
            fregante      6
          max-mapper      6
+  ricardogobbosouza      6
            suguru03      6
+             yisibl      6
+          LinusBorg      5
                NMFR      5
               couto      5
              dchest      5
@@ -4652,8 +4698,6 @@ github-actions[bot]      9
     not-an-aardvark      5
              sebmck      5
          sudo-suhas      5
-             yisibl      5
-          LinusBorg      4
         OverZealous      4
           TimothyGu      4
          adamhalasz      4
@@ -4664,14 +4708,15 @@ github-actions[bot]      9
               kevva      4
              malept      4
       mathiasbynens      4
-              sokra      4
             vramana      4
               yasuf      4
+            zertosh      4
      ForbesLindesay      3
             JounQin      3
      JustinBeckwith      3
       Khaledgarbaya      3
             Siilwyn      3
+          SpaceK33z      3
            addaleax      3
         andyjansson      3
              bakkot      3
@@ -4696,9 +4741,8 @@ github-actions[bot]      9
            othiym23      3
              puleos      3
          silverwind      3
-             xzyfer      3
+             watson      3
               zensh      3
-            zertosh      3
        CodeTroopers      2
                Nxt3      2
                Qix-      2
@@ -4707,34 +4751,42 @@ github-actions[bot]      9
         ahmadnassri      2
            bnjmnt4n      2
        bradennapier      2
+              bruno      2
         callumacrae      2
+     cap-Bernardito      2
         danethurber      2
                dasa      2
           daviddias      2
+          deepsweet      2
             ehmicky      2
           elldritch      2
           emilbayes      2
      felipewmartins      2
              geelen      2
              hoschi      2
+            jednano      2
            jeffcarp      2
                josh      2
        jprichardson      2
            kachkaev      2
+           kalmbach      2
                karl      2
             kpilard      2
                 kzc      2
-           lencioni      2
    no-response[bot]      2
+             okuryu      2
               passy      2
              rauchg      2
          robaxelsen      2
         tunnckoCore      2
             vue-bot      2
+         wesleytodd      2
           wraithgar      2
+             ALF-er      1
          AaronFriel      1
           AlCalzone      1
     AlexanderWright      1
+           Allenice      1
        AndrewFinlay      1
      Antonio-Laguna      1
        BerkeleyTrue      1
@@ -4743,12 +4795,16 @@ github-actions[bot]      9
         CasperLaiTW      1
             Cheddam      1
         CodePlayer7      1
+            Craga89      1
          Datazource      1
             Delagen      1
+           DeltaEvo      1
      DigitalBrainJS      1
          DirtyHairy      1
          Dunkelheit      1
+            EECOLOR      1
          EnzoMartin      1
+             EvHaus      1
       EvgenyOrekhov      1
             Ewocker      1
           FezVrasta      1
@@ -4771,7 +4827,9 @@ HerringtonDarkholme      1
         LongTengDao      1
        LucasBrazi06      1
              Mottie      1
+    NikolayFrantsev      1
               Okipa      1
+    Oleksandr-Silin      1
          OliverJAsh      1
               Pomax      1
             RMHonor      1
@@ -4784,8 +4842,11 @@ HerringtonDarkholme      1
             Swaagie      1
            Swatinem      1
            Synzvato      1
+         TheLarkInn      1
+    ThrowsException      1
         TooTallNate      1
             Turbo87      1
+           ValeryVS      1
  Vasiliy-Bondarenko      1
           VinGarcia      1
             WRidder      1
@@ -4798,6 +4859,7 @@ HerringtonDarkholme      1
          afelicioni      1
            aghayeff      1
             aikoven      1
+        akihikodaki      1
         alan-agius4      1
         alan-zhang-      1
         alansouzati      1
@@ -4806,6 +4868,7 @@ HerringtonDarkholme      1
       alicerocheman      1
        alisabzevari      1
          amaury1093      1
+           amneacsu      1
         analog-nico      1
        andinoJamesV      1
         andrewparks      1
@@ -4814,8 +4877,12 @@ HerringtonDarkholme      1
            anstapol      1
          antoniovj1      1
          antstanley      1
+             apexad      1
             armano2      1
       arnoldmanzano      1
+           arseneyr      1
+       arthurjamain      1
+             asafda      1
                axic      1
                b12k      1
             badtant      1
@@ -4829,6 +4896,7 @@ HerringtonDarkholme      1
         blakeembrey      1
               blond      1
              boyenn      1
+     brandonburkett      1
           branneman      1
          brockmdean      1
              brucou      1
@@ -4864,7 +4932,6 @@ HerringtonDarkholme      1
              danc86      1
          davidmashe      1
           dcyriller      1
-          deepsweet      1
            defr0zen      1
            deftomat      1
         dhcmrlchtdj      1
@@ -4885,6 +4952,7 @@ HerringtonDarkholme      1
            ericsnap      1
             eriknyk      1
        ethanresnick      1
+             ewiner      1
                exah      1
      existentialism      1
             fatfisz      1
@@ -4893,20 +4961,26 @@ HerringtonDarkholme      1
        fengyuanchen      1
           fgsalomon      1
             fholzer      1
+        filipesilva      1
          franciscop      1
    frederickfogerty      1
        fungiboletus      1
+      ghoshnirmalya      1
              ghusse      1
         glasseyes42      1
+     glenngijsberts      1
                gms1      1
           goloroden      1
                gr2m      1
         grapehunter      1
            greggman      1
+         gucong3000      1
+      gwenaellarmet      1
             hanlike      1
      himynameisdave      1
          hineshamin      1
             hiroppy      1
+            hubcarl      1
         hudochenkov      1
                hzoo      1
          iammerrick      1
@@ -4917,28 +4991,33 @@ HerringtonDarkholme      1
              isaacl      1
           jacobheun      1
         jamiebuilds      1
+        jarretmoses      1
                jb55      1
           jbreuer95      1
-            jednano      1
       jericopulvera      1
            jharris4      1
             jimblue      1
+              jinjl      1
+   jluxenberg-scoot      1
+          jmbarbier      1
               jods4      1
       johanneslumpe      1
         jonathanong      1
           jordaaash      1
-          joshwiens      1
             jsg2021      1
      jthomaschewski      1
         juancabrera      1
     juancarlosfarah      1
        juandelperal      1
+            juergba      1
          just-boris      1
       keithhamilton      1
       kesha-antonov      1
               kidlj      1
+             kouhin      1
     kristoferbaxter      1
             kumavis      1
+          kuroisuna      1
              kvchen      1
          kylemilloy      1
               laino      1
@@ -4954,19 +5033,23 @@ HerringtonDarkholme      1
             macks22      1
            macor161      1
              mahrud      1
+        maieutiquer      1
     maikelmclauflin      1
          maiorano84      1
+         mankittens      1
            mapleeit      1
             maraisr      1
         marcinlesek      1
          marcjansen      1
   marvinhagemeister      1
            masaeedu      1
+       matteoantoci      1
     matthew-andrews      1
      matthewmueller      1
            mcollina      1
             medikoo      1
           merlinnot      1
+             mfyuce      1
        michaelBenin      1
     michaelnakamura      1
   michaelryancaputo      1
@@ -4974,9 +5057,11 @@ HerringtonDarkholme      1
          mistadikay      1
          mitermayer      1
           mjrussell      1
+           mkucharz      1
        mmckenziedev      1
          mobiletoly      1
         mohsinulhaq      1
+          monkindey      1
             moretti      1
             mourner      1
              mqklin      1
@@ -4985,6 +5070,7 @@ HerringtonDarkholme      1
             mweibel      1
         nakamorichi      1
           natstar93      1
+            necolas      1
       nickfederighi      1
      nicolo-ribaudo      1
           nkabardin      1
@@ -4999,6 +5085,7 @@ HerringtonDarkholme      1
             parshap      1
             paul-go      1
         paulvarache      1
+       peternewnham      1
     petitchevalroux      1
            pfgithub      1
          pietermees      1
@@ -5006,6 +5093,8 @@ HerringtonDarkholme      1
       platinumazure      1
             ponelat      1
              poteto      1
+      privatenumber      1
+          pshurygin      1
      rafalschmidt97      1
        rafegoldberg      1
               rapzo      1
@@ -5029,16 +5118,21 @@ HerringtonDarkholme      1
              sastan      1
             saumets      1
            sciyoshi      1
+          scottdj92      1
              scriby      1
         sebiniemann      1
           secondfry      1
           seiya-git      1
+        shadowspawn      1
+          shengnian      1
            sibelius      1
+          sibiraj-s      1
             siggirh      1
            silverqx      1
            songsiqi      1
             squirmy      1
              sramam      1
+           src-code      1
          staxmanade      1
        stefanpenner      1
            stevieyu      1
@@ -5055,15 +5149,18 @@ HerringtonDarkholme      1
          timshannon      1
          tomaschyly      1
            tomccabe      1
+            torifat      1
              tpag26      1
             tqwhite      1
       trevordmiller      1
+           truebden      1
           typeofweb      1
        tyson-benson      1
             tzeikob      1
       ulisses-alves      1
               uriva      1
               utnaf      1
+      vadimshvetsov      1
             veljkoz      1
              vinhlh      1
            visciang      1
@@ -5073,18 +5170,18 @@ HerringtonDarkholme      1
            wanderer      1
            warnellw      1
              wasong      1
-             watson      1
         waynevanson      1
              webpig      1
-         wesleytodd      1
            wkwiatek      1
            wuppious      1
+               wyze      1
             xCykrix      1
             xeoneux      1
            xjamundx      1
            xudafeng      1
           yangblink      1
         yoshuawuyts      1
+         yuchonghua      1
             yugasun      1
        zackthehuman      1
               zeakd      1
@@ -5097,17 +5194,18 @@ HerringtonDarkholme      1
 Not  a Bug
 ----------------------------------------------------------------------
        closed_by_username  count
-                  Unknown    626
+                  Unknown    721
+                   ljharb    507
                   timdorr    491
-             sindresorhus    452
+             sindresorhus    453
                dougwilson    390
                JeffreyWay    387
                   gaearon    315
+          alexander-akait    298
               chinesedfan    283
                stale[bot]    263
-                   ljharb    239
+                yyx990803    239
               markerikson    237
-                yyx990803    223
                    feross    201
                    lydell    169
                 szmarczak    152
@@ -5115,6 +5213,7 @@ Not  a Bug
                     vjeux    150
                kossnocorp    147
                rubennorte    142
+        michael-ciniawsky    140
                   dgraham    133
               Rich-Harris    117
                  typicode    114
@@ -5128,27 +5227,29 @@ Not  a Bug
                   RyanZim     84
                 gregberge     83
             jonschlinkert     81
+                     MoOx     80
+                     bcoe     79
                    mislav     78
-          alexander-akait     76
       github-actions[bot]     75
              lukastaegert     74
+                LinusBorg     73
                 benmosher     72
                       azz     71
+                   bebraw     69
                 theKashey     66
-                     bcoe     64
+                glenjamin     65
                guybedford     63
                    phated     63
                  TrySound     62
+                yannickcr     61
                  dcousens     57
               mweststrate     56
                      j-f1     53
                    puzrin     52
                  floridoo     50
+                  calesce     48
              coreyfarrell     48
                       mde     48
-                LinusBorg     47
-                     MoOx     47
-                  calesce     47
                  duailibe     47
                   vue-bot     46
                 floatdrop     45
@@ -5159,35 +5260,40 @@ Not  a Bug
                    lpinca     37
               OverZealous     36
                      NMFR     35
+                  zertosh     34
              Victorystick     32
                       btd     32
-                  zertosh     32
                     JaKXz     30
             jonathantneal     30
+                  kazupon     30
                     doowb     29
              thejoshwolfe     29
                aleclarson     28
           emilyemorehouse     28
                 dkozickis     27
-                  kazupon     27
                 leshakoss     27
                mzabriskie     27
                    sebmck     26
                   ehmicky     24
+        ricardogobbosouza     24
+                    sokra     24
                    dchest     23
                  fregante     23
                   indutny     23
             mathiasbynens     22
                 nmccready     22
+                 valscion     22
                     danez     21
                    fed135     21
                mysticatea     21
+                     th0r     21
                     couto     20
                  jimbolla     20
                    nzakas     20
             davidtheclark     19
                      Flet     18
                   domenic     18
+                joshwiens     17
            eventualbuddha     16
                    fisker     16
               haoqunjiang     16
@@ -5202,12 +5308,14 @@ Not  a Bug
                 mastilver     14
                     posva     14
                 TimothyGu     13
+                 kevlened     13
                       nlf     13
                   suchipi     13
                     yasuf     13
            JustinBeckwith     11
              jamestalmage     11
             josephfrazier     11
+                  jscheid     11
                  lahmatiy     11
                   satazor     11
             Khaledgarbaya     10
@@ -5219,38 +5327,42 @@ Not  a Bug
             calvinmetcalf      9
                     reggi      9
                robaxelsen      9
+                scottdj92      9
                     zensh      9
                  3rd-Eden      8
+                FezVrasta      8
             chriseppstein      8
                    isaacs      8
              juliangruber      8
              novemberborn      8
                  soryy708      8
-                FezVrasta      7
                   Siilwyn      7
                    amasad      7
-                   bebraw      7
-                joshwiens      7
                omichelsen      7
               tunnckoCore      7
                  Andarist      6
+                   EvHaus      6
               Fishrock123      6
                   bcomnes      6
               callumlocke      6
+                deepsweet      6
                   jhiesey      6
               jonathanong      6
                kemitchell      6
                 mafintosh      6
+              mattlewis92      6
             schnittstabil      6
                silverwind      6
              sosukesuzuki      6
              stevenvachon      6
+                  tleunen      6
                  wkwiatek      6
                   Borewit      5
                      Qix-      5
                 Sebmaster      5
                 arekinath      5
               c0debreaker      5
+           catamphetamine      5
            darrachequesne      5
             defunctzombie      5
                   fanatid      5
@@ -5260,9 +5372,13 @@ Not  a Bug
               jamesplease      5
                 joewagner      5
                kaicataldo      5
+                    kopax      5
                    malept      5
              niftylettuce      5
+                      pke      5
+            reintroducing      5
                 rosskevin      5
+                   xzyfer      5
                  Justineo      4
               LongTengDao      4
                   SidKwok      4
@@ -5270,7 +5386,6 @@ Not  a Bug
                    aweary      4
                    bakkot      4
               blakeembrey      4
-           catamphetamine      4
                    eriwen      4
               jamiebuilds      4
                   jcoglan      4
@@ -5282,28 +5397,40 @@ Not  a Bug
                 keithamus      4
                 kiwo12345      4
           krainboltgreene      4
+                 lencioni      4
                   lichnow      4
               ludofischer      4
                   mohsen1      4
            nicolo-ribaudo      4
           not-an-aardvark      4
+                 olalonde      4
                    scravy      4
              stefanpenner      4
                  suguru03      4
+                  trusktr      4
               volkanunsal      4
+                     0x80      3
             AdrienLemaire      3
+               Anahkiasen      3
                      Ayms      3
                 DanielRuf      3
              JakeChampion      3
                 Kikobeats      3
+                  Legends      3
           LeonardoGentile      3
+                   SimenB      3
+                SpaceK33z      3
+              aaronjensen      3
                   alextes      3
               andyjansson      3
+        aprilmintacpineda      3
                backspaces      3
               callumacrae      3
+                charandas      3
              chrisblossom      3
               corysimmons      3
                    cowwoc      3
+             developer239      3
                dschissler      3
               electerious      3
                    ellbee      3
@@ -5311,10 +5438,11 @@ Not  a Bug
                     es128      3
                    ffxsam      3
                   fturmel      3
+                 geowarin      3
                   ir-fuel      3
              jprichardson      3
+               karelbilek      3
                   kilianc      3
-                    kopax      3
               lamyergeier      3
                 laracasts      3
                     lipis      3
@@ -5325,11 +5453,11 @@ Not  a Bug
                      mifi      3
                  mqliutie      3
             mschipperheyn      3
+                 muuvmuuv      3
+                mvolkmann      3
                   ngryman      3
-                 olalonde      3
-                      pke      3
+                ooflorent      3
               rasmuswoelk      3
-            reintroducing      3
                 rightaway      3
             romanmarkelov      3
                  sajumani      3
@@ -5337,18 +5465,20 @@ Not  a Bug
                 shikelong      3
                    shinnn      3
                 sholladay      3
+                sibiraj-s      3
                  strarsis      3
                sudo-suhas      3
                 tillkruss      3
                   tkellen      3
-                  tleunen      3
-                  trusktr      3
+              voronianski      3
+                   watson      3
                      0nn0      2
-                     0x80      2
-               Anahkiasen      2
+                     AmrN      2
                    Aqours      2
           Benjamin-Dobell      2
              BerkeleyTrue      2
+                 BernardA      2
+                    Bnaya      2
                 Bram-Zijp      2
                    Domvel      2
                  Fantasim      2
@@ -5356,22 +5486,27 @@ Not  a Bug
                  Fr33maan      2
                     GongT      2
                  GrimLink      2
+            IngwiePhoenix      2
                 JedWatson      2
                 Jessidhia      2
+               KidkArolis      2
+                  LINKIWI      2
                    LJNeon      2
                    Marsup      2
             MatteoGioioso      2
              Methuselah96      2
               OmgImAlexis      2
                 PierBover      2
+                   QmarkC      2
+               RWOverdijk      2
                 Reshmabcu      2
                  RibbtDev      2
                   SNOWGUM      2
-                   SimenB      2
             StreetStrider      2
                  Tedowski      2
+                TheAifam5      2
+                   Vanuan      2
                     Yugis      2
-              aaronjensen      2
              aaronplanell      2
                adamhalasz      2
                adamreisnz      2
@@ -5381,9 +5516,9 @@ Not  a Bug
                   akoidan      2
               alan-agius4      2
               alessioalex      2
+              alexkrolick      2
                     amcsi      2
                  ankurk91      2
-        aprilmintacpineda      2
                  ashubham      2
                  battaglr      2
                  bellwood      2
@@ -5396,66 +5531,93 @@ Not  a Bug
              bradennapier      2
                brandon93s      2
                brandonros      2
+                brickyang      2
               bsommardahl      2
                  bterlson      2
+                  budarin      2
+               busticated      2
+                  cagross      2
+           cap-Bernardito      2
                     capaj      2
+                     caub      2
                  cdaringe      2
                  ceremcem      2
-                charandas      2
+              chopfitzroy      2
                  chrahunt      2
         christophehurpeau      2
                  cktang88      2
                cmawhorter      2
               command-tab      2
+            cristian-sima      2
              damienleroux      2
                davidmashe      2
                 dcurletti      2
                    dejour      2
              deltaepsilon      2
               dereknelson      2
-             developer239      2
                    dib258      2
                      dmt0      2
               dnalborczyk      2
                  doctyper      2
              drinkingcode      2
+                   dzek69      2
+             dzhytomyrsky      2
                  edgesoft      2
+                    effem      2
+                    efkan      2
                    egoist      2
                   ellisio      2
+             ericclemmons      2
+                    ericf      2
+                esamattis      2
            existentialism      2
+                    eyalw      2
+                  fatfisz      2
            felipewmartins      2
+                felixsanz      2
+                 fengerzh      2
                    fengkx      2
                   fengmk2      2
               fikriauliya      2
+               filipekiss      2
              flying-sheep      2
                ganlanyuan      2
                   geirman      2
-                 geowarin      2
              geraldfullam      2
+                githoniel      2
+                  gpoitch      2
+                  greaber      2
                    greggb      2
                 hawkeye64      2
                    hgwood      2
              himanshu0128      2
                   hiroppy      2
                 houshuang      2
+                  hozefaj      2
                    hronro      2
                    hughsk      2
                    hyperh      2
             iangregsondev      2
                     iarna      2
+                      ide      2
                  ilearnio      2
               ilyavolodin      2
+             itsMapleLeaf      2
             ivan-kleshnin      2
                jackmellis      2
                  jackysee      2
+                janryWang      2
                   jednano      2
                jeffsaremi      2
+               josebalius      2
                 jstrimpel      2
             justinmwarner      2
-               karelbilek      2
+                kasperekt      2
+                  keenwon      2
                kelly-tock      2
             kennetpostigo      2
                kevzettler      2
+                 kimgysen      2
            kirillgroshkov      2
               knownasilya      2
                  koddsson      2
@@ -5470,12 +5632,14 @@ Not  a Bug
               marvinroger      2
                  masoudgs      2
              matthew-dean      2
+           matthewmueller      2
                max-mapper      2
                  mchen391      2
                   medikoo      2
                  mesqueeb      2
             miaulightouch      2
                  micha149      2
+             michaeldzjap      2
         mikestopcontinues      2
                moleculezz      2
                    moltar      2
@@ -5483,25 +5647,27 @@ Not  a Bug
                   moose56      2
                 mrgodhani      2
                  mridgway      2
-                 muuvmuuv      2
-                mvolkmann      2
                    mxstbr      2
                   nam-hle      2
                  nihiluis      2
                   nikomal      2
                   nirazul      2
                   nuintun      2
+                   okuryu      2
                  oleersoy      2
                olessavluk      2
                   olsonpm      2
                    omerts      2
-                ooflorent      2
                   paglias      2
+                   pgilad      2
+                pronebird      2
+                   pruett      2
        quoininc-huudatran      2
              ramasilveyra      2
                 ranaclyde      2
               rattrayalex      2
                   ravecat      2
+                rbalicki2      2
                  reconbot      2
                  rhys-vdw      2
                  rohandey      2
@@ -5509,7 +5675,6 @@ Not  a Bug
                    shaimo      2
                   sheerun      2
                  sibelius      2
-                sibiraj-s      2
           stevenbriscoeca      2
                     surma      2
                    swyxio      2
@@ -5521,17 +5686,22 @@ Not  a Bug
                   unional      2
               vamsiampolu      2
               vishnevskiy      2
-              voronianski      2
+                 wcastand      2
                  wearhere      2
                 wellyshen      2
                  wmertens      2
+                  woldner      2
                  xjamundx      2
                    xzilja      2
+                 yanneves      2
                  yannik-b      2
                  yazmnh87      2
                      zeke      2
                zeuscronos      2
+                    zimme      2
                   zishanj      2
+               zwhitchcox      2
+                  01Kuzma      1
                      0326      1
                      0m15      1
                     0rvar      1
@@ -5540,16 +5710,21 @@ Not  a Bug
                0xdevalias      1
                  1nfinite      1
                     1pete      1
+                 1rosehip      1
                     29x10      1
                    2beers      1
+                   2color      1
               2rohityadav      1
               321ckatz123      1
+                   3kynox      1
                    3nsoft      1
                  4096void      1
                  423967mv      1
               4lph4-Ph4un      1
+                   4muzar      1
                      4ver      1
                 549393092      1
+                   59naga      1
                     8lane      1
                   9585999      1
                    AB1519      1
@@ -5563,10 +5738,13 @@ Not  a Bug
               AfroDevGirl      1
              AgronKabashi      1
                  Aiivaras      1
+                AlCalzone      1
              AldeonMoriak      1
+               AlexKvazos      1
                  AlexReff      1
               AlexVagrant      1
         AlexanderKositsyn      1
+      AlexanderTserkovniy      1
             AlexisTessier      1
                   Alexsey      1
            AllNamesRTaken      1
@@ -5574,11 +5752,13 @@ Not  a Bug
                     Allov      1
                   Altiano      1
                     Alvai      1
-                     AmrN      1
+                   AmosXu      1
              AndrewFinlay      1
              AndrewZamora      1
+                  Andy-QT      1
                   AndyOGo      1
               AngusMorton      1
+             AnthonyLamot      1
          AnthonyPorthouse      1
               AntonPilyak      1
                Antonius-S      1
@@ -5595,6 +5775,8 @@ Not  a Bug
                 AtarisMio      1
               AtofStryker      1
                     Atuna      1
+              AuthorProxy      1
+                    Awk34      1
                  Azam2926      1
              BarryCarlyon      1
            BarthesSimpson      1
@@ -5603,13 +5785,12 @@ Not  a Bug
                   BeanWei      1
                BenRussert      1
              BenoitAverty      1
-                 BernardA      1
              BerndWessels      1
                 BigSea001      1
+                   Billy-      1
               BinahLinden      1
               BinaryShrub      1
             BlueSky1997AL      1
-                    Bnaya      1
                     Boazc      1
                   BoleLee      1
                   Borales      1
@@ -5626,6 +5807,7 @@ Not  a Bug
                    CPunch      1
                     CYBAI      1
               Caesarovich      1
+            Callie-C-Wang      1
               CalmDownVal      1
              CandySunPlus      1
                 CarbonMan      1
@@ -5646,19 +5828,25 @@ Not  a Bug
                CodeLion66      1
            CodeToSurvive1      1
                  CodinCat      1
+                ColinTree      1
                   ComLock      1
                 CoreyCole      1
                   Creatan      1
+                 Cristy94      1
                   Cuixote      1
                     CxRes      1
+                     D4NH      1
                   DMCApps      1
                    DMon19      1
                    DQIJAO      1
                DaAwesomeP      1
                      DaBs      1
                    Dafrok      1
+                   Dajust      1
+                DanFuture      1
                    Dangoo      1
               DanielHeath      1
+           DanielSundberg      1
                DanielWLam      1
                 DanielZhu      1
             Danieliverant      1
@@ -5669,6 +5857,7 @@ Not  a Bug
               DavideValdo      1
                 Deadarius      1
                DeepMalh44      1
+             DeltaCircuit      1
                 DenizUgur      1
                DerJacques      1
              Derek-X-Wang      1
@@ -5676,10 +5865,13 @@ Not  a Bug
               DerekTBrown      1
                   DevJett      1
                 DevMakoto      1
+                   DevanB      1
             DeveloperAlly      1
                 DevinCarl      1
             DianaSuvorova      1
                   Diarsid      1
+                Didericis      1
+          DimitarNestorov      1
               DinerIsmail      1
                    Diokuz      1
               DiscoDancer      1
@@ -5696,7 +5888,9 @@ Not  a Bug
                       EGM      1
                    ESASAH      1
               EasonWang01      1
+                EdHubbell      1
                 EddyVinck      1
+            EdwardDrapkin      1
           EisenbergEffect      1
                  EizFeren      1
                    ElanMu      1
@@ -5704,6 +5898,8 @@ Not  a Bug
                EliasHasle      1
                     Enase      1
              EnoahNetzach      1
+                     Eomm      1
+                     Erid      1
                  ErrorPro      1
               EvgenyGerdt      1
             EvilSourcerer      1
@@ -5726,18 +5922,23 @@ Not  a Bug
             Frank-C-Zhang      1
               FredKSchott      1
                FuGardenia      1
+                Fudoshiki      1
           FullStackForger      1
                   GBincaz      1
+                GaoYYYang      1
                   GarthDB      1
+                GarveySun      1
                    Gcaufy      1
                  Gemorroj      1
            GeoffreyHervet      1
             GeoffreyPlitt      1
                GerHobbelt      1
                    Germey      1
+                   Ghusar      1
           GianlucaGuarini      1
                GitSquared      1
                  Goddchen      1
+                 Graham42      1
                 Granddevv      1
        GreaterThanOrEqual      1
                   Gregoor      1
@@ -5756,21 +5957,26 @@ Not  a Bug
               HongqingCao      1
            HoraceShmorace      1
                   Humeira      1
+                Hypnosphi      1
                   Hzy0913      1
          I-Want-ToBelieve      1
+               IUnknown68      1
+                  Ian5015      1
+                    IanVS      1
              IhsanMujdeci      1
                   IlyaZha      1
                ImadSalimi      1
                Immortalin      1
                     ImreC      1
                Industrial      1
-            IngwiePhoenix      1
                 InrayLiao      1
              IsaiasCuevas      1
              Ishank-dubey      1
+         IskanderMustafin      1
             ItsAshleyJ182      1
             IvanGoncharov      1
               IvanSanchez      1
+                  J-F-Liu      1
               JGSilverman      1
                    JLarky      1
                   JSn1nj4      1
@@ -5787,10 +5993,12 @@ Not  a Bug
                Jaxenormus      1
                JeffWScott      1
                 JeremyLoy      1
+                 JerryCBH      1
                  Jezternz      1
                     Jiiun      1
                 JinJieTan      1
               JoaoMosmann      1
+                JoeBBChen      1
              JoeCianflone      1
             JoePassanante      1
                 JohannLai      1
@@ -5808,6 +6016,7 @@ Not  a Bug
               KDSaltyPony      1
                     KO527      1
             KaizenTamashi      1
+              KangdaOOLin      1
                  Kannnnng      1
                  KaoruDev      1
                  KarlPurk      1
@@ -5819,8 +6028,9 @@ Not  a Bug
              KevinGrandon      1
          KevinMarioGerard      1
                Khachatour      1
-               KidkArolis      1
+                   Kielan      1
             KieranClarke1      1
+                KingMario      1
                  Kiran554      1
                Kirpich634      1
              KnisterPeter      1
@@ -5830,7 +6040,6 @@ Not  a Bug
                KromDaniel      1
              KyleAMathews      1
                    LEQADA      1
-                  LINKIWI      1
               LRstudentHU      1
             LarsVlyminckx      1
              Lazarencjusz      1
@@ -5841,6 +6050,7 @@ Not  a Bug
                 LoganDark      1
                    Lokdei      1
                 Lonniebiz      1
+                  Loppone      1
               LucasIcarus      1
                   LucyMac      1
            Luke-Niwranski      1
@@ -5852,6 +6062,7 @@ Not  a Bug
                   MaTToX3      1
                   MacL3an      1
                     Macil      1
+                MagicDuck      1
               MagicLegend      1
             MajesticRaven      1
               MammaSonnim      1
@@ -5864,7 +6075,10 @@ Not  a Bug
      MatthewDavidCampbell      1
                 Mavrick91      1
            Max-Kolodezniy      1
+                MaxInMoon      1
              MaximVanhove      1
+            Mayank1791989      1
+                  Means88      1
                    Melcus      1
                    Memoyr      1
                     Mensu      1
@@ -5874,6 +6088,7 @@ Not  a Bug
            MichaelBieniek      1
              MichaelJCole      1
                 MichaelSL      1
+               MihaMarkic      1
               MikeJoyce19      1
             MikeTheReader      1
                 MilanJimi      1
@@ -5887,16 +6102,20 @@ Not  a Bug
                    MrToxy      1
                   Mrwaite      1
              NagabhushanS      1
+                  Nantris      1
                  Neglexis      1
                      NekR      1
          NellyHayrapetyan      1
              NemanjaManot      1
+                   Nemsae      1
+         NeroVanbiervliet      1
                 NewOldMax      1
                   NexxLuo      1
            Nicolas-yonedA      1
                     NidMo      1
             NightOwlPrgmr      1
          NiklasRosenstein      1
+          NikolayFrantsev      1
                    NoiSek      1
                   Nokel81      1
                  Nomeasmo      1
@@ -5911,6 +6130,7 @@ Not  a Bug
                   PENG199      1
             PachoJGaviria      1
            PacoSysHooptap      1
+                 Parasrah      1
            PatrickHeneise      1
                 PatrickJS      1
                     Pauan      1
@@ -5919,8 +6139,12 @@ Not  a Bug
              PerfectionVR      1
           PerspectivesLab      1
               PetitCookie      1
+               PetterRuud      1
+                 PezCoder      1
                   Phaze1D      1
                   PierBJX      1
+                  Piero87      1
+               PierreMano      1
             Prabhat-Sutar      1
               Praveer1981      1
               Problematic      1
@@ -5930,17 +6154,19 @@ Not  a Bug
                   Que3216      1
                 Quentin01      1
                  RRaideRR      1
-               RWOverdijk      1
                Rabbit0306      1
+             RahavLussato      1
                  RaleighY      1
                   Razican      1
                ReinsBrain      1
                 RevillWeb      1
                   Rialgar      1
+         RicardoBrito1938      1
               RichardIvan      1
               RichardLitt      1
                      RiiD      1
               RobertGary1      1
+               RobinRadic      1
                RockinRonE      1
                    Rogach      1
                 Rohitbels      1
@@ -5953,6 +6179,7 @@ Not  a Bug
                SafaElmali      1
                   SamXiao      1
            SamantaChinmoy      1
+              SanderSpies      1
                Sawtaytoes      1
                 Scriptura      1
           SeanLMcCullough      1
@@ -5964,6 +6191,8 @@ Not  a Bug
                  Shadow88      1
                Shahriar87      1
                  ShaneMcX      1
+                 Sharcoux      1
+               ShukantPal      1
                Shyam-Chen      1
                  SiAdcock      1
              SidneyNemzer      1
@@ -5976,6 +6205,7 @@ Not  a Bug
                   Softeqa      1
                SonofNun15      1
                    SoulKa      1
+              SparkleChen      1
                  Stalinko      1
                    Stanko      1
                 Stanzilla      1
@@ -5986,6 +6216,7 @@ Not  a Bug
                 SteveALee      1
               SteveCruise      1
                    SturmB      1
+               Suantovith      1
            Sukhpall-Singh      1
              SumanthPuram      1
              SunooBertsch      1
@@ -6003,7 +6234,6 @@ Not  a Bug
               Tcheikovski      1
                   Telokis      1
                   Tetheta      1
-                TheAifam5      1
                   TheAkio      1
            TheAlexLichter      1
                   TheBigK      1
@@ -6012,9 +6242,11 @@ Not  a Bug
            TheNorthMemory      1
                TheRusskiy      1
                 TheSpyder      1
+             TheVexatious      1
                   TheoMer      1
                  Thesephi      1
             ThiagoMiranda      1
+              ThiefMaster      1
                   Thisman      1
               ThomasRalee      1
            ThunderBirdsX3      1
@@ -6029,6 +6261,7 @@ Not  a Bug
            Tomekmularczyk      1
                   TonBits      1
                 TopCoDuck      1
+                   TopGrd      1
                    Torcsi      1
          TotooriaHyperion      1
             TrentWest7190      1
@@ -6036,13 +6269,13 @@ Not  a Bug
             TristanCottam      1
                  TrustNik      1
           TryingToImprove      1
+                Tvrqvoise      1
                 TylerYang      1
                 UncleBill      1
             Undistraction      1
                      V1os      1
               Vaasu-Dhand      1
                Valeronlol      1
-                   Vanuan      1
                   Vayvala      1
                    VicXXX      1
                  VikR1000      1
@@ -6060,6 +6293,7 @@ Not  a Bug
                  WwupengP      1
                  X-Tender      1
                    XLCYun      1
+             XeniaSiskaki      1
                  XhmikosR      1
              XiaoJianPeng      1
                  Xotic750      1
@@ -6098,8 +6332,12 @@ Not  a Bug
               abrhambas01      1
                  acinader      1
                  acobster      1
+                  aconfee      1
+                    acthp      1
+                adam-beck      1
                adam-lynch      1
                  adam-mvk      1
+             adamborowski      1
          adamelliotfields      1
                adamgruber      1
             adamierymenko      1
@@ -6110,21 +6348,25 @@ Not  a Bug
                  adamyonk      1
                adamzhu-xs      1
                 adebiyial      1
+                    adred      1
              adrienharnay      1
                 adubouski      1
                    aduh95      1
                    aeegvk      1
                   aelbore      1
+                   aemino      1
                 aermicioi      1
               affanshahid      1
                    aflext      1
                   afreidz      1
+                 agalazis      1
                age2pierre      1
                 agentidea      1
                    ages96      1
                  agilgur5      1
                   ahahn95      1
                  ahmedk92      1
+                aholtkamp      1
                     ahtcx      1
                  aidenZou      1
                  airtonix      1
@@ -6145,7 +6387,10 @@ Not  a Bug
                  al-the-x      1
               aladdin-add      1
                  alallier      1
+              alangpierce      1
+               alburritos      1
                  aldarund      1
+                   aldeka      1
               aleccool213      1
                   alecm20      1
            alegradev-user      1
@@ -6155,6 +6400,7 @@ Not  a Bug
                   alendit      1
             alex-miller-0      1
              alex-pouivet      1
+                   alex88      1
                   alex996      1
               alexanderby      1
          alexandernanberg      1
@@ -6167,14 +6413,16 @@ Not  a Bug
             alexisargyris      1
             alexisvincent      1
                    alexjg      1
-              alexkrolick      1
             alexlafroscia      1
            alexlrobertson      1
+              alexmiranda      1
            alexsasharegan      1
                   alexw10      1
                  alferpal      1
+             alfredriesen      1
              alihaddadkar      1
                   alippai      1
+             alisabzevari      1
                 allangrds      1
                     alloy      1
                   allybee      1
@@ -6183,14 +6431,18 @@ Not  a Bug
       aloukianova-godaddy      1
           alpha-and-omega      1
                   alphand      1
+      althamash-chaipoint      1
           alwaysonlinetxm      1
                alysonbonk      1
+                  ambewas      1
                  amitksin      1
                   amitzur      1
                 ammichael      1
                  ammuench      1
                 anagram3k      1
               analog-nico      1
+               anatoly314      1
+                 anchal20      1
               andfaulkner      1
                  andineck      1
              andrastothtw      1
@@ -6198,6 +6450,8 @@ Not  a Bug
          andreaswachowski      1
           andreechristian      1
           andrejcremoznik      1
+            andreubotella      1
+            andrevenancio      1
             andrewgrewell      1
                  andrewrk      1
                 andrewtyl      1
@@ -6209,7 +6463,9 @@ Not  a Bug
                    ankurp      1
           annakocheshkova      1
                  ansonyao      1
+          anthony-dandrea      1
           antoinejaussoin      1
+            antoniojunyor      1
            antonioribeiro      1
                    antony      1
                 applemate      1
@@ -6218,6 +6474,7 @@ Not  a Bug
                   arackaf      1
          aravindkumaremis      1
           arcanedev-maroc      1
+                  arcanis      1
                arduino731      1
                       are      1
                 aredridel      1
@@ -6240,6 +6497,7 @@ Not  a Bug
           arthurmmedeiros      1
                  arthurvr      1
                 artworkad      1
+            artyomtrityak      1
                       arv      1
                 asajadi84      1
                aschrijver      1
@@ -6247,6 +6505,7 @@ Not  a Bug
                ashercoren      1
               asimpletune      1
             asivaneswaran      1
+      asthap-nimblechapps      1
                 astoilkov      1
                  astra137      1
                  astrauka      1
@@ -6267,8 +6526,10 @@ Not  a Bug
                axelrindle      1
                axit-joost      1
                     axten      1
+                     axtn      1
              aymeneCasino      1
                  ayophanz      1
+               ayush-srtv      1
              ayushkamadji      1
                     ayxos      1
             azatakmyradov      1
@@ -6277,6 +6538,7 @@ Not  a Bug
                 babakness      1
               badcodercpp      1
                    badoet      1
+                  badtant      1
                    bahsim      1
                 baijunjie      1
              bandicsongor      1
@@ -6288,6 +6550,7 @@ Not  a Bug
                bartekleon      1
                bartsmykla      1
                    baryla      1
+                     basz      1
                    batjko      1
                    bayun2      1
                      bboe      1
@@ -6298,6 +6561,7 @@ Not  a Bug
             begincalendar      1
                 begueradj      1
                  belcherj      1
+             believer-ufa      1
              belousnikita      1
                benbuckman      1
            benderTheCrime      1
@@ -6316,6 +6580,7 @@ Not  a Bug
                   benpink      1
                bensampaio      1
                  benyanke      1
+                   bernex      1
                berserkore      1
               bertho-zero      1
               besrabasant      1
@@ -6330,6 +6595,8 @@ Not  a Bug
             bhargavrpatel      1
                    bi-kai      1
                   bibiehy      1
+                 bigbossx      1
+                bigslycat      1
                   bilby91      1
                billdwhite      1
              binjospookie      1
@@ -6343,6 +6610,8 @@ Not  a Bug
                 blaasvaer      1
                  blade503      1
                      blai      1
+             blainekasten      1
+            blake-regalia      1
           blakeandrewwood      1
                 blakemann      1
                  blikblum      1
@@ -6365,6 +6634,7 @@ Not  a Bug
                 boneskull      1
                  bonesoul      1
                    borekb      1
+                borisding      1
                  boushley      1
                     braco      1
                  bradware      1
@@ -6377,18 +6647,19 @@ Not  a Bug
                 brendaMan      1
                brendanmig      1
             brendonparker      1
+              bretthadley      1
                   brettz9      1
                brian101co      1
              briandipalma      1
             brianignacio5      1
            brianjenkins94      1
                brianzelip      1
-                brickyang      1
                  brillout      1
                    broofa      1
                    broom9      1
               brstillwell      1
               brt-han-mai      1
+                 brtthomp      1
              bruceauyeung      1
                   bruchim      1
         brunodasilvalenga      1
@@ -6397,22 +6668,25 @@ Not  a Bug
            bryanrasmussen      1
                 bsansouci      1
                  bsonntag      1
+              bspies-work      1
                   btmdave      1
-                  budarin      1
+                     btoo      1
                  burabure      1
                burakerdem      1
                 burakuluu      1
                    burtek      1
-               busticated      1
                 bvalerius      1
                        bw      1
                 byrafaelr      1
                    bytasv      1
-                  cagross      1
+                     c-h-      1
+                    ca057      1
+                caguthrie      1
                  cahyowhy      1
                      caih      1
                     caitp      1
                 calebboyd      1
+          calebcartwright      1
                  calebeby      1
                  calebmer      1
                  calidion      1
@@ -6429,11 +6703,11 @@ Not  a Bug
      carvalhoviniciusluiz      1
               catesandrew      1
                  cattermo      1
-                     caub      1
                      cb29      1
                  cchanxzy      1
               ccheung0926      1
                   ccoffey      1
+                  ccorcos      1
                  ccravens      1
                cdanielsen      1
                   cdhowie      1
@@ -6451,17 +6725,19 @@ Not  a Bug
                    chanon      1
                 chao00440      1
                 chapati23      1
+           charliedavison      1
                     chase      1
              chase-moskal      1
                chasemaier      1
                     chasm      1
                    chenzx      1
                  chiefGui      1
+              chiefjester      1
                     chiel      1
                chilander1      1
                      chjj      1
+                chochihim      1
              choffmeister      1
-              chopfitzroy      1
                     chpio      1
                  chris4dd      1
                 chrisands      1
@@ -6472,6 +6748,7 @@ Not  a Bug
                 chrisgrim      1
           christatedavies      1
              christensson      1
+            christian4423      1
            christianbundy      1
     christopher-francisco      1
            christopherdro      1
@@ -6483,18 +6760,25 @@ Not  a Bug
               cia48621793      1
                     cideM      1
                       cif      1
+                    cinic      1
+                 cirsteve      1
                        cj      1
+                   cjhdom      1
                    ckib16      1
+                 cklepeis      1
                  clawfire      1
            claytonrcarter      1
                  cleptric      1
+                clhenrick      1
                 clintwood      1
+                 clubajax      1
                   cocadgy      1
                cocoastorm      1
          codefromthecrypt      1
               codeofsumit      1
            colepizzarella      1
                coleturner      1
+           colinmcparland      1
               collinsauve      1
           commander-bryan      1
          computersarecool      1
@@ -6509,6 +6793,7 @@ Not  a Bug
                    cpojer      1
                 craigh411      1
               credwards27      1
+             crenshaw-dev      1
              cristinecula      1
                 cswleocsw      1
                      ctf0      1
@@ -6517,12 +6802,15 @@ Not  a Bug
                 cuongndc9      1
                 cvalmonte      1
                      cvle      1
+              cwallervand      1
                   cweiske      1
                  cwhite92      1
                    cy2003      1
                  cyberhck      1
                cypherbits      1
               cyrilchapon      1
+              cyrildurand      1
+                 cyrus-za      1
                     cyyyu      1
                  cztomsik      1
                 d-fischer      1
@@ -6530,10 +6818,12 @@ Not  a Bug
                     d3zza      1
                      dKab      1
                daavidjobe      1
+                     dace      1
                 dagatsoin      1
                  daleyjem      1
                  dalisoft      1
                   damassi      1
+           damianobarbati      1
             damienmartel2      1
                damonmaria      1
                 damountie      1
@@ -6543,12 +6833,15 @@ Not  a Bug
                    danias      1
           danielbayerlein      1
            danielbuechele      1
+                danielkcz      1
+               danielo515      1
                  danielrs      1
               danielwaltz      1
                 danillouz      1
            danilosilvadev      1
                 danivalls      1
                      danm      1
+                    danoc      1
                 danrigsby      1
                  danrneal      1
                  danwdart      1
@@ -6560,8 +6853,10 @@ Not  a Bug
                 darkedges      1
                  darknoon      1
                 darkylmnx      1
+              darrenklein      1
                  darrickc      1
                darrickyee      1
+                datakurre      1
              daveferrara1      1
                     davej      1
                   davesag      1
@@ -6573,23 +6868,30 @@ Not  a Bug
                davidhtien      1
                davidmatas      1
             davidmgarrett      1
+              davidpelaez      1
+                 daviesaz      1
                    davvit      1
               davydnorris      1
+                 dawnmist      1
                 dazinator      1
                  dazlious      1
                   dbolton      1
                   dbyzero      1
                   dcastil      1
                   dcermak      1
+                  dcs3spp      1
                    ddatsh      1
                      ddhp      1
              ddimitrioglo      1
+                    ddtch      1
              ddydeveloper      1
                      dead      1
                dead-horse      1
             deadcoder0904      1
             deanilvincent      1
                  deckar01      1
+                 deecewan      1
+               deepakjois      1
               deeshrestha      1
                   deframe      1
                    dejewi      1
@@ -6610,6 +6912,7 @@ Not  a Bug
                  devinivy      1
                   devotox      1
                 dgirgenti      1
+              dgoldstein0      1
                   dgrcode      1
                 dharkness      1
             dhavalgogri17      1
@@ -6622,18 +6925,23 @@ Not  a Bug
                      diit      1
                   dimensi      1
             dimitropoulos      1
+                    dimti      1
                   diosney      1
                    dippas      1
+                   divmgl      1
                 divyanthj      1
                 divyenduz      1
                  diya-ing      1
                     djMax      1
            djleonskennedy      1
                   djmtype      1
+             dlebedynskyi      1
               dmarshall83      1
                  dmason30      1
           dmitry-saritasa      1
              dmitrykrylov      1
+       dmitrykuznetsovdev      1
+                     dmnd      1
                dmstocking      1
                    dolbex      1
               domchristie      1
@@ -6646,11 +6954,13 @@ Not  a Bug
               dongyuzheng      1
                    donker      1
                  donnysim      1
+                    doque      1
           dotnetCarpenter      1
                  dottodot      1
                 doug-wade      1
               dougblackjr      1
               douglassllc      1
+                    doums      1
                dpacmittal      1
                 dparmar74      1
                    dpinol      1
@@ -6659,12 +6969,16 @@ Not  a Bug
                    drazik      1
                    drcmda      1
               dreamevilgf      1
+               drifterz28      1
+               drizzlezxy      1
               drozdzynski      1
                 dsafanyuk      1
                    dsl101      1
+                    dsngo      1
                    dthree      1
                 dtjohnson      1
                  duebbert      1
+             dumpsayamrat      1
                      duro      1
                     dutzi      1
                    dwelle      1
@@ -6676,9 +6990,8 @@ Not  a Bug
                  dyf19118      1
            dylanarmstrong      1
                dylanparry      1
-                   dzek69      1
-             dzhytomyrsky      1
                  dzintars      1
+                 eTorAken      1
                  edalzell      1
           eddiefletchernz      1
                    eddywm      1
@@ -6687,14 +7000,15 @@ Not  a Bug
             edouard-lopez      1
           eduardolundgren      1
                    edygar      1
+                eejdoowad      1
                   efender      1
-                    effem      1
-                    efkan      1
                 egidijusj      1
                eightyfive      1
                   ekelvin      1
                   elcolie      1
+                     eldh      1
                elf-pavlik      1
+                  eliihen      1
                elinskytap      1
                elisechant      1
                ellioseven      1
@@ -6704,49 +7018,56 @@ Not  a Bug
                     elzup      1
                    embiem      1
                 emilbayes      1
+                  emjaksa      1
                   emmenko      1
                 emperorjm      1
                      empz      1
+                endcycles      1
                 enjoylife      1
                   enriqg9      1
                eoinmurray      1
                 epikhighs      1
               epnlespieux      1
                    eqyiel      1
+                  eranimo      1
              ericanderson      1
-             ericclemmons      1
+              ericelliott      1
               ericmdantas      1
                ericmorand      1
                  ericsnap      1
                ericwooley      1
                   erikras      1
                   es6Test      1
-                esamattis      1
                escapedcat      1
                  essedger      1
              estevezluis1      1
                    ethyde      1
                  etillson      1
                   euforic      1
+          eugeny-dementev      1
                     eusen      1
                evantahler      1
                     evanw      1
+               everettwho      1
+                   evless      1
                    evsign      1
+                 ezmiller      1
                   f0rmiga      1
                  fALKENdk      1
                     fab1o      1
+               fabienjuif      1
           fabiospampinato      1
                 fabiulous      1
          fabriziogiordano      1
            fabriziomoscon      1
               faceyspacey      1
+                 faergeek      1
                  fahadhaq      1
                    falost      1
              fanchangyong      1
               fancyboynet      1
                  farmerau      1
                  farwayer      1
-                  fatfisz      1
                    fazega      1
                      fb55      1
                   fbacker      1
@@ -6757,18 +7078,18 @@ Not  a Bug
                   fdubost      1
                    fearrr      1
                  febeling      1
+                   fedemp      1
+                     fegg      1
               felipediogo      1
+             felipefialho      1
                     felix      1
           felixakiragreen      1
              felixfbecker      1
-                felixsanz      1
-                 fengerzh      1
               fengxinming      1
                    fer-ri      1
              ferrantejake      1
               fghibellini      1
                 fheidrich      1
-               filipekiss      1
              filipemerker      1
           filippoitaliano      1
                fingermark      1
@@ -6787,7 +7108,9 @@ Not  a Bug
                    flytam      1
                   folkvir      1
                 folterung      1
+               fongandrew      1
                  forehalo      1
+              forkingpath      1
              forsureitsme      1
                    fortes      1
                      fovj      1
@@ -6803,9 +7126,13 @@ Not  a Bug
               fridaydream      1
                  frosty00      1
                  frozeman      1
+                   fruser      1
                fsck-mount      1
                fselcukcan      1
                   fskreuz      1
+                     fttx      1
+                   fudini      1
+               fumblehool      1
            furkankadioglu      1
                  futurist      1
                   fwh1990      1
@@ -6813,6 +7140,7 @@ Not  a Bug
                      g8up      1
                 gaastonsr      1
              gabegorelick      1
+                 gabimelo      1
                    gabxgz      1
                    gadicc      1
               galenandrew      1
@@ -6829,56 +7157,68 @@ Not  a Bug
           gbhipolitoglyph      1
                gborcherds      1
                    gd4Ark      1
+               gdepouilly      1
                 gduffy100      1
           geanfrancovolpe      1
            geekosaurusR3x      1
                   gera2ld      1
              gerardabello      1
+                   gerbal      1
                 gergelyke      1
                 germanamz      1
                    getchu      1
                 getnashty      1
                  gewentao      1
+                   gflohr      1
                     ggJSC      1
+                  gggitpl      1
                      ggmo      1
                    ghenry      1
           giancarlosisasi      1
+              gianpietro1      1
                    gilbox      1
                    ginter      1
                  giolvani      1
                   gitHber      1
                  gitawego      1
-                githoniel      1
                   givanse      1
+                    givik      1
                  gjovanov      1
                   gkhndev      1
                   gkovacs      1
               glennmcewan      1
                glennreyes      1
+                    gnihi      1
                     gnoff      1
                 goffreder      1
             golubvladimir      1
                   gonjavi      1
                gplusdotgr      1
-                  gpoitch      1
-                  greaber      1
+                      gre      1
          greenkeeper[bot]      1
                   gregbty      1
                   gregory      1
                     greim      1
               greytexture      1
                    grinry      1
+                 grundiss      1
                 grydstedt      1
                     gsouf      1
                     gstoa      1
               guanweiwang      1
+           guilhermeutzig      1
           guillaume-acard      1
               guillaumekh      1
                 guobinhit      1
+                 guocheng      1
+                   guotie      1
                 gurufordy      1
+               gusdaud-zz      1
             gustafhalldor      1
         gustavovendramini      1
               guyfedwards      1
+               guywaldman      1
+                   guzart      1
                    gveraa      1
               gxxcastillo      1
                 gyandeeps      1
@@ -6895,6 +7235,7 @@ Not  a Bug
                haldunanil      1
                   half0wl      1
                   half2me      1
+                hallister      1
               hamdibayhan      1
           hamiltondanielb      1
                 hamxabaig      1
@@ -6905,12 +7246,14 @@ Not  a Bug
                   happyqu      1
               harimambura      1
                   harkoad      1
+               haroldo-ok      1
             harrydengchao      1
                 harshan89      1
              hasanbayatme      1
                hasayake97      1
                  haskaalo      1
            hassanshaikley      1
+                  hatched      1
                 hathamneh      1
                 hawkrives      1
                     hazzo      1
@@ -6920,12 +7263,14 @@ Not  a Bug
                   hemanth      1
                hendrikeng      1
               hengsunrith      1
+                henkvhest      1
                 henryruhs      1
                   herpiko      1
                herrtxbias      1
                heyamykate      1
                heyimlance      1
               heyitsarpit      1
+                   hezedu      1
              hideo666nabe      1
                  highfeed      1
                  hikerpig      1
@@ -6942,6 +7287,7 @@ Not  a Bug
                   howel52      1
                  hrace009      1
               hsiaoyi0504      1
+               htank-wang      1
                   htulipe      1
                    htuzel      1
           huang-xiao-jian      1
@@ -6951,12 +7297,14 @@ Not  a Bug
                 hughlomas      1
                hugomrdias      1
                    humphd      1
+                   hurrtz      1
                 huyaxiong      1
                   huydbui      1
                  hvalette      1
                    hymair      1
                     hyosh      1
                     hzlzh      1
+                   iGarym      1
                     iKoru      1
              iSarahSajjad      1
                iam-peekay      1
@@ -6972,28 +7320,35 @@ Not  a Bug
            ianstormtaylor      1
                     iansu      1
                     icepy      1
-                      ide      1
+                idahogurl      1
+                     idan      1
+               idangozlan      1
          ideoclickVanessa      1
                      iffa      1
                      iffy      1
                    ifrguy      1
                ignatevdev      1
+                   igrek8      1
                  iguido95      1
              ihiteshgupta      1
                    ikovic      1
                   ikzjfr0      1
+            ilan-schemoul      1
                   iliakut      1
+                iliasbhal      1
                    ilife5      1
                   ilijamt      1
                   illepic      1
                    imakou      1
             imcodingideas      1
+                  imerkle      1
                    imnot2      1
               imrefazekas      1
                   imruxin      1
                indraraj26      1
                    ineoss      1
                  infahash      1
+                 infolock      1
                initialdmg      1
              inovramadani      1
                 insidewhy      1
@@ -7006,9 +7361,10 @@ Not  a Bug
           isitreallyalive      1
       isthisstackoverflow      1
                      isvk      1
-             itsMapleLeaf      1
                  itslenny      1
                ivanromakh      1
+               ivansieder      1
+                   ivgrin      1
                  ivitivan      1
                 iwotastic      1
                   iyawnis      1
@@ -7027,6 +7383,7 @@ Not  a Bug
             jakearchibald      1
                 jakedowns      1
                  jakewies      1
+                 jalal246      1
                     jamen      1
           james-criscuolo      1
                  james-ff      1
@@ -7038,12 +7395,12 @@ Not  a Bug
                  jamietre      1
                    jamlen      1
                   janat08      1
-                janryWang      1
               japherwocky      1
               japrogramer      1
                jaredsmith      1
                jasonkuhrt      1
              jasontianxie      1
+               jasonxia23      1
                jasperdunn      1
                    javi11      1
                jaybekster      1
@@ -7056,6 +7413,7 @@ Not  a Bug
                    jcarpe      1
                   jchayan      1
                   jcimoch      1
+                   jcklpe      1
                  jcs12311      1
                jdalrymple      1
                   jdalton      1
@@ -7066,14 +7424,17 @@ Not  a Bug
                  jediyuan      1
            jedrekdomanski      1
               jedrichards      1
+              jeffcharles      1
                jeffjewiss      1
             jenniferabowd      1
              jensHartfelt      1
               jephjohnson      1
+             jeremiah-ang      1
                  jeremija      1
         jeremy-smith-maco      1
              jerroydmoore      1
                  jescalan      1
+              jesstelford      1
                      jeud      1
                jevinsidhu      1
                   jevonch      1
@@ -7083,7 +7444,9 @@ Not  a Bug
                  jfrolich      1
                  jfstephe      1
                  jgehrcke      1
+              jgerigmeyer      1
                  jgogstad      1
+                 jgornick      1
                     jgoux      1
                    jgthms      1
                  jharris4      1
@@ -7094,6 +7457,7 @@ Not  a Bug
                     jidma      1
                      jigz      1
                 jim-moody      1
+                  jimblue      1
                   jimmy-e      1
                jimmybrawn      1
              jimmywarting      1
@@ -7114,16 +7478,21 @@ Not  a Bug
                  jmhwang7      1
                      jmls      1
                       jmm      1
+                 jmorrell      1
               jnachtigall      1
                    jnanin      1
                   jndietz      1
              joacim-boive      1
                    joakin      1
+               joaopslins      1
+                joaquimds      1
                joeattardi      1
            joedrummer8993      1
             joel-solymosi      1
                joelharkes      1
               joelmukuthu      1
+                  joelnet      1
+                 joetidee      1
                     joews      1
                  joezimjs      1
             johanmynhardt      1
@@ -7132,9 +7501,11 @@ Not  a Bug
            johndatserakis      1
                   johndc7      1
               johnjelinek      1
+                johnny-mh      1
                johnzielke      1
                     jon49      1
                 jonahbron      1
+             jonashartwig      1
         jonathanglasmeyer      1
                 jonathanj      1
                 jonchurch      1
@@ -7142,14 +7513,17 @@ Not  a Bug
                 jonjaques      1
                   jonkemp      1
             jonny-novikov      1
+              jonricaurte      1
                jorangreef      1
+                jordaaash      1
             jordanpapaleo      1
                   jordond      1
         jordyvandomselaar      1
-               josebalius      1
                josephdyer      1
+          josephfinlayson      1
               josephrexme      1
                  joseprio      1
+             josh-endries      1
                    josh18      1
               joshmanders      1
               joshrhoades      1
@@ -7165,17 +7539,21 @@ Not  a Bug
                  jptaylor      1
                   jquense      1
                      jr-k      1
+                  jrappen      1
                     jraut      1
+                   jrencz      1
                 jrgleason      1
+                 jrmcdona      1
               jrobison153      1
                 jrock2004      1
-                  jscheid      1
                   jsherin      1
+                  jsliu27      1
                    json2d      1
                  jsphweid      1
                      jt3k      1
            jthomaschewski      1
                     jtulk      1
+               jtyler-dev      1
             julienvincent      1
                  jun95585      1
              juniorgarcia      1
@@ -7186,6 +7564,7 @@ Not  a Bug
            justintime4tea      1
             justkidding96      1
               jvanbruegge      1
+                     jvik      1
                   jvinhit      1
            jwakeman-ebsco      1
             jwang-navarik      1
@@ -7194,13 +7573,16 @@ Not  a Bug
               k2snowman69      1
                    kKen94      1
                  kachkaev      1
+                   kaidez      1
                kalbert312      1
                  kalitine      1
+                 kalmbach      1
                 kambing86      1
                   kamikat      1
          kamleshchandnani      1
                   kapouer      1
           karandeepvirk85      1
+           karimcambridge      1
                 karladler      1
                    karlas      1
                 karlhorky      1
@@ -7209,7 +7591,6 @@ Not  a Bug
       karolisgrinkevicius      1
                karptonite      1
                 karthicks      1
-                kasperekt      1
                    katsos      1
                    kay-is      1
                    kbardi      1
@@ -7217,12 +7598,14 @@ Not  a Bug
                 kculmback      1
                 kdelmonte      1
                   kduy969      1
-                  keenwon      1
+                  kdw2060      1
            kellyrmilligan      1
                    kenany      1
                 kenjiding      1
+               kenkozheng      1
             kennethbigler      1
                  kerspoon      1
+                    kesla      1
               kevinSuttle      1
                kevinbeaty      1
                   kevinji      1
@@ -7231,13 +7614,17 @@ Not  a Bug
               kevinsimper      1
                kevo1ution      1
                   kfw9257      1
+             kg-currenxie      1
               khanhtc1202      1
                  khusamov      1
+                    kibin      1
                    kidbai      1
             kiki-le-singe      1
                 killmenot      1
+               kimihiro64      1
                   kimjuny      1
                    kimown      1
+                kingscott      1
                 kiprasmel      1
                   kiranjd      1
               kirbysayshi      1
@@ -7270,6 +7657,7 @@ Not  a Bug
                    kromit      1
                 ksharifbd      1
                    ksjogo      1
+                 ksmithut      1
                ksorathiya      1
                    kswope      1
                      kt3k      1
@@ -7281,8 +7669,10 @@ Not  a Bug
              kunalspathak      1
                  kuncevic      1
                  kunjee17      1
+                kunlongxu      1
                kurtextrem      1
                kushubham9      1
+                kwhitaker      1
                   kyasbal      1
                    kyldvs      1
                labsvisual      1
@@ -7303,6 +7693,7 @@ Not  a Bug
                    lathil      1
                  latipun7      1
            laurencedorman      1
+                 laurenkt      1
                  ldrahnik      1
                    leaven      1
              lednhatkhanh      1
@@ -7311,7 +7702,10 @@ Not  a Bug
                 leejh3224      1
                  leeoniya      1
                   leer561      1
+             leesiongchan      1
               leinelissen      1
+                 lekhnath      1
+                lemonmade      1
                   lemonov      1
            lemoustachiste      1
            leonardobaggio      1
@@ -7319,6 +7713,7 @@ Not  a Bug
                 leonheess      1
              leonid-bauxy      1
                    leoyli      1
+                   letoss      1
                    leungi      1
             leviathanbeak      1
              levithomason      1
@@ -7335,6 +7730,7 @@ Not  a Bug
                lijialiang      1
                   lijuenc      1
                 likun7981      1
+                lilian132      1
                limichange      1
                   limonte      1
                limpbrains      1
@@ -7354,6 +7750,7 @@ Not  a Bug
                loheswaran      1
          lohithdhanakonda      1
                 lokialone      1
+                 lomboboo      1
                longletian      1
                  loranger      1
                  lorefnon      1
@@ -7389,6 +7786,7 @@ Not  a Bug
              lukekentwell      1
                 lukescott      1
               luminarious      1
+                 lushijie      1
                     luwes      1
                     lxkuz      1
                  lxsmnsyc      1
@@ -7406,15 +7804,18 @@ Not  a Bug
                  mad-hero      1
                madcapper2      1
                 maelfosso      1
+                maerzhase      1
                  maestroh      1
                   magsout      1
               maheshkrsna      1
           maheshkumar2150      1
                  maiermic      1
+                maiertech      1
              maifeeulasad      1
                    mainrs      1
              maks-rafalko      1
                  malexdev      1
+          malikkamranabid      1
               mallardduck      1
                mamachanko      1
               manas-hegde      1
@@ -7449,16 +7850,18 @@ Not  a Bug
                 matheusml      1
                  matheuss      1
     mathias22osterhagen22      1
+                 mathieug      1
               matiastucci      1
                    matpen      1
+               mattcolman      1
             mattdarveniza      1
+                 mattdell      1
                  mattdesl      1
                    mattes      1
           matthew-andrews      1
           matthewBeckwith      1
              matthewepler      1
                  matthewh      1
-           matthewmueller      1
          matthewoestreich      1
            matthieusieben      1
                  mattkatt      1
@@ -7470,6 +7873,7 @@ Not  a Bug
                maxime1992      1
               maxmedina05      1
              maxpopovitch      1
+                 maxrimue      1
                  maxvipon      1
                mayuelei66      1
                   maziarz      1
@@ -7485,20 +7889,27 @@ Not  a Bug
                      mck-      1
                  mcollina      1
                 mdelclaro      1
+                 mderrick      1
                    me1230      1
                  mega6382      1
            mehrdad-shokri      1
                    melloc      1
+                 melloc01      1
+               melvinodsa      1
                  menasheh      1
+                  merksam      1
                   merobal      1
                     mevbg      1
                     meyer      1
                  mfellner      1
                       mfn      1
+                   mfyuce      1
                     mgarf      1
                  mgenware      1
                  mgiraldo      1
                      mgol      1
+                  mh-cbon      1
+                 mhdcodes      1
                    mhlmhl      1
                 mi-mazouz      1
                   mic3ael      1
@@ -7508,17 +7919,19 @@ Not  a Bug
              michaelBenin      1
           michaelKurowski      1
            michaelalhilly      1
-             michaeldzjap      1
            michaeljholmes      1
                 mickaeltr      1
+              mickyginger      1
                    miclud      1
                microshine      1
                miguelmota      1
                    mikbry      1
              mike-aungsan      1
                    mikeal      1
+               mikeaustin      1
               mikebronner      1
                mikechabot      1
+                   mikepb      1
           miladkhorramian      1
               mileshenley      1
                    milesj      1
@@ -7528,18 +7941,24 @@ Not  a Bug
                   miraage      1
               mirbatworks      1
                     mirgj      1
+              misantronic      1
                 mishchief      1
                  mismosmi      1
+               mistadikay      1
                  misteral      1
+                   mistic      1
                 mistricky      1
             mistrykaran91      1
+           mitchellmorris      1
                  mixedout      1
                  mjackson      1
                  mjschlot      1
                      mk0y      1
                mkantautas      1
                 mkarnicki      1
+                     mkg0      1
                  mlabarre      1
+                  mladenp      1
                  mlarcher      1
                mmacfadden      1
                     mmkal      1
@@ -7549,26 +7968,32 @@ Not  a Bug
                    mnmkng      1
                      mo22      1
                    mochja      1
+                  moimael      1
+                 moimikey      1
               mojavelinux      1
                  mojoaxel      1
                molszanski      1
                    moog16      1
                     mosch      1
+                   moshie      1
                      moso      1
               mostafa6765      1
                     motla      1
                   mourner      1
+                   mov1er      1
                 mowais-ac      1
                mpiasta-ca      1
                    mqklin      1
               mr-flannery      1
              mrasoahaingo      1
               mrbinky3000      1
+                  mrchief      1
                    mrcuix      1
               mrmartineau      1
                mrmedicine      1
                    mrmlnc      1
                   mrose17      1
+                 mrrorinc      1
            mrsharpoblunto      1
                   msathis      1
                    mscdex      1
@@ -7581,6 +8006,7 @@ Not  a Bug
              msukmanowsky      1
                  mtford90      1
                   mthamil      1
+                 mtmtcode      1
                 mtrabelsi      1
                    mtrucc      1
                   mtsewrs      1
@@ -7596,11 +8022,13 @@ Not  a Bug
                     muzea      1
                  mvachhar      1
                  mvaneijk      1
+                mvarrieur      1
                 mvattuone      1
                myleshyson      1
                      n1k0      1
                     n49o7      1
            nabezokodaikon      1
+              nabilnaffar      1
                      nabn      1
                  nabs-grg      1
              naixinxiaozi      1
@@ -7628,14 +8056,18 @@ Not  a Bug
                    neojpk      1
              netanelgilad      1
                  netmajor      1
+                  nexdrew      1
+                ngocketit      1
               ngohungphuc      1
                    nhardy      1
                    niceue      1
                nickbullll      1
+                 nickdima      1
             nickfederighi      1
                  nicklasb      1
                    nickli      1
                  nickserv      1
+               nickzarate      1
                 nickzelei      1
                  nicotp80      1
                     niesk      1
@@ -7643,6 +8075,8 @@ Not  a Bug
             nikhilbisht21      1
                  nikoloza      1
                     nikrb      1
+                   nikrou      1
+                nil-ni-ck      1
                  nilobarp      1
                     nim23      1
                    nimo23      1
@@ -7656,8 +8090,10 @@ Not  a Bug
                 njgraf512      1
                       njj      1
                     njs50      1
+                     nkbt      1
                    nknapp      1
              nkovalenko93      1
+                nmschulte      1
                    nmussy      1
                 noahgrant      1
               noahmonster      1
@@ -7687,6 +8123,7 @@ Not  a Bug
                    okonet      1
                     okwme      1
            olafguesswhapp      1
+               olegkalyta      1
               olegstepura      1
          oleksiireshetnik      1
                    oli-mo      1
@@ -7730,6 +8167,7 @@ Not  a Bug
                      papb      1
                    papiro      1
              paraofheaven      1
+                   parion      1
                  parky128      1
             parminderkaur      1
               patrickarlt      1
@@ -7740,6 +8178,7 @@ Not  a Bug
            patrickroberts      1
               patricksmms      1
                  patw0929      1
+               paul-sachs      1
                  paulbrie      1
                 paulhayes      1
             paulinthought      1
@@ -7749,7 +8188,9 @@ Not  a Bug
          pawel-andruszkow      1
                 paymonyau      1
                  pbelyaev      1
+                   pbreah      1
               pburkindine      1
+              pburtchaell      1
                    pc-mon      1
                    pcorey      1
                   pdehaan      1
@@ -7761,8 +8202,8 @@ Not  a Bug
              peterharding      1
               peterpine83      1
                   petulla      1
+                  pfhayes      1
                    pfjare      1
-                   pgilad      1
                    phiilu      1
               philippotto      1
          philipstanislaus      1
@@ -7781,6 +8222,7 @@ Not  a Bug
                  piperswe      1
                   pjangam      1
                    pjincz      1
+                  pjlee11      1
             platinumazure      1
                  plexus77      1
                  pmochine      1
@@ -7804,6 +8246,7 @@ Not  a Bug
                prashaantt      1
          prateekchoudhary      1
             prateekjahead      1
+               pratoshpro      1
                     pravi      1
           pravichandran15      1
               pravin-maan      1
@@ -7814,14 +8257,17 @@ Not  a Bug
                 pricetula      1
                 printercu      1
           priyankagupta34      1
-                pronebird      1
                   psankar      1
                 psantos10      1
                 psi-4ward      1
               pugnascotia      1
+                  pulse00      1
                   punkbit      1
                  purepear      1
+                 pvcresin      1
+                   pwang2      1
                      qfox      1
+                 qidaneix      1
                  qt911025      1
                 quantizor      1
                   qwerdee      1
@@ -7837,24 +8283,29 @@ Not  a Bug
           rafallyczkowski      1
                     rafis      1
                rain-manek      1
+                   rake5k      1
               ralphjesy12      1
                 ralphking      1
                    randak      1
+               raphaklaus      1
                   rapidia      1
+                rastalamm      1
                    rauchg      1
                 raulmatei      1
                  rauschma      1
+                  ray0324      1
                  razdahan      1
-                rbalicki2      1
                 rbecheras      1
                   rbonomo      1
                  rc452860      1
                   rccoder      1
                  rculbert      1
                 rdalfonso      1
+                   rdiazv      1
               realityking      1
                    realph      1
               redelman431      1
+               redonkulus      1
                   redroot      1
                    reefki      1
                  refaelos      1
@@ -7865,6 +8316,7 @@ Not  a Bug
                 renedekat      1
                 renehauck      1
               renestalder      1
+            renovate[bot]      1
               renzocastro      1
                 reorg-hle      1
               resolritter      1
@@ -7905,6 +8357,8 @@ Not  a Bug
                     robvk      1
             roccogalluzzo      1
          rockchalkwushock      1
+              rocketraman      1
+                 rococode      1
                roddypratt      1
             rodeyseijkens      1
                    rodush      1
@@ -7912,14 +8366,18 @@ Not  a Bug
               rohaanhamid      1
                 rohannair      1
              roigreenberg      1
+                roman01la      1
+               romanzenka      1
                   romucci      1
                 ron-fugue      1
+                 ronaldgj      1
                  ronjouch      1
                 ronycohen      1
               rossjcooper      1
                  rostgoat      1
                 rousselle      1
                   rowthan      1
+          royipressburger      1
                   rozumem      1
                  rpominov      1
                   rrfheff      1
@@ -7927,11 +8385,13 @@ Not  a Bug
                   rslanzi      1
                  rstacruz      1
                     rtorr      1
+       rubenspgcavalcante      1
                    rubiin      1
              ruchernchong      1
                   ruiming      1
                     rulgf      1
                    rumkin      1
+                 runmoore      1
                 runspired      1
                  russback      1
               rustlemills      1
@@ -7946,6 +8406,7 @@ Not  a Bug
                       s-a      1
                    s97712      1
                  safaiyeh      1
+                    sag1v      1
               sahanatroam      1
             saileshkush95      1
                  sakovias      1
@@ -7960,11 +8421,13 @@ Not  a Bug
                 samonxian      1
                samthomson      1
             sanderwapstra      1
+              sandysaders      1
                 sanriqing      1
            santiagoarizti      1
                 sarincasm      1
                   sarovin      1
                  sashberd      1
+                  sassanh      1
       sathishsoundharajan      1
                 satishn92      1
             saurabhpetkar      1
@@ -7978,7 +8441,9 @@ Not  a Bug
                sbreatnach      1
                   sbryfcz      1
                  sbuzonas      1
+               scarletsky      1
                  scaryguy      1
+                 scastiel      1
                   scefali      1
                  scerelli      1
                    scharf      1
@@ -7994,6 +8459,7 @@ Not  a Bug
                  scriptjs      1
              seanlandsman      1
              seanspradlin      1
+                   seavan      1
                 secisland      1
                  seeliang      1
                  seif1000      1
@@ -8009,17 +8475,21 @@ Not  a Bug
                  sethcall      1
                   setpill      1
                     sgatu      1
+                 sgronblo      1
                 shabyWoks      1
                shadow-fox      1
+              shadowspawn      1
               shamilovtim      1
                 shamilsun      1
                shangxinbo      1
                 shanoaice      1
               shaunlebron      1
+               shawninder      1
                  shawnzhu      1
               sheldonkwok      1
             shenningsgard      1
               shepherd-06      1
+               sheweichun      1
                 shikloshi      1
               shin-monkey      1
                 shirotech      1
@@ -8032,13 +8502,16 @@ Not  a Bug
                    shrynx      1
              shuaiyaotian      1
           shubhamjaisingh      1
+                 shunxing      1
            sideshowbarker      1
                    signus      1
+                  silaike      1
               silentroach      1
                   silkcom      1
              silkentrance      1
                  silverqx      1
             silvioiannone      1
+                simkentys      1
                  simkessy      1
        simone-sanfratello      1
                simonkberg      1
@@ -8051,6 +8524,8 @@ Not  a Bug
                  sir-marc      1
                    sirian      1
                sixtyseven      1
+           sjoerdvisscher      1
+                  sjoshi2      1
             skanda-suresh      1
                 skawinski      1
                  skdavies      1
@@ -8062,6 +8537,7 @@ Not  a Bug
                  slavik57      1
                   slaviki      1
             slightlytyler      1
+               slim-hmidi      1
                  smachave      1
              smeekmeister      1
                  smelukov      1
@@ -8076,6 +8552,7 @@ Not  a Bug
                       sod      1
                 softshape      1
                 sombhotlu      1
+               sompylasar      1
               sonicoder86      1
                    sontek      1
                   soojeen      1
@@ -8095,6 +8572,7 @@ sprlwrksAprilmintacpineda      1
              srikrishnacj      1
                    srlowe      1
                    srolel      1
+                  sscaff1      1
              stalakokkula      1
                 stalkercn      1
                  stantoxt      1
@@ -8109,8 +8587,10 @@ sprlwrksAprilmintacpineda      1
              stephen-last      1
             stereobooster      1
                    sterpe      1
+              stevemarksd      1
              stevemolitor      1
       steven-pribilinskiy      1
+          stevenmusumeche      1
                  stevepop      1
              stevoPerisic      1
                    stigok      1
@@ -8123,10 +8603,12 @@ sprlwrksAprilmintacpineda      1
                   subblue      1
                 subhero24      1
             subhokarmakar      1
+                suchanlee      1
                 suconghou      1
                  sudhir9p      1
                    suhdan      1
                  suiyun39      1
+                    sunel      1
                sunjoong85      1
                sunrize531      1
                 sunshineo      1
@@ -8149,11 +8631,14 @@ sprlwrksAprilmintacpineda      1
                     taoqf      1
        tbergquist-godaddy      1
              tborychowski      1
+                  tconroy      1
+               tcosentino      1
                   tcstory      1
                       tdd      1
                  tedjames      1
                  teintinu      1
                teknolojia      1
+                      tel      1
                tencircles      1
                terinjokes      1
                   testxin      1
@@ -8168,6 +8653,7 @@ sprlwrksAprilmintacpineda      1
                  the94air      1
            theAndrewCline      1
              theantichris      1
+               thebuilder      1
                  thecotne      1
              thecyrilcril      1
                  thedamon      1
@@ -8180,6 +8666,7 @@ sprlwrksAprilmintacpineda      1
              theverything      1
                      thgh      1
              thiagohirata      1
+             thibpoullain      1
               thisconnect      1
                  thmsbkkr      1
            thomasthiebaud      1
@@ -8199,6 +8686,8 @@ sprlwrksAprilmintacpineda      1
                  timkraut      1
               timneutkens      1
           timothykrell-hb      1
+              tinkertrain      1
+                 titiyoyo      1
               titoBouzout      1
                      tiye      1
                        tj      1
@@ -8208,6 +8697,7 @@ sprlwrksAprilmintacpineda      1
                     tmpfs      1
                    tmtron      1
                      tnga      1
+                   tnrich      1
            tobiasbueschel      1
            tobiasmuecksch      1
              tobiasthaden      1
@@ -8221,10 +8711,14 @@ sprlwrksAprilmintacpineda      1
                 tomhallam      1
               tomitrescak      1
                tomkimsour      1
+              tommai78101      1
                tomtheisen      1
+           tonetechnician      1
                  tonyeung      1
                 tonyrewin      1
+                 tonyxiao      1
                   torifat      1
+                 torvitas      1
                    tosone      1
                        tp      1
                  tpreusse      1
@@ -8236,7 +8730,9 @@ sprlwrksAprilmintacpineda      1
             trickydisco78      1
                   trotzig      1
                 troublete      1
+                     trsh      1
            tsadigovAgmail      1
+                 tsangint      1
                   tschaub      1
                  tschiela      1
                   tsekhan      1
@@ -8251,6 +8747,7 @@ sprlwrksAprilmintacpineda      1
                 tylerlong      1
              tylorkolbeck      1
                       u3u      1
+                    uMtMu      1
                  uNmAnNeR      1
                    udayms      1
                      uhyo      1
@@ -8272,6 +8769,7 @@ sprlwrksAprilmintacpineda      1
                    vagusX      1
                    vahost      1
            valentindotxyz      1
+                vansosnin      1
                vanwagonet      1
                    varmeh      1
             varunsharma38      1
@@ -8290,7 +8788,9 @@ sprlwrksAprilmintacpineda      1
                   vietbui      1
                  vikil143      1
                    vikr01      1
+                 villesau      1
                    vimcaw      1
+               vincent-cm      1
                viniciusbo      1
           viniciusjssouza      1
                    vinteo      1
@@ -8304,6 +8804,8 @@ sprlwrksAprilmintacpineda      1
                    vkopio      1
                    vm-001      1
               vmarkovtsev      1
+                    vojty      1
+              vollyimnetz      1
                    vorfol      1
               voroninpaul      1
                 voroshkov      1
@@ -8318,13 +8820,17 @@ sprlwrksAprilmintacpineda      1
                  wangxiao      1
                  waniwang      1
                  warlord0      1
+               warpdesign      1
                     warpr      1
                   wasd171      1
-                 wcastand      1
+                    wbern      1
                    wdvvgy      1
+                 webOS101      1
                    webark      1
+               webberwang      1
                 webbushka      1
                 webdevmsk      1
+             weblancaster      1
                 webliving      1
             webuniverseio      1
                weedgrease      1
@@ -8333,16 +8839,19 @@ sprlwrksAprilmintacpineda      1
              weiying-chen      1
               wereHamster      1
                westdavidr      1
+                 wfgmiami      1
                  whaaaley      1
                   whatwg6      1
+                 wiliamvj      1
+               willdurand      1
               willem-aart      1
               william1888      1
              williamluke4      1
+                   willin      1
             willmcclellan      1
                winterZhao      1
          wojciech-bilicki      1
                 wojtekmaj      1
-                  woldner      1
             wondergitluda      1
                     wong2      1
                  wood1986      1
@@ -8352,15 +8861,19 @@ sprlwrksAprilmintacpineda      1
       wtgtybhertgeghgtwtg      1
                     wyxos      1
                      wzup      1
+                   x-yuri      1
                   xGuIInE      1
                   xMikasa      1
                  xarasbir      1
               xavicolomer      1
+              xavierartot      1
+                xeroxstar      1
                   xgqfrms      1
            xgqfrms-GitHub      1
               xiangnanscu      1
              xiaomingming      1
            xiaoxiaosaohuo      1
+             xiaoyanzheng      1
                     xiffy      1
                 xingyuzhe      1
                     xinix      1
@@ -8375,7 +8888,6 @@ sprlwrksAprilmintacpineda      1
                  xudafeng      1
                   xywenke      1
                   xyzdata      1
-                   xzyfer      1
                  yaananth      1
                      yafp      1
                    yairEO      1
@@ -8385,9 +8897,9 @@ sprlwrksAprilmintacpineda      1
              yanickrochon      1
                     yanjb      1
                   yannayl      1
-                 yanneves      1
                 yaodingyd      1
                 yarick123      1
+            yarynakorduba      1
                    yazpid      1
                ybiquitous      1
              yckbilly1929      1
@@ -8418,6 +8930,7 @@ sprlwrksAprilmintacpineda      1
                   yovasx2      1
                 yreenchan      1
                 yuanmaole      1
+               yuchonghua      1
                   yugasun      1
            yuri-karadzhov      1
                 yurigenin      1
@@ -8428,6 +8941,7 @@ sprlwrksAprilmintacpineda      1
                    zaaack      1
                 zachdixon      1
                  zachleat      1
+               zachmullen      1
                    zakjan      1
                    zanona      1
             zastavnitskiy      1
@@ -8437,6 +8951,8 @@ sprlwrksAprilmintacpineda      1
                     zdila      1
                 zerkalica      1
                   zero298      1
+                    zfogg      1
+               zgrossbart      1
                  zhang740      1
               zhangenming      1
         zhangjianxing2011      1
@@ -8445,7 +8961,8 @@ sprlwrksAprilmintacpineda      1
                 zhenyulin      1
                zhipenglin      1
                zhiwenxuan      1
-                    zimme      1
+              zhouxinyong      1
+                 zigang93      1
                  zivenday      1
                     zlk89      1
                  zloirock      1
@@ -8460,7 +8977,6 @@ sprlwrksAprilmintacpineda      1
                zsoltbokor      1
                   zverexe      1
                    zvxayr      1
-               zwhitchcox      1
                      zwsf      1
                    zywind      1
                    zzzgit      1
@@ -8468,763 +8984,223 @@ sprlwrksAprilmintacpineda      1
 Unknown
 ----------------------------------------------------------------------
      closed_by_username  count
-                 ljharb    643
-        alexander-akait    334
-              yannickcr    296
-                Unknown    233
-      michael-ciniawsky    192
              stale[bot]    168
-              glenjamin     83
-                 bebraw     81
-                  sokra     67
-                   bcoe     60
+                Unknown     75
             chinesedfan     58
-                   MoOx     53
-              yyx990803     51
-                   th0r     50
-      ricardogobbosouza     39
              shellscape     38
-               valscion     35
-              LinusBorg     34
-               kevlened     27
+        alexander-akait     37
              dougwilson     26
                 vue-bot     26
     github-actions[bot]     25
-                jscheid     25
-              joshwiens     23
+              yyx990803     25
+                 ljharb     24
                typicode     20
-           sindresorhus     19
+           sindresorhus     18
        no-response[bot]     17
              JeffreyWay     16
-                kazupon     16
            jasonsaayman     15
-               lencioni     13
-              scottdj92     13
-                 xzyfer     13
+                kazupon     12
             loganfsmyth     12
               nmccready     12
                   JaKXz     10
-              deepsweet     10
              rubennorte     10
-                 EvHaus      9
             Rich-Harris      9
                 gaearon      9
                 RyanZim      8
+                   bcoe      8
                chimurai      8
                 timdorr      8
-            mattlewis92      7
+              LinusBorg      7
             mweststrate      7
            nickuraltsev      7
               szmarczak      7
-              SpaceK33z      6
                 dgraham      6
                  feross      6
                fregante      6
-                  gajus      6
              guybedford      6
             haoqunjiang      6
             markerikson      6
-         cap-Bernardito      5
+                   MoOx      5
+                 bebraw      5
            coreyfarrell      5
               gregberge      5
+                jscheid      5
            lukastaegert      5
+      michael-ciniawsky      5
                   vjeux      5
-                 watson      5
                  fed135      4
           jonathantneal      4
           jonschlinkert      4
-                 okuryu      4
+      ricardogobbosouza      4
+                   th0r      4
          JustinBeckwith      3
-                Legends      3
                    NMFR      3
-             TheLarkInn      3
                      ai      3
               dkozickis      3
         emilyemorehouse      3
-                  ericf      3
+                  gajus      3
+              glenjamin      3
                jimbolla      3
-               kalmbach      3
              kentcdodds      3
+              scottdj92      3
+                  sokra      3
               theKashey      3
-                tleunen      3
-                zertosh      3
                Alanscut      2
-        NikolayFrantsev      2
+                 EvHaus      2
             OverZealous      2
-                 QmarkC      2
                TrySound      2
               arekinath      2
                     azz      2
-                  bruno      2
                     btd      2
-         catamphetamine      2
-          cristian-sima      2
                dcousens      2
-           developer239      2
-                  eyalw      2
-                hozefaj      2
-                jimblue      2
             jonathanong      2
               jonchurch      2
-               kimgysen      2
-                  kopax      2
              kossnocorp      2
                  lpinca      2
                  lydell      2
                     mde      2
-                 mfyuce      2
              mzabriskie      2
        oliviertassinari      2
-                    pke      2
-                 pruett      2
                  puzrin      2
-          reintroducing      2
              robaxelsen      2
                 satazor      2
                  scravy      2
-            shadowspawn      2
-              sibiraj-s      2
                  thorn0      2
-             warpdesign      2
-             wesleytodd      2
                xudafeng      2
-             yuchonghua      2
-                01Kuzma      1
-                   0x80      1
-               1rosehip      1
-                 2color      1
-                 3kynox      1
-                 4muzar      1
-                 59naga      1
-                 ALF-er      1
-              AlCalzone      1
-             AlexKvazos      1
-    AlexanderTserkovniy      1
-               Allenice      1
+              yannickcr      2
               Alphapage      1
-                 AmosXu      1
-                   AmrN      1
-             Anahkiasen      1
-                Andy-QT      1
-           AnthonyLamot      1
           ArthurClemens      1
-             Arturszott      1
-            AuthorProxy      1
-                  Awk34      1
                 BBigLee      1
-               BernardA      1
-                 Billy-      1
-                  Bnaya      1
-          Callie-C-Wang      1
          CaptainChemist      1
                   Clloz      1
-              ColinTree      1
-                Craga89      1
-               Cristy94      1
-                   D4NH      1
-                 Dajust      1
-              DanFuture      1
-         DanielSundberg      1
-           DeltaCircuit      1
-               DeltaEvo      1
-                 DevanB      1
-              Didericis      1
-        DimitarNestorov      1
-                EECOLOR      1
-              EdHubbell      1
-          EdwardDrapkin      1
-                   Eomm      1
-                   Erid      1
                  Eschon      1
-              FezVrasta      1
-             FrailWords      1
        FranckFreiburger      1
-              Fudoshiki      1
-              GaoYYYang      1
-              GarveySun      1
-                 Ghusar      1
-               Graham42      1
              HereIsJade      1
-              Hypnosphi      1
-             IUnknown68      1
-                Ian5015      1
-                  IanVS      1
-          IngwiePhoenix      1
-       IskanderMustafin      1
-                J-F-Liu      1
                 JLHwung      1
                JPeer264      1
               Jamiewarb      1
-               JerryCBH      1
-              JoeBBChen      1
-            KangdaOOLin      1
-             KidkArolis      1
-                 Kielan      1
-              KingMario      1
-             KisaneNeko      1
-                 Kurtas      1
-                LINKIWI      1
-                Loppone      1
-              MagicDuck      1
           MajesticRaven      1
               MathRobin      1
-              MaxInMoon      1
-          Mayank1791989      1
-                Means88      1
-             MihaMarkic      1
-                Nantris      1
-                 Nemsae      1
-       NeroVanbiervliet      1
-        Oleksandr-Silin      1
-               Parasrah      1
-             PetterRuud      1
-               PezCoder      1
-                Piero87      1
-             PierreMano      1
-             RWOverdijk      1
-           RahavLussato      1
-       RicardoBrito1938      1
-             RobinRadic      1
-            SanderSpies      1
              Sanjay4715      1
             Semigradsky      1
-               Sharcoux      1
-             ShukantPal      1
-                 SimenB      1
               SkyDropGG      1
-            SparkleChen      1
-             Suantovith      1
-              TheAifam5      1
-           TheVexatious      1
-            ThiefMaster      1
-        ThrowsException      1
                 TimSusa      1
-                 TopGrd      1
-              Tvrqvoise      1
                UltCombo      1
-               ValeryVS      1
-                 Vanuan      1
-           XeniaSiskaki      1
-            aaronjensen      1
                 ablipan      1
-                aconfee      1
-                  acthp      1
-              adam-beck      1
-           adamborowski      1
-                  adred      1
-                 aemino      1
-               agalazis      1
             ahmadnassri      1
-              aholtkamp      1
-            akihikodaki      1
             alan-agius4      1
-            alangpierce      1
-             alburritos      1
-                 aldeka      1
-                 alex88      1
-            alexkrolick      1
-            alexmiranda      1
                 alexw10      1
-           alfredriesen      1
-           alisabzevari      1
-    althamash-chaipoint      1
-                ambewas      1
-               amneacsu      1
               anasinnyk      1
-             anatoly314      1
                 anazodo      1
-               anchal20      1
-          andreubotella      1
-          andrevenancio      1
-             andreypopp      1
-               anilanar      1
-        anthony-dandrea      1
-          antoniojunyor      1
-                 apexad      1
-      aprilmintacpineda      1
-                arcanis      1
-               arseneyr      1
-           arthurjamain      1
-          artyomtrityak      1
-                 asafda      1
-    asthap-nimblechapps      1
         avocadowastaken      1
-                   axtn      1
-             ayush-srtv      1
-                badtant      1
-                   basz      1
           bclinkinbeard      1
-                beckend      1
-           believer-ufa      1
                  ben-eb      1
-               benregan      1
-                 bernex      1
-               bigbossx      1
-              bigslycat      1
-           blainekasten      1
-          blake-regalia      1
-              borisding      1
-         brandonburkett      1
            brandondoran      1
-            bretthadley      1
                brianh20      1
-              brickyang      1
-               brtthomp      1
-            bspies-work      1
-                   btoo      1
-                budarin      1
-             busticated      1
-                   c-h-      1
-                  ca057      1
-                cagross      1
-              caguthrie      1
-        calebcartwright      1
-                calesce      1
                 camiant      1
-                   caub      1
-                ccorcos      1
+         catamphetamine      1
                cdaringe      1
-              charandas      1
-         charliedavison      1
-            chiefjester      1
-              chochihim      1
-            chopfitzroy      1
             chrisdavies      1
              chrisl8888      1
-          christian4423      1
-                  cinic      1
-               cirsteve      1
-                 cjhdom      1
-               cklepeis      1
-              clhenrick      1
-               clubajax      1
-         colinmcparland      1
-           crenshaw-dev      1
-            cwallervand      1
                  cycold      1
-            cyrildurand      1
-               cyrus-za      1
-                   dace      1
-         damianobarbati      1
                   danez      1
-              danielkcz      1
-             danielo515      1
-                  danoc      1
-            darrenklein      1
-              datakurre      1
               davalapar      1
              davidfateh      1
-            davidpelaez      1
-               daviesaz      1
                    davo      1
-               dawnmist      1
-                dcs3spp      1
-                  ddtch      1
-               deecewan      1
-             deepakjois      1
-            dgoldstein0      1
+              deepsweet      1
+           developer239      1
              dimchanske      1
-                  dimti      1
-                 divmgl      1
-           dlebedynskyi      1
-     dmitrykuznetsovdev      1
-                   dmnd      1
             dongweiming      1
-                  doque      1
-                  doums      1
-                 dounan      1
-             drifterz28      1
-             drizzlezxy      1
-                  dsngo      1
-           dumpsayamrat      1
-                 dzek69      1
-           dzhytomyrsky      1
-               eTorAken      1
-              eejdoowad      1
-                  effem      1
-                  efkan      1
                 ehmicky      1
-                   eldh      1
-                eliihen      1
-                emjaksa      1
-              endcycles      1
 enzigma-gaurav-wadghule      1
-                eranimo      1
-           ericclemmons      1
-            ericelliott      1
-              esamattis      1
-        eugeny-dementev      1
-             everettwho      1
-                 evless      1
-                 ewiner      1
-               ezmiller      1
-             fabienjuif      1
-               faergeek      1
-                fatfisz      1
                   favna      1
-                 fedemp      1
-                   fegg      1
-           felipefialho      1
-              felixsanz      1
-               fengerzh      1
-             filipekiss      1
-            filipesilva      1
                floridoo      1
-             fongandrew      1
-            forkingpath      1
-                 fruser      1
-                   fttx      1
-                 fudini      1
-             fumblehool      1
-               gabimelo      1
-             gdepouilly      1
-               geowarin      1
-                 gerbal      1
-                 gflohr      1
-                gggitpl      1
-          ghoshnirmalya      1
-            gianpietro1      1
-              githoniel      1
-                  givik      1
-         glenngijsberts      1
-                  gnihi      1
-                gpoitch      1
-                    gre      1
-                greaber      1
-               grundiss      1
-             gucong3000      1
-         guilhermeutzig      1
-               guocheng      1
-                 guotie      1
-             gusdaud-zz      1
-             guywaldman      1
-                 guzart      1
-          gwenaellarmet      1
-              hallister      1
                haodouya      1
              harogaston      1
-             haroldo-ok      1
-                hatched      1
-              henkvhest      1
-                 hezedu      1
                 hfossli      1
-             htank-wang      1
-                hubcarl      1
-                 hurrtz      1
                    hzoo      1
-                 iGarym      1
-              idahogurl      1
-                   idan      1
-             idangozlan      1
-                    ide      1
-                 igrek8      1
-          ilan-schemoul      1
-              iliasbhal      1
-             imdongchen      1
-                imerkle      1
-               infolock      1
                inxilpro      1
-           itsMapleLeaf      1
-             ivansieder      1
-                 ivgrin      1
-               jalal246      1
            jamestalmage      1
-              janryWang      1
-            jarretmoses      1
-             jasonxia23      1
-                 jcklpe      1
-                jednano      1
-            jeffcharles      1
-           jeremiah-ang      1
-            jesstelford      1
-            jgerigmeyer      1
-               jgornick      1
+                jimblue      1
              jimmyt2003      1
-                  jinjl      1
-       jluxenberg-scoot      1
-              jmbarbier      1
-               jmorrell      1
-             joaopslins      1
-              joaquimds      1
-                joelnet      1
-               joetidee      1
-              johnny-mh      1
-           jonashartwig      1
-            jonricaurte      1
-           jorawarsingh      1
-              jordaaash      1
-             josebalius      1
-        josephfinlayson      1
-           josh-endries      1
-                jrappen      1
-                 jrencz      1
-               jrmcdona      1
-                jsliu27      1
-             jtyler-dev      1
                 judypol      1
-                juergba      1
-                   jvik      1
-                 kaidez      1
-             karelbilek      1
-         karimcambridge      1
-              kasperekt      1
               kbeckster      1
                 kclonts      1
-                kdw2060      1
-                keenwon      1
               keithamus      1
-             kenkozheng      1
-                  kesla      1
-           kg-currenxie      1
-                  kibin      1
-             kimihiro64      1
                  kingga      1
-              kingscott      1
-                kobe990      1
                koddsson      1
                   korve      1
-                 kouhin      1
-               ksmithut      1
-              kunlongxu      1
-              kuroisuna      1
-              kwhitaker      1
               laracasts      1
-               laurenkt      1
-           leesiongchan      1
-               lekhnath      1
-              lemonmade      1
-                 letoss      1
           lifeiscontent      1
                  lili21      1
-              lilian132      1
-               lomboboo      1
             lounsbrough      1
             ludofischer      1
                lunelson      1
             luozhang002      1
-               lushijie      1
                    lzxb      1
-              maerzhase      1
               mafintosh      1
-              maiertech      1
-            maieutiquer      1
-        malikkamranabid      1
-             mankittens      1
                 mariusk      1
               mastilver      1
           mathiasbynens      1
-               mathieug      1
-             mattcolman      1
-               mattdell      1
-           matteoantoci      1
            matthewbauer      1
-         matthewmueller      1
-               maxrimue      1
-               mderrick      1
-               melloc01      1
-             melvinodsa      1
-                merksam      1
-                mh-cbon      1
-               mhdcodes      1
-           michaeldzjap      1
-            mickyginger      1
-             mikeaustin      1
-                 mikepb      1
+            mattlewis92      1
           minedeljkovic      1
-            misantronic      1
                  mislav      1
-             mistadikay      1
-                 mistic      1
-         mitchellmorris      1
-                   mkg0      1
-               mkucharz      1
-                mladenp      1
                    mo-n      1
-                moimael      1
-               moimikey      1
-              monkindey      1
                  morlay      1
-                 moshie      1
                 motet-a      1
-                 mov1er      1
-                mrchief      1
-               mrrorinc      1
-               mtmtcode      1
-               muuvmuuv      1
-              mvarrieur      1
-              mvolkmann      1
                 myumyun      1
-            nabilnaffar      1
-                necolas      1
                nenadalm      1
-                nexdrew      1
-              ngocketit      1
                 niallmc      1
-               nickdima      1
-             nickzarate      1
          nicolo-ribaudo      1
                nihiluis      1
-                niieani      1
-                 nikrou      1
-              nil-ni-ck      1
-                   nkbt      1
-              nmschulte      1
             nolanlawson      1
              nwikstrand      1
                  nzakas      1
-                 oh-ren      1
-               olalonde      1
-             olegkalyta      1
-              ooflorent      1
              openainext      1
                    ozum      1
-                 parion      1
-             paul-sachs      1
           paulschneider      1
-                 pbreah      1
-            pburtchaell      1
-           peternewnham      1
                pfarnach      1
-                pfhayes      1
-                 pgilad      1
             phaistonian      1
                  phated      1
-                pjlee11      1
        popuguytheparrot      1
                   posva      1
-             pratoshpro      1
-          privatenumber      1
-              pronebird      1
-              pshurygin      1
-                pulse00      1
-               pvcresin      1
-                 pwang2      1
-               qidaneix      1
              rajikaimal      1
-                 rake5k      1
-             raphaklaus      1
-              rastalamm      1
-                ray0324      1
-              rbalicki2      1
-                 rdiazv      1
-             redonkulus      1
                  refack      1
-          renovate[bot]      1
                  revelt      1
           richardadrian      1
              robrichard      1
-            rocketraman      1
-               rococode      1
-              roman01la      1
-             romanzenka      1
-               ronaldgj      1
               rosskevin      1
             rossknudsen      1
-        royipressburger      1
-     rubenspgcavalcante      1
            ruchernchong      1
-               runmoore      1
-              rvarbanov      1
              sadiqevani      1
-                  sag1v      1
              samturrell      1
-            sandysaders      1
-                sassanh      1
-             scarletsky      1
-               scastiel      1
-                 seavan      1
             sergiotapia      1
-               sgronblo      1
-             shawninder      1
-              shengnian      1
-             sheweichun      1
-               shunxing      1
-                silaike      1
              silverwind      1
-              simkentys      1
              simon-hogg      1
              simonvadee      1
-         sjoerdvisscher      1
-                sjoshi2      1
-             slim-hmidi      1
              someshkoli      1
-             sompylasar      1
               splincode      1
                    sqal      1
-               src-code      1
-                sscaff1      1
            stefanpenner      1
-            stevemarksd      1
-        stevenmusumeche      1
            stevenvachon      1
-              suchanlee      1
              sudo-suhas      1
-                  sunel      1
                 sunorry      1
                  swyxio      1
                  taoche      1
               tbjgolden      1
-                tconroy      1
                tcoopman      1
-             tcosentino      1
-                    tel      1
-             thebuilder      1
            thejoshwolfe      1
                 thepian      1
-           thibpoullain      1
-            tinkertrain      1
-               titiyoyo      1
-                 tnrich      1
-            tommai78101      1
-         tonetechnician      1
-                   tony      1
-               tonyxiao      1
-                torifat      1
-               torvitas      1
-                   trsh      1
-               truebden      1
-                trusktr      1
-               tsangint      1
-            tzimmermann      1
-                  uMtMu      1
-          vadimshvetsov      1
-              vansosnin      1
-               villesau      1
-             vincent-cm      1
-                  vojty      1
-            vollyimnetz      1
-            voronianski      1
-                  wbern      1
-               wcastand      1
-               webOS101      1
-             webberwang      1
-           weblancaster      1
+               valscion      1
+             warpdesign      1
                  weerdm      1
-               wfgmiami      1
+             wesleytodd      1
                whittlem      1
-               wiliamvj      1
-             willdurand      1
-                 willin      1
-                woldner      1
               wraithgar      1
-                   wyze      1
-                 x-yuri      1
                xarasbir      1
               xavianaxw      1
-            xavierartot      1
-              xeroxstar      1
-           xiaoyanzheng      1
                xunhuan7      1
-               yanneves      1
                 yaquawa      1
-          yarynakorduba      1
-                 yisibl      1
             yoshuawuyts      1
-             zachmullen      1
                   zensh      1
-                  zfogg      1
-             zgrossbart      1
-            zhouxinyong      1
-               zigang93      1
-                  zimme      1
-             zwhitchcox      1

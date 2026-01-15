@@ -1,0 +1,3069 @@
+{
+  "package": "prettier",
+  "total_bugs": 2934,
+  "versions_tracked": 94,
+  "version_timeline": [
+    {
+      "version": "0.0.1",
+      "published_at": "2017-01-10 03:45:38.963000+00:00",
+      "published_str": "2017-01-10",
+      "production_deps": 5,
+      "is_major": false
+    },
+    {
+      "version": "0.0.2",
+      "published_at": "2017-01-10 04:31:28.120000+00:00",
+      "published_str": "2017-01-10",
+      "production_deps": 5,
+      "is_major": false
+    },
+    {
+      "version": "0.0.3",
+      "published_at": "2017-01-10 17:18:52.417000+00:00",
+      "published_str": "2017-01-10",
+      "production_deps": 5,
+      "is_major": false
+    },
+    {
+      "version": "0.0.4",
+      "published_at": "2017-01-11 04:52:50.871000+00:00",
+      "published_str": "2017-01-11",
+      "production_deps": 7,
+      "is_major": false
+    },
+    {
+      "version": "0.0.5",
+      "published_at": "2017-01-11 16:55:07.338000+00:00",
+      "published_str": "2017-01-11",
+      "production_deps": 8,
+      "is_major": false
+    },
+    {
+      "version": "0.0.6",
+      "published_at": "2017-01-13 20:14:11.275000+00:00",
+      "published_str": "2017-01-13",
+      "production_deps": 8,
+      "is_major": false
+    },
+    {
+      "version": "0.0.7",
+      "published_at": "2017-01-14 04:28:11.881000+00:00",
+      "published_str": "2017-01-14",
+      "production_deps": 8,
+      "is_major": false
+    },
+    {
+      "version": "0.0.8",
+      "published_at": "2017-01-17 15:37:23.040000+00:00",
+      "published_str": "2017-01-17",
+      "production_deps": 8,
+      "is_major": false
+    },
+    {
+      "version": "0.0.9",
+      "published_at": "2017-01-18 22:24:20.461000+00:00",
+      "published_str": "2017-01-18",
+      "production_deps": 8,
+      "is_major": false
+    },
+    {
+      "version": "0.0.10",
+      "published_at": "2017-01-20 18:00:18.974000+00:00",
+      "published_str": "2017-01-20",
+      "production_deps": 8,
+      "is_major": false
+    },
+    {
+      "version": "0.11.0",
+      "published_at": "2017-01-23 17:40:10.811000+00:00",
+      "published_str": "2017-01-23",
+      "production_deps": 8,
+      "is_major": false
+    },
+    {
+      "version": "0.13.1",
+      "published_at": "2017-01-28 16:22:17.609000+00:00",
+      "published_str": "2017-01-28",
+      "production_deps": 9,
+      "is_major": false
+    },
+    {
+      "version": "0.14.0",
+      "published_at": "2017-01-30 17:41:40.891000+00:00",
+      "published_str": "2017-01-30",
+      "production_deps": 9,
+      "is_major": false
+    },
+    {
+      "version": "0.14.1",
+      "published_at": "2017-01-30 17:56:16.036000+00:00",
+      "published_str": "2017-01-30",
+      "production_deps": 9,
+      "is_major": false
+    },
+    {
+      "version": "0.15.0",
+      "published_at": "2017-02-02 23:28:33.641000+00:00",
+      "published_str": "2017-02-02",
+      "production_deps": 9,
+      "is_major": false
+    },
+    {
+      "version": "0.16.0",
+      "published_at": "2017-02-06 02:28:45.881000+00:00",
+      "published_str": "2017-02-06",
+      "production_deps": 9,
+      "is_major": false
+    },
+    {
+      "version": "0.17.0",
+      "published_at": "2017-02-14 03:11:18.068000+00:00",
+      "published_str": "2017-02-14",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "0.17.1",
+      "published_at": "2017-02-14 21:46:56.940000+00:00",
+      "published_str": "2017-02-14",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "0.18.0",
+      "published_at": "2017-02-16 17:28:36.712000+00:00",
+      "published_str": "2017-02-16",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "0.19.0",
+      "published_at": "2017-02-23 17:53:21.835000+00:00",
+      "published_str": "2017-02-23",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "0.20.0",
+      "published_at": "2017-02-28 18:49:42.620000+00:00",
+      "published_str": "2017-02-28",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "0.21.0",
+      "published_at": "2017-03-03 22:03:48.722000+00:00",
+      "published_str": "2017-03-03",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "0.22.0",
+      "published_at": "2017-03-09 17:16:00.047000+00:00",
+      "published_str": "2017-03-09",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "1.0.0",
+      "published_at": "2017-04-13 16:31:12.234000+00:00",
+      "published_str": "2017-04-13",
+      "production_deps": 12,
+      "is_major": true
+    },
+    {
+      "version": "1.0.1",
+      "published_at": "2017-04-13 17:04:30.369000+00:00",
+      "published_str": "2017-04-13",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "1.0.2",
+      "published_at": "2017-04-13 17:19:08.500000+00:00",
+      "published_str": "2017-04-13",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "1.1.0",
+      "published_at": "2017-04-14 01:41:32.182000+00:00",
+      "published_str": "2017-04-14",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "1.2.0",
+      "published_at": "2017-04-19 18:02:13.377000+00:00",
+      "published_str": "2017-04-19",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "1.2.1",
+      "published_at": "2017-04-19 19:00:43.290000+00:00",
+      "published_str": "2017-04-19",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "1.2.2",
+      "published_at": "2017-04-19 20:19:43.614000+00:00",
+      "published_str": "2017-04-19",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "1.3.0",
+      "published_at": "2017-05-02 22:31:53.986000+00:00",
+      "published_str": "2017-05-02",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "1.3.1",
+      "published_at": "2017-05-03 21:39:46.048000+00:00",
+      "published_str": "2017-05-03",
+      "production_deps": 10,
+      "is_major": false
+    },
+    {
+      "version": "1.4.0-beta",
+      "published_at": "2017-06-02 03:31:21.378000+00:00",
+      "published_str": "2017-06-02",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.4.0",
+      "published_at": "2017-06-02 15:55:50.613000+00:00",
+      "published_str": "2017-06-02",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.4.1",
+      "published_at": "2017-06-02 23:26:58.416000+00:00",
+      "published_str": "2017-06-02",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.4.2",
+      "published_at": "2017-06-03 15:54:58.491000+00:00",
+      "published_str": "2017-06-03",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.4.3",
+      "published_at": "2017-06-07 22:49:15.333000+00:00",
+      "published_str": "2017-06-07",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.4.4",
+      "published_at": "2017-06-07 23:38:54.489000+00:00",
+      "published_str": "2017-06-07",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.5.0",
+      "published_at": "2017-06-27 17:11:51.855000+00:00",
+      "published_str": "2017-06-27",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.5.1",
+      "published_at": "2017-06-27 20:42:58.348000+00:00",
+      "published_str": "2017-06-27",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.5.2",
+      "published_at": "2017-06-28 03:34:08.836000+00:00",
+      "published_str": "2017-06-28",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.5.3",
+      "published_at": "2017-07-15 09:53:32.355000+00:00",
+      "published_str": "2017-07-15",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.6.0-beta2",
+      "published_at": "2017-08-26 03:20:27.043000+00:00",
+      "published_str": "2017-08-26",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.6.0",
+      "published_at": "2017-08-28 16:05:27.943000+00:00",
+      "published_str": "2017-08-28",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.6.1",
+      "published_at": "2017-08-29 16:00:06.358000+00:00",
+      "published_str": "2017-08-29",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.7.0",
+      "published_at": "2017-09-14 17:22:53.046000+00:00",
+      "published_str": "2017-09-14",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.7.1",
+      "published_at": "2017-09-27 17:01:17.726000+00:00",
+      "published_str": "2017-09-27",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.7.2",
+      "published_at": "2017-09-27 23:21:14.450000+00:00",
+      "published_str": "2017-09-27",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.7.3",
+      "published_at": "2017-09-30 10:53:51.384000+00:00",
+      "published_str": "2017-09-30",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.7.4",
+      "published_at": "2017-10-03 08:48:32.068000+00:00",
+      "published_str": "2017-10-03",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.8.0",
+      "published_at": "2017-11-07 03:58:58.274000+00:00",
+      "published_str": "2017-11-07",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.8.1",
+      "published_at": "2017-11-07 12:38:42.037000+00:00",
+      "published_str": "2017-11-07",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.8.2",
+      "published_at": "2017-11-09 11:26:24.455000+00:00",
+      "published_str": "2017-11-09",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.9.0",
+      "published_at": "2017-12-05 08:13:43.852000+00:00",
+      "published_str": "2017-12-05",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.9.1",
+      "published_at": "2017-12-05 23:33:10.893000+00:00",
+      "published_str": "2017-12-05",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.9.2",
+      "published_at": "2017-12-12 03:16:43.113000+00:00",
+      "published_str": "2017-12-12",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.10.0",
+      "published_at": "2018-01-10 12:07:19.820000+00:00",
+      "published_str": "2018-01-10",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.10.1",
+      "published_at": "2018-01-10 12:26:45.817000+00:00",
+      "published_str": "2018-01-10",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.10.2",
+      "published_at": "2018-01-11 01:59:08.832000+00:00",
+      "published_str": "2018-01-11",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.11.0-rc.1",
+      "published_at": "2018-02-24 00:01:49.203000+00:00",
+      "published_str": "2018-02-24",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.11.0",
+      "published_at": "2018-02-27 01:26:44.031000+00:00",
+      "published_str": "2018-02-27",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.11.1",
+      "published_at": "2018-02-28 22:22:11.608000+00:00",
+      "published_str": "2018-02-28",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.12.0",
+      "published_at": "2018-04-12 04:28:53.151000+00:00",
+      "published_str": "2018-04-12",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.12.1",
+      "published_at": "2018-04-17 02:43:23.980000+00:00",
+      "published_str": "2018-04-17",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.13.0",
+      "published_at": "2018-05-27 18:16:53.809000+00:00",
+      "published_str": "2018-05-27",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.13.1",
+      "published_at": "2018-05-29 06:14:14.186000+00:00",
+      "published_str": "2018-05-29",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.13.2",
+      "published_at": "2018-05-29 06:23:40.883000+00:00",
+      "published_str": "2018-05-29",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.13.3",
+      "published_at": "2018-05-30 18:02:16.681000+00:00",
+      "published_str": "2018-05-30",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.13.4",
+      "published_at": "2018-06-01 11:58:43.455000+00:00",
+      "published_str": "2018-06-01",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.13.5",
+      "published_at": "2018-06-08 18:01:12.233000+00:00",
+      "published_str": "2018-06-08",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.13.6",
+      "published_at": "2018-06-25 13:47:20.463000+00:00",
+      "published_str": "2018-06-25",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.13.7",
+      "published_at": "2018-06-28 19:20:27.119000+00:00",
+      "published_str": "2018-06-28",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.14.0",
+      "published_at": "2018-07-29 07:35:11.081000+00:00",
+      "published_str": "2018-07-29",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.14.1",
+      "published_at": "2018-08-08 16:36:58.793000+00:00",
+      "published_str": "2018-08-08",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.14.2",
+      "published_at": "2018-08-09 03:05:06.044000+00:00",
+      "published_str": "2018-08-09",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.14.3",
+      "published_at": "2018-09-19 12:58:30.850000+00:00",
+      "published_str": "2018-09-19",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.15.0",
+      "published_at": "2018-11-07 01:08:26.280000+00:00",
+      "published_str": "2018-11-07",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.15.1",
+      "published_at": "2018-11-07 02:20:10.966000+00:00",
+      "published_str": "2018-11-07",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.15.2",
+      "published_at": "2018-11-10 17:09:18.389000+00:00",
+      "published_str": "2018-11-10",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.15.3",
+      "published_at": "2018-11-30 02:29:38.667000+00:00",
+      "published_str": "2018-11-30",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.16.0",
+      "published_at": "2019-01-20 08:00:09.550000+00:00",
+      "published_str": "2019-01-20",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.16.1",
+      "published_at": "2019-01-22 13:53:30.142000+00:00",
+      "published_str": "2019-01-22",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.16.2",
+      "published_at": "2019-01-30 08:24:08.243000+00:00",
+      "published_str": "2019-01-30",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.16.3",
+      "published_at": "2019-01-31 04:18:41.228000+00:00",
+      "published_str": "2019-01-31",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.16.4",
+      "published_at": "2019-02-03 12:31:24.634000+00:00",
+      "published_str": "2019-02-03",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.17.0",
+      "published_at": "2019-04-12 20:36:46.104000+00:00",
+      "published_str": "2019-04-12",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.17.1",
+      "published_at": "2019-05-13 13:48:46.304000+00:00",
+      "published_str": "2019-05-13",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.18.0",
+      "published_at": "2019-06-06 21:46:30.478000+00:00",
+      "published_str": "2019-06-06",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.18.1",
+      "published_at": "2019-06-07 12:57:49.819000+00:00",
+      "published_str": "2019-06-07",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.18.2",
+      "published_at": "2019-06-07 14:55:43.212000+00:00",
+      "published_str": "2019-06-07",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.19.0",
+      "published_at": "2019-11-09 00:10:07.313000+00:00",
+      "published_str": "2019-11-09",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "1.19.1",
+      "published_at": "2019-11-09 12:21:15.351000+00:00",
+      "published_str": "2019-11-09",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.0.0",
+      "published_at": "2020-03-21 19:59:43.613000+00:00",
+      "published_str": "2020-03-21",
+      "production_deps": 0,
+      "is_major": true
+    },
+    {
+      "version": "2.0.1",
+      "published_at": "2020-03-21 23:06:25.403000+00:00",
+      "published_str": "2020-03-21",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.0.2",
+      "published_at": "2020-03-23 22:33:06.579000+00:00",
+      "published_str": "2020-03-23",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.0.3",
+      "published_at": "2020-04-05 20:48:40.788000+00:00",
+      "published_str": "2020-04-05",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.0.4",
+      "published_at": "2020-04-06 11:55:28.171000+00:00",
+      "published_str": "2020-04-06",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.0.5",
+      "published_at": "2020-04-21 17:05:57.825000+00:00",
+      "published_str": "2020-04-21",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.1.0",
+      "published_at": "2020-08-24 11:26:00.624000+00:00",
+      "published_str": "2020-08-24",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.1.1",
+      "published_at": "2020-08-26 04:23:01.635000+00:00",
+      "published_str": "2020-08-26",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.1.2",
+      "published_at": "2020-09-16 00:47:12.852000+00:00",
+      "published_str": "2020-09-16",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.2.0",
+      "published_at": "2020-11-20 04:45:26.153000+00:00",
+      "published_str": "2020-11-20",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.2.1",
+      "published_at": "2020-11-28 00:21:41.735000+00:00",
+      "published_str": "2020-11-28",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.3.0",
+      "published_at": "2021-05-09 21:01:40.825000+00:00",
+      "published_str": "2021-05-09",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.3.1",
+      "published_at": "2021-06-05 10:22:39.339000+00:00",
+      "published_str": "2021-06-05",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.3.2",
+      "published_at": "2021-06-26 08:28:43.949000+00:00",
+      "published_str": "2021-06-26",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.4.0",
+      "published_at": "2021-09-09 09:20:15.240000+00:00",
+      "published_str": "2021-09-09",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.4.1",
+      "published_at": "2021-09-16 06:06:41.651000+00:00",
+      "published_str": "2021-09-16",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.5.0",
+      "published_at": "2021-11-25 13:57:42.748000+00:00",
+      "published_str": "2021-11-25",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.5.1",
+      "published_at": "2021-12-04 14:31:29.278000+00:00",
+      "published_str": "2021-12-04",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.6.0",
+      "published_at": "2022-03-16 04:21:19.654000+00:00",
+      "published_str": "2022-03-16",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.6.1",
+      "published_at": "2022-03-25 04:59:18.048000+00:00",
+      "published_str": "2022-03-25",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.6.2",
+      "published_at": "2022-04-02 16:31:42.353000+00:00",
+      "published_str": "2022-04-02",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.7.0",
+      "published_at": "2022-06-14 06:20:34.587000+00:00",
+      "published_str": "2022-06-14",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.7.1",
+      "published_at": "2022-06-16 05:43:52.397000+00:00",
+      "published_str": "2022-06-16",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.0",
+      "published_at": "2022-08-17 09:12:49.537000+00:00",
+      "published_str": "2022-08-17",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.1",
+      "published_at": "2022-10-08 08:54:58.929000+00:00",
+      "published_str": "2022-10-08",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.2",
+      "published_at": "2022-10-13 09:12:25.759000+00:00",
+      "published_str": "2022-10-13",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.3",
+      "published_at": "2022-10-20 01:59:24.589000+00:00",
+      "published_str": "2022-10-20",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.4",
+      "published_at": "2022-10-26 03:05:17.724000+00:00",
+      "published_str": "2022-10-26",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.8.0",
+      "published_at": "2022-11-23 04:51:22.503000+00:00",
+      "published_str": "2022-11-23",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.8.1",
+      "published_at": "2022-12-07 17:26:38.191000+00:00",
+      "published_str": "2022-12-07",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.8.2",
+      "published_at": "2023-01-07 11:19:41.659000+00:00",
+      "published_str": "2023-01-07",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.8.3",
+      "published_at": "2023-01-14 03:38:48.087000+00:00",
+      "published_str": "2023-01-14",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.8.4",
+      "published_at": "2023-02-08 03:08:44.072000+00:00",
+      "published_str": "2023-02-08",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.5",
+      "published_at": "2023-03-01 10:00:47.035000+00:00",
+      "published_str": "2023-03-01",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.6",
+      "published_at": "2023-03-02 09:19:46.624000+00:00",
+      "published_str": "2023-03-02",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.8.5",
+      "published_at": "2023-03-20 06:05:39.932000+00:00",
+      "published_str": "2023-03-20",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.8.6",
+      "published_at": "2023-03-21 08:17:39.465000+00:00",
+      "published_str": "2023-03-21",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.8.7",
+      "published_at": "2023-03-24 08:15:19.994000+00:00",
+      "published_str": "2023-03-24",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.7-for-vscode",
+      "published_at": "2023-04-23 06:54:00.153000+00:00",
+      "published_str": "2023-04-23",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "2.8.8",
+      "published_at": "2023-04-23 07:26:12.772000+00:00",
+      "published_str": "2023-04-23",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.8-for-vscode",
+      "published_at": "2023-04-23 08:07:28.795000+00:00",
+      "published_str": "2023-04-23",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.9-for-vscode",
+      "published_at": "2023-04-23 08:50:26.138000+00:00",
+      "published_str": "2023-04-23",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.10",
+      "published_at": "2023-04-23 10:51:27.118000+00:00",
+      "published_str": "2023-04-23",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.11",
+      "published_at": "2023-04-25 02:47:52.655000+00:00",
+      "published_str": "2023-04-25",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0-alpha.12",
+      "published_at": "2023-05-26 14:12:45.252000+00:00",
+      "published_str": "2023-05-26",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.0",
+      "published_at": "2023-07-05 12:44:13.820000+00:00",
+      "published_str": "2023-07-05",
+      "production_deps": 0,
+      "is_major": true
+    },
+    {
+      "version": "3.0.1",
+      "published_at": "2023-08-03 06:10:21.592000+00:00",
+      "published_str": "2023-08-03",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.2",
+      "published_at": "2023-08-15 15:44:19.367000+00:00",
+      "published_str": "2023-08-15",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.0.3",
+      "published_at": "2023-08-29 12:30:11.880000+00:00",
+      "published_str": "2023-08-29",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.1.0",
+      "published_at": "2023-11-13 02:57:22.609000+00:00",
+      "published_str": "2023-11-13",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.0",
+      "published_at": "2023-11-30 05:45:34.115000+00:00",
+      "published_str": "2023-11-30",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.1",
+      "published_at": "2023-11-30 06:42:36.440000+00:00",
+      "published_str": "2023-11-30",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.2",
+      "published_at": "2023-11-30 16:49:10.348000+00:00",
+      "published_str": "2023-11-30",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.3",
+      "published_at": "2023-12-01 05:34:45.202000+00:00",
+      "published_str": "2023-12-01",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.4",
+      "published_at": "2023-12-10 08:09:33.912000+00:00",
+      "published_str": "2023-12-10",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "3.1.1",
+      "published_at": "2023-12-10 08:36:17.920000+00:00",
+      "published_str": "2023-12-10",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.5",
+      "published_at": "2023-12-14 05:53:18.886000+00:00",
+      "published_str": "2023-12-14",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.6",
+      "published_at": "2023-12-16 03:16:14.815000+00:00",
+      "published_str": "2023-12-16",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.7",
+      "published_at": "2023-12-17 18:47:04.955000+00:00",
+      "published_str": "2023-12-17",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.8",
+      "published_at": "2023-12-20 18:12:56.119000+00:00",
+      "published_str": "2023-12-20",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "3.2.0",
+      "published_at": "2024-01-12 16:16:16.167000+00:00",
+      "published_str": "2024-01-12",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.2.1",
+      "published_at": "2024-01-12 19:16:36.881000+00:00",
+      "published_str": "2024-01-12",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.2.2",
+      "published_at": "2024-01-14 03:07:57.876000+00:00",
+      "published_str": "2024-01-14",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.2.3",
+      "published_at": "2024-01-17 03:30:11.340000+00:00",
+      "published_str": "2024-01-17",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.2.4",
+      "published_at": "2024-01-17 10:15:25.179000+00:00",
+      "published_str": "2024-01-17",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.2.5",
+      "published_at": "2024-02-04 05:38:11.623000+00:00",
+      "published_str": "2024-02-04",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.3.0",
+      "published_at": "2024-06-01 17:03:12.419000+00:00",
+      "published_str": "2024-06-01",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.3.1",
+      "published_at": "2024-06-05 09:11:21.355000+00:00",
+      "published_str": "2024-06-05",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.3.2",
+      "published_at": "2024-06-11 06:07:20.240000+00:00",
+      "published_str": "2024-06-11",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.9",
+      "published_at": "2024-06-17 22:48:53.722000+00:00",
+      "published_str": "2024-06-17",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "3.3.3",
+      "published_at": "2024-07-13 12:26:38.008000+00:00",
+      "published_str": "2024-07-13",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.10",
+      "published_at": "2024-09-02 22:37:55.892000+00:00",
+      "published_str": "2024-09-02",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "3.4.0",
+      "published_at": "2024-11-26 04:51:34.765000+00:00",
+      "published_str": "2024-11-26",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.4.1",
+      "published_at": "2024-11-26 13:04:40.296000+00:00",
+      "published_str": "2024-11-26",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.4.2",
+      "published_at": "2024-12-04 07:04:07.630000+00:00",
+      "published_str": "2024-12-04",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.5.0",
+      "published_at": "2025-02-09 11:23:40.436000+00:00",
+      "published_str": "2025-02-09",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.5.1",
+      "published_at": "2025-02-13 13:13:25.908000+00:00",
+      "published_str": "2025-02-13",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.5.2",
+      "published_at": "2025-02-22 04:13:24.234000+00:00",
+      "published_str": "2025-02-22",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.11",
+      "published_at": "2025-02-24 22:11:36.974000+00:00",
+      "published_str": "2025-02-24",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "3.5.3",
+      "published_at": "2025-03-03 01:18:57.493000+00:00",
+      "published_str": "2025-03-03",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.12",
+      "published_at": "2025-03-06 09:58:16.951000+00:00",
+      "published_str": "2025-03-06",
+      "production_deps": 1,
+      "is_major": false
+    },
+    {
+      "version": "3.6.0",
+      "published_at": "2025-06-23 02:02:45.570000+00:00",
+      "published_str": "2025-06-23",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.6.1",
+      "published_at": "2025-06-25 06:44:07.413000+00:00",
+      "published_str": "2025-06-25",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.6.2",
+      "published_at": "2025-06-27 02:53:53.185000+00:00",
+      "published_str": "2025-06-27",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "4.0.0-alpha.13",
+      "published_at": "2025-11-18 08:04:21.677000+00:00",
+      "published_str": "2025-11-18",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.7.0",
+      "published_at": "2025-11-27 08:29:56.202000+00:00",
+      "published_str": "2025-11-27",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.7.1",
+      "published_at": "2025-11-27 11:31:51.388000+00:00",
+      "published_str": "2025-11-27",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.7.2",
+      "published_at": "2025-11-28 20:58:02.914000+00:00",
+      "published_str": "2025-11-28",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.7.3",
+      "published_at": "2025-11-29 17:54:14.047000+00:00",
+      "published_str": "2025-11-29",
+      "production_deps": 0,
+      "is_major": false
+    },
+    {
+      "version": "3.7.4",
+      "published_at": "2025-12-03 04:35:23.210000+00:00",
+      "published_str": "2025-12-03",
+      "production_deps": 0,
+      "is_major": false
+    }
+  ],
+  "analysis_results": [
+    {
+      "version": "0.0.2",
+      "published_at": "2017-01-10",
+      "production_deps": 5,
+      "is_major": false,
+      "total_bugs": 14,
+      "counts": {
+        "intrinsic": 10,
+        "extrinsic": 0,
+        "not_bug": 4,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 71.4,
+        "extrinsic": 0.0,
+        "not_bug": 28.6,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.0.3",
+      "published_at": "2017-01-10",
+      "production_deps": 5,
+      "is_major": false,
+      "total_bugs": 16,
+      "counts": {
+        "intrinsic": 11,
+        "extrinsic": 1,
+        "not_bug": 4,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 68.8,
+        "extrinsic": 6.2,
+        "not_bug": 25.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.0.4",
+      "published_at": "2017-01-11",
+      "production_deps": 7,
+      "is_major": false,
+      "total_bugs": 9,
+      "counts": {
+        "intrinsic": 7,
+        "extrinsic": 0,
+        "not_bug": 2,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 77.8,
+        "extrinsic": 0.0,
+        "not_bug": 22.2,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.0.5",
+      "published_at": "2017-01-11",
+      "production_deps": 8,
+      "is_major": false,
+      "total_bugs": 17,
+      "counts": {
+        "intrinsic": 10,
+        "extrinsic": 0,
+        "not_bug": 7,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 58.8,
+        "extrinsic": 0.0,
+        "not_bug": 41.2,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.0.6",
+      "published_at": "2017-01-13",
+      "production_deps": 8,
+      "is_major": false,
+      "total_bugs": 1,
+      "counts": {
+        "intrinsic": 1,
+        "extrinsic": 0,
+        "not_bug": 0,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 100.0,
+        "extrinsic": 0.0,
+        "not_bug": 0.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.0.7",
+      "published_at": "2017-01-14",
+      "production_deps": 8,
+      "is_major": false,
+      "total_bugs": 36,
+      "counts": {
+        "intrinsic": 24,
+        "extrinsic": 0,
+        "not_bug": 12,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 66.7,
+        "extrinsic": 0.0,
+        "not_bug": 33.3,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.0.8",
+      "published_at": "2017-01-17",
+      "production_deps": 8,
+      "is_major": false,
+      "total_bugs": 5,
+      "counts": {
+        "intrinsic": 5,
+        "extrinsic": 0,
+        "not_bug": 0,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 100.0,
+        "extrinsic": 0.0,
+        "not_bug": 0.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.0.9",
+      "published_at": "2017-01-18",
+      "production_deps": 8,
+      "is_major": false,
+      "total_bugs": 11,
+      "counts": {
+        "intrinsic": 9,
+        "extrinsic": 1,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 81.8,
+        "extrinsic": 9.1,
+        "not_bug": 9.1,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.0.10",
+      "published_at": "2017-01-20",
+      "production_deps": 8,
+      "is_major": false,
+      "total_bugs": 29,
+      "counts": {
+        "intrinsic": 26,
+        "extrinsic": 1,
+        "not_bug": 2,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 89.7,
+        "extrinsic": 3.4,
+        "not_bug": 6.9,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.11.0",
+      "published_at": "2017-01-23",
+      "production_deps": 8,
+      "is_major": false,
+      "total_bugs": 14,
+      "counts": {
+        "intrinsic": 7,
+        "extrinsic": 0,
+        "not_bug": 6,
+        "unknown": 1
+      },
+      "percentages": {
+        "intrinsic": 50.0,
+        "extrinsic": 0.0,
+        "not_bug": 42.9,
+        "unknown": 7.1
+      }
+    },
+    {
+      "version": "0.13.1",
+      "published_at": "2017-01-28",
+      "production_deps": 9,
+      "is_major": false,
+      "total_bugs": 8,
+      "counts": {
+        "intrinsic": 7,
+        "extrinsic": 0,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 87.5,
+        "extrinsic": 0.0,
+        "not_bug": 12.5,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.14.1",
+      "published_at": "2017-01-30",
+      "production_deps": 9,
+      "is_major": false,
+      "total_bugs": 29,
+      "counts": {
+        "intrinsic": 20,
+        "extrinsic": 1,
+        "not_bug": 8,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 69.0,
+        "extrinsic": 3.4,
+        "not_bug": 27.6,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.15.0",
+      "published_at": "2017-02-02",
+      "production_deps": 9,
+      "is_major": false,
+      "total_bugs": 18,
+      "counts": {
+        "intrinsic": 15,
+        "extrinsic": 0,
+        "not_bug": 3,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 83.3,
+        "extrinsic": 0.0,
+        "not_bug": 16.7,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.16.0",
+      "published_at": "2017-02-06",
+      "production_deps": 9,
+      "is_major": false,
+      "total_bugs": 20,
+      "counts": {
+        "intrinsic": 6,
+        "extrinsic": 2,
+        "not_bug": 12,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 30.0,
+        "extrinsic": 10.0,
+        "not_bug": 60.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.17.0",
+      "published_at": "2017-02-14",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 9,
+      "counts": {
+        "intrinsic": 7,
+        "extrinsic": 1,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 77.8,
+        "extrinsic": 11.1,
+        "not_bug": 11.1,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.17.1",
+      "published_at": "2017-02-14",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 11,
+      "counts": {
+        "intrinsic": 7,
+        "extrinsic": 0,
+        "not_bug": 3,
+        "unknown": 1
+      },
+      "percentages": {
+        "intrinsic": 63.6,
+        "extrinsic": 0.0,
+        "not_bug": 27.3,
+        "unknown": 9.1
+      }
+    },
+    {
+      "version": "0.18.0",
+      "published_at": "2017-02-16",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 16,
+      "counts": {
+        "intrinsic": 8,
+        "extrinsic": 2,
+        "not_bug": 6,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 50.0,
+        "extrinsic": 12.5,
+        "not_bug": 37.5,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.19.0",
+      "published_at": "2017-02-23",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 19,
+      "counts": {
+        "intrinsic": 15,
+        "extrinsic": 0,
+        "not_bug": 4,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 78.9,
+        "extrinsic": 0.0,
+        "not_bug": 21.1,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.20.0",
+      "published_at": "2017-02-28",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 8,
+      "counts": {
+        "intrinsic": 7,
+        "extrinsic": 0,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 87.5,
+        "extrinsic": 0.0,
+        "not_bug": 12.5,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.21.0",
+      "published_at": "2017-03-03",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 40,
+      "counts": {
+        "intrinsic": 32,
+        "extrinsic": 1,
+        "not_bug": 7,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 80.0,
+        "extrinsic": 2.5,
+        "not_bug": 17.5,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "0.22.0",
+      "published_at": "2017-03-09",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 97,
+      "counts": {
+        "intrinsic": 58,
+        "extrinsic": 1,
+        "not_bug": 36,
+        "unknown": 2
+      },
+      "percentages": {
+        "intrinsic": 59.8,
+        "extrinsic": 1.0,
+        "not_bug": 37.1,
+        "unknown": 2.1
+      }
+    },
+    {
+      "version": "1.0.0",
+      "published_at": "2017-04-13",
+      "production_deps": 12,
+      "is_major": true,
+      "total_bugs": 2,
+      "counts": {
+        "intrinsic": 2,
+        "extrinsic": 0,
+        "not_bug": 0,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 100.0,
+        "extrinsic": 0.0,
+        "not_bug": 0.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.0.1",
+      "published_at": "2017-04-13",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 1,
+      "counts": {
+        "intrinsic": 1,
+        "extrinsic": 0,
+        "not_bug": 0,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 100.0,
+        "extrinsic": 0.0,
+        "not_bug": 0.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.0.2",
+      "published_at": "2017-04-13",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 14,
+      "counts": {
+        "intrinsic": 7,
+        "extrinsic": 1,
+        "not_bug": 6,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 50.0,
+        "extrinsic": 7.1,
+        "not_bug": 42.9,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.1.0",
+      "published_at": "2017-04-14",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 35,
+      "counts": {
+        "intrinsic": 18,
+        "extrinsic": 3,
+        "not_bug": 14,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 51.4,
+        "extrinsic": 8.6,
+        "not_bug": 40.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.2.0",
+      "published_at": "2017-04-19",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 2,
+      "counts": {
+        "intrinsic": 1,
+        "extrinsic": 0,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 50.0,
+        "extrinsic": 0.0,
+        "not_bug": 50.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.2.2",
+      "published_at": "2017-04-19",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 58,
+      "counts": {
+        "intrinsic": 33,
+        "extrinsic": 9,
+        "not_bug": 16,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 56.9,
+        "extrinsic": 15.5,
+        "not_bug": 27.6,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.3.0",
+      "published_at": "2017-05-02",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 4,
+      "counts": {
+        "intrinsic": 2,
+        "extrinsic": 0,
+        "not_bug": 2,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 50.0,
+        "extrinsic": 0.0,
+        "not_bug": 50.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.3.1",
+      "published_at": "2017-05-03",
+      "production_deps": 10,
+      "is_major": false,
+      "total_bugs": 77,
+      "counts": {
+        "intrinsic": 36,
+        "extrinsic": 8,
+        "not_bug": 33,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 46.8,
+        "extrinsic": 10.4,
+        "not_bug": 42.9,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.4.0-beta",
+      "published_at": "2017-06-02",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 9,
+      "counts": {
+        "intrinsic": 5,
+        "extrinsic": 2,
+        "not_bug": 2,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 55.6,
+        "extrinsic": 22.2,
+        "not_bug": 22.2,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.4.0",
+      "published_at": "2017-06-02",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 28,
+      "counts": {
+        "intrinsic": 21,
+        "extrinsic": 2,
+        "not_bug": 5,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 75.0,
+        "extrinsic": 7.1,
+        "not_bug": 17.9,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.4.1",
+      "published_at": "2017-06-02",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 7,
+      "counts": {
+        "intrinsic": 5,
+        "extrinsic": 0,
+        "not_bug": 2,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 71.4,
+        "extrinsic": 0.0,
+        "not_bug": 28.6,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.4.2",
+      "published_at": "2017-06-03",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 31,
+      "counts": {
+        "intrinsic": 17,
+        "extrinsic": 2,
+        "not_bug": 12,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 54.8,
+        "extrinsic": 6.5,
+        "not_bug": 38.7,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.4.3",
+      "published_at": "2017-06-07",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 1,
+      "counts": {
+        "intrinsic": 1,
+        "extrinsic": 0,
+        "not_bug": 0,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 100.0,
+        "extrinsic": 0.0,
+        "not_bug": 0.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.4.4",
+      "published_at": "2017-06-07",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 96,
+      "counts": {
+        "intrinsic": 50,
+        "extrinsic": 12,
+        "not_bug": 33,
+        "unknown": 1
+      },
+      "percentages": {
+        "intrinsic": 52.1,
+        "extrinsic": 12.5,
+        "not_bug": 34.4,
+        "unknown": 1.0
+      }
+    },
+    {
+      "version": "1.5.0",
+      "published_at": "2017-06-27",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 4,
+      "counts": {
+        "intrinsic": 2,
+        "extrinsic": 1,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 50.0,
+        "extrinsic": 25.0,
+        "not_bug": 25.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.5.1",
+      "published_at": "2017-06-27",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 7,
+      "counts": {
+        "intrinsic": 6,
+        "extrinsic": 0,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 85.7,
+        "extrinsic": 0.0,
+        "not_bug": 14.3,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.5.2",
+      "published_at": "2017-06-28",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 73,
+      "counts": {
+        "intrinsic": 29,
+        "extrinsic": 3,
+        "not_bug": 39,
+        "unknown": 2
+      },
+      "percentages": {
+        "intrinsic": 39.7,
+        "extrinsic": 4.1,
+        "not_bug": 53.4,
+        "unknown": 2.7
+      }
+    },
+    {
+      "version": "1.5.3",
+      "published_at": "2017-07-15",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 75,
+      "counts": {
+        "intrinsic": 28,
+        "extrinsic": 4,
+        "not_bug": 43,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 37.3,
+        "extrinsic": 5.3,
+        "not_bug": 57.3,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.6.0-beta2",
+      "published_at": "2017-08-26",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 1,
+      "counts": {
+        "intrinsic": 0,
+        "extrinsic": 0,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 0.0,
+        "extrinsic": 0.0,
+        "not_bug": 100.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.6.0",
+      "published_at": "2017-08-28",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 12,
+      "counts": {
+        "intrinsic": 6,
+        "extrinsic": 2,
+        "not_bug": 4,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 50.0,
+        "extrinsic": 16.7,
+        "not_bug": 33.3,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.6.1",
+      "published_at": "2017-08-29",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 47,
+      "counts": {
+        "intrinsic": 18,
+        "extrinsic": 4,
+        "not_bug": 25,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 38.3,
+        "extrinsic": 8.5,
+        "not_bug": 53.2,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.7.0",
+      "published_at": "2017-09-14",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 43,
+      "counts": {
+        "intrinsic": 24,
+        "extrinsic": 5,
+        "not_bug": 14,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 55.8,
+        "extrinsic": 11.6,
+        "not_bug": 32.6,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.7.1",
+      "published_at": "2017-09-27",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 6,
+      "counts": {
+        "intrinsic": 5,
+        "extrinsic": 0,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 83.3,
+        "extrinsic": 0.0,
+        "not_bug": 16.7,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.7.2",
+      "published_at": "2017-09-27",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 5,
+      "counts": {
+        "intrinsic": 3,
+        "extrinsic": 1,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 60.0,
+        "extrinsic": 20.0,
+        "not_bug": 20.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.7.3",
+      "published_at": "2017-09-30",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 7,
+      "counts": {
+        "intrinsic": 3,
+        "extrinsic": 0,
+        "not_bug": 4,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 42.9,
+        "extrinsic": 0.0,
+        "not_bug": 57.1,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.7.4",
+      "published_at": "2017-10-03",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 80,
+      "counts": {
+        "intrinsic": 37,
+        "extrinsic": 0,
+        "not_bug": 41,
+        "unknown": 2
+      },
+      "percentages": {
+        "intrinsic": 46.2,
+        "extrinsic": 0.0,
+        "not_bug": 51.2,
+        "unknown": 2.5
+      }
+    },
+    {
+      "version": "1.8.0",
+      "published_at": "2017-11-07",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 7,
+      "counts": {
+        "intrinsic": 7,
+        "extrinsic": 0,
+        "not_bug": 0,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 100.0,
+        "extrinsic": 0.0,
+        "not_bug": 0.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.8.1",
+      "published_at": "2017-11-07",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 10,
+      "counts": {
+        "intrinsic": 5,
+        "extrinsic": 0,
+        "not_bug": 5,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 50.0,
+        "extrinsic": 0.0,
+        "not_bug": 50.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.8.2",
+      "published_at": "2017-11-09",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 64,
+      "counts": {
+        "intrinsic": 33,
+        "extrinsic": 6,
+        "not_bug": 25,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 51.6,
+        "extrinsic": 9.4,
+        "not_bug": 39.1,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.9.0",
+      "published_at": "2017-12-05",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 9,
+      "counts": {
+        "intrinsic": 7,
+        "extrinsic": 1,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 77.8,
+        "extrinsic": 11.1,
+        "not_bug": 11.1,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.9.1",
+      "published_at": "2017-12-05",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 15,
+      "counts": {
+        "intrinsic": 8,
+        "extrinsic": 2,
+        "not_bug": 5,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 53.3,
+        "extrinsic": 13.3,
+        "not_bug": 33.3,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.9.2",
+      "published_at": "2017-12-12",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 60,
+      "counts": {
+        "intrinsic": 24,
+        "extrinsic": 7,
+        "not_bug": 29,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 40.0,
+        "extrinsic": 11.7,
+        "not_bug": 48.3,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.10.0",
+      "published_at": "2018-01-10",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 1,
+      "counts": {
+        "intrinsic": 1,
+        "extrinsic": 0,
+        "not_bug": 0,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 100.0,
+        "extrinsic": 0.0,
+        "not_bug": 0.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.10.1",
+      "published_at": "2018-01-10",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 3,
+      "counts": {
+        "intrinsic": 1,
+        "extrinsic": 0,
+        "not_bug": 2,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 33.3,
+        "extrinsic": 0.0,
+        "not_bug": 66.7,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.10.2",
+      "published_at": "2018-01-11",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 104,
+      "counts": {
+        "intrinsic": 35,
+        "extrinsic": 9,
+        "not_bug": 58,
+        "unknown": 2
+      },
+      "percentages": {
+        "intrinsic": 33.7,
+        "extrinsic": 8.7,
+        "not_bug": 55.8,
+        "unknown": 1.9
+      }
+    },
+    {
+      "version": "1.11.0-rc.1",
+      "published_at": "2018-02-24",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 7,
+      "counts": {
+        "intrinsic": 4,
+        "extrinsic": 0,
+        "not_bug": 3,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 57.1,
+        "extrinsic": 0.0,
+        "not_bug": 42.9,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.11.0",
+      "published_at": "2018-02-27",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 11,
+      "counts": {
+        "intrinsic": 5,
+        "extrinsic": 2,
+        "not_bug": 4,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 45.5,
+        "extrinsic": 18.2,
+        "not_bug": 36.4,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.11.1",
+      "published_at": "2018-02-28",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 90,
+      "counts": {
+        "intrinsic": 37,
+        "extrinsic": 7,
+        "not_bug": 46,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 41.1,
+        "extrinsic": 7.8,
+        "not_bug": 51.1,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.12.0",
+      "published_at": "2018-04-12",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 10,
+      "counts": {
+        "intrinsic": 7,
+        "extrinsic": 1,
+        "not_bug": 2,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 70.0,
+        "extrinsic": 10.0,
+        "not_bug": 20.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.12.1",
+      "published_at": "2018-04-17",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 72,
+      "counts": {
+        "intrinsic": 28,
+        "extrinsic": 5,
+        "not_bug": 39,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 38.9,
+        "extrinsic": 6.9,
+        "not_bug": 54.2,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.13.0",
+      "published_at": "2018-05-27",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 6,
+      "counts": {
+        "intrinsic": 2,
+        "extrinsic": 0,
+        "not_bug": 4,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 33.3,
+        "extrinsic": 0.0,
+        "not_bug": 66.7,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.13.2",
+      "published_at": "2018-05-29",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 5,
+      "counts": {
+        "intrinsic": 3,
+        "extrinsic": 0,
+        "not_bug": 2,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 60.0,
+        "extrinsic": 0.0,
+        "not_bug": 40.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.13.3",
+      "published_at": "2018-05-30",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 6,
+      "counts": {
+        "intrinsic": 4,
+        "extrinsic": 0,
+        "not_bug": 2,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 66.7,
+        "extrinsic": 0.0,
+        "not_bug": 33.3,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.13.4",
+      "published_at": "2018-06-01",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 21,
+      "counts": {
+        "intrinsic": 7,
+        "extrinsic": 1,
+        "not_bug": 13,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 33.3,
+        "extrinsic": 4.8,
+        "not_bug": 61.9,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.13.5",
+      "published_at": "2018-06-08",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 28,
+      "counts": {
+        "intrinsic": 14,
+        "extrinsic": 1,
+        "not_bug": 13,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 50.0,
+        "extrinsic": 3.6,
+        "not_bug": 46.4,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.13.6",
+      "published_at": "2018-06-25",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 11,
+      "counts": {
+        "intrinsic": 4,
+        "extrinsic": 1,
+        "not_bug": 5,
+        "unknown": 1
+      },
+      "percentages": {
+        "intrinsic": 36.4,
+        "extrinsic": 9.1,
+        "not_bug": 45.5,
+        "unknown": 9.1
+      }
+    },
+    {
+      "version": "1.13.7",
+      "published_at": "2018-06-28",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 46,
+      "counts": {
+        "intrinsic": 20,
+        "extrinsic": 6,
+        "not_bug": 20,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 43.5,
+        "extrinsic": 13.0,
+        "not_bug": 43.5,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.14.0",
+      "published_at": "2018-07-29",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 25,
+      "counts": {
+        "intrinsic": 13,
+        "extrinsic": 2,
+        "not_bug": 9,
+        "unknown": 1
+      },
+      "percentages": {
+        "intrinsic": 52.0,
+        "extrinsic": 8.0,
+        "not_bug": 36.0,
+        "unknown": 4.0
+      }
+    },
+    {
+      "version": "1.14.1",
+      "published_at": "2018-08-08",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 1,
+      "counts": {
+        "intrinsic": 1,
+        "extrinsic": 0,
+        "not_bug": 0,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 100.0,
+        "extrinsic": 0.0,
+        "not_bug": 0.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.14.2",
+      "published_at": "2018-08-09",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 76,
+      "counts": {
+        "intrinsic": 32,
+        "extrinsic": 5,
+        "not_bug": 38,
+        "unknown": 1
+      },
+      "percentages": {
+        "intrinsic": 42.1,
+        "extrinsic": 6.6,
+        "not_bug": 50.0,
+        "unknown": 1.3
+      }
+    },
+    {
+      "version": "1.14.3",
+      "published_at": "2018-09-19",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 81,
+      "counts": {
+        "intrinsic": 41,
+        "extrinsic": 2,
+        "not_bug": 37,
+        "unknown": 1
+      },
+      "percentages": {
+        "intrinsic": 50.6,
+        "extrinsic": 2.5,
+        "not_bug": 45.7,
+        "unknown": 1.2
+      }
+    },
+    {
+      "version": "1.15.0",
+      "published_at": "2018-11-07",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 1,
+      "counts": {
+        "intrinsic": 1,
+        "extrinsic": 0,
+        "not_bug": 0,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 100.0,
+        "extrinsic": 0.0,
+        "not_bug": 0.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.15.1",
+      "published_at": "2018-11-07",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 36,
+      "counts": {
+        "intrinsic": 22,
+        "extrinsic": 1,
+        "not_bug": 13,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 61.1,
+        "extrinsic": 2.8,
+        "not_bug": 36.1,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.15.2",
+      "published_at": "2018-11-10",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 58,
+      "counts": {
+        "intrinsic": 25,
+        "extrinsic": 3,
+        "not_bug": 30,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 43.1,
+        "extrinsic": 5.2,
+        "not_bug": 51.7,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.15.3",
+      "published_at": "2018-11-30",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 85,
+      "counts": {
+        "intrinsic": 29,
+        "extrinsic": 4,
+        "not_bug": 49,
+        "unknown": 3
+      },
+      "percentages": {
+        "intrinsic": 34.1,
+        "extrinsic": 4.7,
+        "not_bug": 57.6,
+        "unknown": 3.5
+      }
+    },
+    {
+      "version": "1.16.0",
+      "published_at": "2019-01-20",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 5,
+      "counts": {
+        "intrinsic": 4,
+        "extrinsic": 0,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 80.0,
+        "extrinsic": 0.0,
+        "not_bug": 20.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.16.1",
+      "published_at": "2019-01-22",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 11,
+      "counts": {
+        "intrinsic": 3,
+        "extrinsic": 4,
+        "not_bug": 4,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 27.3,
+        "extrinsic": 36.4,
+        "not_bug": 36.4,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.16.2",
+      "published_at": "2019-01-30",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 3,
+      "counts": {
+        "intrinsic": 0,
+        "extrinsic": 2,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 0.0,
+        "extrinsic": 66.7,
+        "not_bug": 33.3,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.16.3",
+      "published_at": "2019-01-31",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 4,
+      "counts": {
+        "intrinsic": 2,
+        "extrinsic": 1,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 50.0,
+        "extrinsic": 25.0,
+        "not_bug": 25.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.16.4",
+      "published_at": "2019-02-03",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 88,
+      "counts": {
+        "intrinsic": 33,
+        "extrinsic": 1,
+        "not_bug": 52,
+        "unknown": 2
+      },
+      "percentages": {
+        "intrinsic": 37.5,
+        "extrinsic": 1.1,
+        "not_bug": 59.1,
+        "unknown": 2.3
+      }
+    },
+    {
+      "version": "1.17.0",
+      "published_at": "2019-04-12",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 36,
+      "counts": {
+        "intrinsic": 16,
+        "extrinsic": 2,
+        "not_bug": 18,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 44.4,
+        "extrinsic": 5.6,
+        "not_bug": 50.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.17.1",
+      "published_at": "2019-05-13",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 23,
+      "counts": {
+        "intrinsic": 9,
+        "extrinsic": 3,
+        "not_bug": 10,
+        "unknown": 1
+      },
+      "percentages": {
+        "intrinsic": 39.1,
+        "extrinsic": 13.0,
+        "not_bug": 43.5,
+        "unknown": 4.3
+      }
+    },
+    {
+      "version": "1.18.0",
+      "published_at": "2019-06-06",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 1,
+      "counts": {
+        "intrinsic": 1,
+        "extrinsic": 0,
+        "not_bug": 0,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 100.0,
+        "extrinsic": 0.0,
+        "not_bug": 0.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.18.1",
+      "published_at": "2019-06-07",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 1,
+      "counts": {
+        "intrinsic": 1,
+        "extrinsic": 0,
+        "not_bug": 0,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 100.0,
+        "extrinsic": 0.0,
+        "not_bug": 0.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.18.2",
+      "published_at": "2019-06-07",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 181,
+      "counts": {
+        "intrinsic": 60,
+        "extrinsic": 14,
+        "not_bug": 102,
+        "unknown": 5
+      },
+      "percentages": {
+        "intrinsic": 33.1,
+        "extrinsic": 7.7,
+        "not_bug": 56.4,
+        "unknown": 2.8
+      }
+    },
+    {
+      "version": "1.19.0",
+      "published_at": "2019-11-09",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 3,
+      "counts": {
+        "intrinsic": 2,
+        "extrinsic": 0,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 66.7,
+        "extrinsic": 0.0,
+        "not_bug": 33.3,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "1.19.1",
+      "published_at": "2019-11-09",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 199,
+      "counts": {
+        "intrinsic": 93,
+        "extrinsic": 4,
+        "not_bug": 97,
+        "unknown": 5
+      },
+      "percentages": {
+        "intrinsic": 46.7,
+        "extrinsic": 2.0,
+        "not_bug": 48.7,
+        "unknown": 2.5
+      }
+    },
+    {
+      "version": "2.0.0",
+      "published_at": "2020-03-21",
+      "production_deps": 0,
+      "is_major": true,
+      "total_bugs": 2,
+      "counts": {
+        "intrinsic": 1,
+        "extrinsic": 0,
+        "not_bug": 1,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 50.0,
+        "extrinsic": 0.0,
+        "not_bug": 50.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "2.0.1",
+      "published_at": "2020-03-21",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 11,
+      "counts": {
+        "intrinsic": 3,
+        "extrinsic": 1,
+        "not_bug": 7,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 27.3,
+        "extrinsic": 9.1,
+        "not_bug": 63.6,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "2.0.2",
+      "published_at": "2020-03-23",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 25,
+      "counts": {
+        "intrinsic": 9,
+        "extrinsic": 1,
+        "not_bug": 15,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 36.0,
+        "extrinsic": 4.0,
+        "not_bug": 60.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "2.0.3",
+      "published_at": "2020-04-05",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 3,
+      "counts": {
+        "intrinsic": 3,
+        "extrinsic": 0,
+        "not_bug": 0,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 100.0,
+        "extrinsic": 0.0,
+        "not_bug": 0.0,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "2.0.4",
+      "published_at": "2020-04-06",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 38,
+      "counts": {
+        "intrinsic": 15,
+        "extrinsic": 1,
+        "not_bug": 22,
+        "unknown": 0
+      },
+      "percentages": {
+        "intrinsic": 39.5,
+        "extrinsic": 2.6,
+        "not_bug": 57.9,
+        "unknown": 0.0
+      }
+    },
+    {
+      "version": "2.0.5",
+      "published_at": "2020-04-21",
+      "production_deps": 0,
+      "is_major": false,
+      "total_bugs": 199,
+      "counts": {
+        "intrinsic": 79,
+        "extrinsic": 14,
+        "not_bug": 101,
+        "unknown": 5
+      },
+      "percentages": {
+        "intrinsic": 39.7,
+        "extrinsic": 7.0,
+        "not_bug": 50.8,
+        "unknown": 2.5
+      }
+    }
+  ]
+}

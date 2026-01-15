@@ -211,12 +211,12 @@ def format_dashboard(package_name, months, current_state, recent, comparison, tr
     output.append(f"Generated: {datetime.now().strftime('%Y-%m-%d')}")
     
     if current_state:
-        output.append(f"\n CURRENT STATE:")
+        output.append(f"\nCURRENT STATE:")
         output.append(f"   Latest version: v{current_state['version']}")
         output.append(f"   Production deps: {current_state['production_deps']}")
         output.append(f"   Last release: {current_state['last_release']}")
     else:
-        output.append(f"\n CURRENT STATE:")
+        output.append(f"\nCURRENT STATE:")
         output.append(f"     Unable to fetch current npm data")
     
     output.append(f"\n RECENT ACTIVITY (Last {months} months):")
@@ -233,7 +233,7 @@ def format_dashboard(package_name, months, current_state, recent, comparison, tr
     output.append(f"   - Not a Bug: {comparison['not_bug']} ({comparison['not_bug_pct']:.1f}%)")
     output.append(f"   - Unknown: {comparison['unknown']} ({comparison['unknown_pct']:.1f}%)")
     
-    output.append(f"\n TRENDS:")
+    output.append(f"\nTRENDS:")
     
     ex_arrow = "⬆️" if trends['extrinsic_change'] > 0 else "⬇️" if trends['extrinsic_change'] < 0 else "➡️"
     in_arrow = "⬆️" if trends['intrinsic_change'] > 0 else "⬇️" if trends['intrinsic_change'] < 0 else "➡️"
@@ -248,7 +248,7 @@ def format_dashboard(package_name, months, current_state, recent, comparison, tr
     score_emoji = "🟢" if health_score >= 7 else "🟡" if health_score >= 5 else "🔴"
     score_label = "EXCELLENT" if health_score >= 8 else "GOOD" if health_score >= 7 else "FAIR" if health_score >= 5 else "NEEDS ATTENTION"
     
-    output.append(f"\n{score_emoji} HEALTH SCORE: {health_score}/10 ({score_label})")
+    output.append(f"\n HEALTH SCORE: {health_score}/10 ({score_label})")
     
     output.append("\n" + "=" * 70)
     
